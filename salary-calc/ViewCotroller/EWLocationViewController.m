@@ -15,16 +15,20 @@
 @implementation EWLocationViewController
 {
     NSDictionary* cities;
+    NSArray* allKeys;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"切换城市";
+    self.contentView.delegate = self;
+    self.contentView.dataSource = self;
     [self loadCities];
 }
 
 -(void) loadCities {
     cities = [[CityManager sharedInstance] allCities];
+    allKeys = cities.allKeys;
     [self.contentView reloadData];
 }
 
@@ -34,8 +38,21 @@
 
 #pragma mark table view data source 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (cities.count > 0) {
-        return cities.count + 1;
+    if (section == 0) {
+        return 1;
+    } else {
+        NSString* key = [allKeys objectAtIndex:section - 1];
+        NSArray* values = [cities valueForKey:key];
+        if (values.count > 0) {
+            return values.count;
+        }
+    }
+    return 0;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    if (allKeys.count > 0) {
+        return allKeys.count + 1;
     } else {
         return 0;
     }
@@ -47,7 +64,15 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    cell.textLabel.text = @"dsadsada";
+    if (indexPath.row == 0 && indexPath.section == 0) {
+        cell.textLabel.text = @"热门城市";
+    } else {
+        NSString* text = @"";
+        NSString* key = [allKeys objectAtIndex:indexPath.section - 1];
+        NSArray* values = [cities valueForKey:key];
+        text = [values objectAtIndex:indexPath.row];
+        cell.textLabel.text = text;
+    }
     return cell;
 }
 @end

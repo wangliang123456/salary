@@ -26,10 +26,6 @@
 		<string>乌鲁木齐</string>
 		<string>武汉</string>
 	</array>
-	<key>V</key>
-	<array/>
-	<key>U</key>
-	<array/>
 	<key>S</key>
 	<array>
 		<string>苏州</string>
@@ -38,16 +34,10 @@
 		<string>上海</string>
 		<string>沈阳</string>
 	</array>
-	<key>R</key>
-	<array/>
 	<key>Q</key>
 	<array>
 		<string>青岛</string>
 	</array>
-	<key>P</key>
-	<array/>
-	<key>O</key>
-	<array/>
 	<key>N</key>
 	<array>
 		<string>宁波</string>
@@ -55,8 +45,6 @@
 		<string>南宁</string>
 		<string>南京</string>
 	</array>
-	<key>M</key>
-	<array/>
 	<key>L</key>
 	<array>
 		<string>兰州</string>
@@ -69,8 +57,6 @@
 	<array>
 		<string>济南</string>
 	</array>
-	<key>I</key>
-	<array/>
 	<key>H</key>
 	<array>
 		<string>海口</string>
@@ -88,8 +74,6 @@
 	<array>
 		<string>福州</string>
 	</array>
-	<key>E</key>
-	<array/>
 	<key>D</key>
 	<array>
 		<string>大连</string>
@@ -105,7 +89,5 @@
 	<array>
 		<string>北京</string>
 	</array>
-	<key>A</key>
-	<array/>
 </dict>
 </plist>
