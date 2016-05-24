@@ -16,6 +16,7 @@
 {
     NSDictionary* cities;
     NSArray* allKeys;
+    UIBarButtonItem* cancel;
 }
 
 - (void)viewDidLoad {
@@ -23,7 +24,17 @@
     self.title = @"切换城市";
     self.contentView.delegate = self;
     self.contentView.dataSource = self;
+    [self initView];
     [self loadCities];
+}
+
+-(void) initView {
+    cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
+    self.navigationItem.leftBarButtonItem = cancel;
+}
+
+-(void) cancel:(id) sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void) loadCities {
@@ -74,5 +85,15 @@
         cell.textLabel.text = text;
     }
     return cell;
+}
+
+- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSString* headerTitle = @"";
+    if (section == 0) {
+        headerTitle = @"热门城市";
+    } else {
+        headerTitle = [allKeys objectAtIndex:section - 1];
+    }
+    return headerTitle;
 }
 @end
