@@ -47,7 +47,7 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark table view data source 
+#pragma mark table view data source start
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
         return 1;
@@ -95,5 +95,39 @@
         headerTitle = [allKeys objectAtIndex:section - 1];
     }
     return headerTitle;
+}
+
+- (nullable NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    NSMutableArray<NSString*>* titles = [NSMutableArray array];
+    [titles addObject:@"热门"];
+    [titles addObjectsFromArray:allKeys];
+    return titles;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    if ([title isEqualToString:@"热门"]) {
+        return 0;
+    } else {
+        NSInteger i = 0;
+        NSInteger titleIndex = 0;
+        for (NSString* key in allKeys) {
+            if ([key isEqualToString:title]) {
+                titleIndex = i;
+                break;
+            }
+            i++;
+        }
+        return titleIndex;
+    }
+}
+#pragma mark table view datasource end
+
+#pragma mark table view delegate start
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString* city = @"";
+    NSArray* cityArray = [cities valueForKey:[allKeys objectAtIndex:indexPath.section - 1]];
+    city = [cityArray objectAtIndex:indexPath.row];
+    [userDefaults setObject:city forKey:selectedCity];
 }
 @end

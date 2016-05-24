@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0725FABF1CF4A105007A6088 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		0730A4E71CF3EFD500949058 /* salary-calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "salary-calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0730A4EB1CF3EFD500949058 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0730A4ED1CF3EFD500949058 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -194,6 +195,7 @@
 		0730A5331CF43DB000949058 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0725FABF1CF4A105007A6088 /* Constants.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
