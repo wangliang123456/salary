@@ -19,6 +19,8 @@
 		0730A5291CF401CF00949058 /* EWLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A5281CF401CF00949058 /* EWLocationViewController.m */; };
 		0730A52C1CF401DF00949058 /* EWSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A52B1CF401DF00949058 /* EWSettingViewController.m */; };
 		0730A52F1CF41C7A00949058 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0730A52E1CF41C7A00949058 /* city.plist */; };
+		078449EC1CF457E100A2460C /* CityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078449EB1CF457E100A2460C /* CityManager.m */; };
+		078449F01CF4580200A2460C /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 078449EF1CF4580200A2460C /* City.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,10 @@
 		0730A52A1CF401DF00949058 /* EWSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWSettingViewController.h; sourceTree = "<group>"; };
 		0730A52B1CF401DF00949058 /* EWSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWSettingViewController.m; sourceTree = "<group>"; };
 		0730A52E1CF41C7A00949058 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		078449EA1CF457E100A2460C /* CityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityManager.h; sourceTree = "<group>"; };
+		078449EB1CF457E100A2460C /* CityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityManager.m; sourceTree = "<group>"; };
+		078449EE1CF4580200A2460C /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		078449EF1CF4580200A2460C /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,8 @@
 		0730A4E91CF3EFD500949058 /* salary-calc */ = {
 			isa = PBXGroup;
 			children = (
+				078449ED1CF457F100A2460C /* Entity */,
+				078449E91CF457C800A2460C /* Manager */,
 				0730A5331CF43DB000949058 /* Utils */,
 				0730A5321CF43D9A00949058 /* Views */,
 				0730A52D1CF41BAC00949058 /* resource */,
@@ -188,6 +196,24 @@
 			children = (
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		078449E91CF457C800A2460C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				078449EA1CF457E100A2460C /* CityManager.h */,
+				078449EB1CF457E100A2460C /* CityManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		078449ED1CF457F100A2460C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				078449EE1CF4580200A2460C /* City.h */,
+				078449EF1CF4580200A2460C /* City.m */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,10 +349,12 @@
 			files = (
 				0730A5261CF3F84400949058 /* EWRootViewController.m in Sources */,
 				0730A52C1CF401DF00949058 /* EWSettingViewController.m in Sources */,
+				078449F01CF4580200A2460C /* City.m in Sources */,
 				0730A5291CF401CF00949058 /* EWLocationViewController.m in Sources */,
 				0730A5231CF3F75900949058 /* EWNaviViewController.m in Sources */,
 				0730A4EF1CF3EFD500949058 /* AppDelegate.m in Sources */,
 				0730A4EC1CF3EFD500949058 /* main.m in Sources */,
+				078449EC1CF457E100A2460C /* CityManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
