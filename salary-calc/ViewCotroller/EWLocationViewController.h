@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CityManager.h"
 
-@interface EWLocationViewController : UIViewController
+@interface EWLocationViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *contentView;
 
 @end

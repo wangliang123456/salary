@@ -32,7 +32,7 @@
 
 #pragma mark change city
 -(void) changeCity:(id) sender {
-    
+    [self performSegueWithIdentifier:@"Location" sender:nil];
 }
 
 #pragma mark change setting
