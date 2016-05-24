@@ -1,27 +1,24 @@
 //
-//  ViewController.m
+//  EWRootViewController.m
 //  salary-calc
 //
 //  Created by Eric Wang on 16/5/24.
 //  Copyright © 2016年 Eric Wang. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "EWRootViewController.h"
 
-@interface ViewController ()
+@interface EWRootViewController ()
 
 @end
 
-@implementation ViewController
+@implementation EWRootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
 @end
