@@ -37,7 +37,7 @@
                     <navigationItem key="navigationItem" id="zVD-DS-EoW"/>
                     <connections>
                         <segue destination="KPE-33-ctx" kind="presentation" id="6Qs-vP-Kkr"/>
-                        <segue destination="ZGK-H3-8gN" kind="presentation" id="jaN-kK-83a"/>
+                        <segue destination="ZGK-H3-8gN" kind="presentation" identifier="Setting" id="jaN-kK-83a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0OF-O0-Xlc" userLabel="First Responder" sceneMemberID="firstResponder"/>
