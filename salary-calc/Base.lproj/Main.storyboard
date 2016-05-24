@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="290" y="129"/>
         </scene>
-        <!--View Controller-->
+        <!--Location View Controller-->
         <scene sceneID="Y5X-Uo-fcr">
             <objects>
-                <viewController id="KPE-33-ctx" sceneMemberID="viewController">
+                <viewController id="KPE-33-ctx" customClass="EWLocationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zph-o6-S2l"/>
                         <viewControllerLayoutGuide type="bottom" id="5mY-85-ahU"/>
@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="1007" y="-205"/>
         </scene>
-        <!--View Controller-->
+        <!--Setting View Controller-->
         <scene sceneID="cug-5D-Fgm">
             <objects>
-                <viewController id="ZGK-H3-8gN" sceneMemberID="viewController">
+                <viewController id="ZGK-H3-8gN" customClass="EWSettingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B1s-Tj-E9X"/>
                         <viewControllerLayoutGuide type="bottom" id="grs-gd-b17"/>
@@ -73,7 +73,19 @@
                     <view key="view" contentMode="scaleToFill" id="37w-Vw-sBh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uRS-5K-n5k">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uRS-5K-n5k" firstAttribute="centerY" secondItem="37w-Vw-sBh" secondAttribute="centerY" id="EKP-sR-FEp"/>
+                            <constraint firstItem="uRS-5K-n5k" firstAttribute="width" secondItem="37w-Vw-sBh" secondAttribute="width" id="Osv-Va-1Ri"/>
+                            <constraint firstItem="uRS-5K-n5k" firstAttribute="height" secondItem="37w-Vw-sBh" secondAttribute="height" id="T00-q6-gbF"/>
+                            <constraint firstItem="uRS-5K-n5k" firstAttribute="centerX" secondItem="37w-Vw-sBh" secondAttribute="centerX" id="usu-GR-gc0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3E9-HW-Wcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
