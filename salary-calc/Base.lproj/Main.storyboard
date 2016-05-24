@@ -55,7 +55,19 @@
                     <view key="view" contentMode="scaleToFill" id="wIf-9r-X51">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vMC-DQ-d8M">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vMC-DQ-d8M" firstAttribute="height" secondItem="wIf-9r-X51" secondAttribute="height" id="7Kx-3p-S40"/>
+                            <constraint firstItem="vMC-DQ-d8M" firstAttribute="centerX" secondItem="wIf-9r-X51" secondAttribute="centerX" id="NuQ-SI-TaG"/>
+                            <constraint firstItem="vMC-DQ-d8M" firstAttribute="centerY" secondItem="wIf-9r-X51" secondAttribute="centerY" id="vfV-lY-srJ"/>
+                            <constraint firstItem="vMC-DQ-d8M" firstAttribute="width" secondItem="wIf-9r-X51" secondAttribute="width" id="yy9-Ez-kDh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMf-UK-4Bk" userLabel="First Responder" sceneMemberID="firstResponder"/>
