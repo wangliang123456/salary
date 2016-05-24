@@ -10,4 +10,22 @@
 
 @implementation CityManager
 
+static CityManager* instance;
+
++(instancetype) sharedInstance {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (!instance) {
+            instance = [[CityManager alloc] init];
+        }
+    });
+    return instance;
+}
+
+-(NSDictionary*) allCities {
+    NSBundle* bundle = [NSBundle mainBundle];
+    NSString* plistPath = [bundle pathForResource:@"city" ofType:@"plist"];
+    NSDictionary* dict = [[NSDictionary alloc]initWithContentsOfFile:plistPath];
+    return dict;
+}
 @end

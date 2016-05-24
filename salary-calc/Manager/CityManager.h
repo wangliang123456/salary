@@ -10,4 +10,6 @@
 
 @interface CityManager : NSObject
 
++(instancetype) sharedInstance;
+-(NSDictionary*) allCities;
 @end
