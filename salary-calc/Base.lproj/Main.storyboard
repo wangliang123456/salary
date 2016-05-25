@@ -136,6 +136,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7of-3y-aM6"/>
+                    <connections>
+                        <outlet property="contentView" destination="uRS-5K-n5k" id="ma5-hC-ROs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3E9-HW-Wcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

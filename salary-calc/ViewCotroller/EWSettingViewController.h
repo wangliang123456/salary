@@ -10,4 +10,6 @@
 
 @interface EWSettingViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *contentView;
+
 @end

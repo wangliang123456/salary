@@ -47,6 +47,6 @@
 
 #pragma mark change setting
 -(void) changeSetting:(id) sender {
-
+    [self performSegueWithIdentifier:@"Setting" sender:nil];
 }
 @end
