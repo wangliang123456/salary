@@ -13,9 +13,24 @@
 @end
 
 @implementation EWSettingViewController
+{
+    UIBarButtonItem* right;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"设置";
+    [self initView];
+}
+
+-(void) initView {
+    right = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneSetting)];
+    self.navigationItem.rightBarButtonItem = right;
+}
+
+#pragma mark done logic
+-(void) doneSetting {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

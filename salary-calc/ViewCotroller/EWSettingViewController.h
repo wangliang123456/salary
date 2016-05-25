@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EWSettingViewController : UIViewController
+@interface EWSettingViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *contentView;
 
