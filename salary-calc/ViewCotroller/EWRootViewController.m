@@ -20,6 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"薪资计算";
+    [self initView];
+}
+
+-(void) initView {
     left = [[UIBarButtonItem alloc] initWithTitle:@"北京" style:UIBarButtonItemStylePlain target:self action:@selector(changeCity:)];
     right = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(changeSetting:)];
     self.navigationItem.leftBarButtonItem = left;
