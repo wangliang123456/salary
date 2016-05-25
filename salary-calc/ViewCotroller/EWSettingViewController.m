@@ -9,6 +9,7 @@
 #import "EWSettingViewController.h"
 
 static const NSUInteger kSettingSectionCount = 3;
+static const CGFloat kHeaderViewHieght = 25;
 
 @interface EWSettingViewController ()
 
@@ -102,7 +103,7 @@ static const NSUInteger kSettingSectionCount = 3;
 
 #pragma mark table view delegate start
 -(CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 25;
+    return kHeaderViewHieght;
 }
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
