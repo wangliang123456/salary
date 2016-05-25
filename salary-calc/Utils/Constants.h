@@ -8,4 +8,4 @@
 
 #import <Foundation/Foundation.h>
 
-extern static const NSString* selectedCity = @"selectedCity";
+const NSString* kSelectedCityKey = @"SelectedCityKey";

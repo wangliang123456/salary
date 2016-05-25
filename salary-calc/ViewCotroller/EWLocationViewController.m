@@ -39,7 +39,22 @@
 
 -(void) loadCities {
     cities = [[CityManager sharedInstance] allCities];
-    allKeys = cities.allKeys;
+    allKeys = [cities.allKeys sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        if ([obj1 isKindOfClass:[NSString class]] && [obj2 isKindOfClass:[NSString class]]) {
+            NSString* s1 = (NSString*) obj1;
+            NSString* s2 = (NSString*) obj2;
+            unichar char1 = [s1 characterAtIndex:0];
+            unichar char2 = [s2 characterAtIndex:0];
+            if (char1 == char2) {
+                return NSOrderedSame;
+            } else if (char1 > char2) {
+                return NSOrderedDescending;
+            } else if (char1 < char2) {
+                return NSOrderedAscending;
+            }
+        }
+        return NSOrderedSame;
+    }];
     [self.contentView reloadData];
 }
 
@@ -128,6 +143,6 @@
     NSString* city = @"";
     NSArray* cityArray = [cities valueForKey:[allKeys objectAtIndex:indexPath.section - 1]];
     city = [cityArray objectAtIndex:indexPath.row];
-    [userDefaults setObject:city forKey:selectedCity];
+    [userDefaults setObject:city forKey:kSelectedCityKey];
 }
 @end
