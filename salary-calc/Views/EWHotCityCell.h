@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EWHotCityCell : UITableViewCell
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *hotCity;
 
 @end

@@ -15,46 +15,49 @@
                 <rect key="frame" x="0.0" y="0.0" width="395" height="130.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvP-Xg-eJH">
-                        <rect key="frame" x="173" y="21" width="46" height="30"/>
-                        <state key="normal" title="Button"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w66-9f-YPK">
+                        <rect key="frame" x="182" y="23" width="30" height="30"/>
+                        <state key="normal" title="上海"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4g7-L6-Bn7">
-                        <rect key="frame" x="286" y="21" width="46" height="30"/>
-                        <state key="normal" title="Button"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-mz-4br">
+                        <rect key="frame" x="75" y="23" width="30" height="30"/>
+                        <state key="normal" title="北京"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBM-4w-wKd">
-                        <rect key="frame" x="64" y="78" width="46" height="30"/>
-                        <state key="normal" title="Button"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qE1-oX-hrE">
+                        <rect key="frame" x="289" y="23" width="30" height="30"/>
+                        <state key="normal" title="广州"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMs-1G-k5z">
-                        <rect key="frame" x="173" y="78" width="46" height="30"/>
-                        <state key="normal" title="Button"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pR-0W-mIu">
+                        <rect key="frame" x="182" y="77" width="30" height="30"/>
+                        <state key="normal" title="杭州"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSa-jx-nlX">
-                        <rect key="frame" x="286" y="78" width="46" height="30"/>
-                        <state key="normal" title="Button"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fR7-I2-jmM">
+                        <rect key="frame" x="289" y="77" width="30" height="30"/>
+                        <state key="normal" title="苏州"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pR-1w-Miv">
-                        <rect key="frame" x="64" y="21" width="46" height="30"/>
-                        <state key="normal" title="Button"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBg-LB-mEe">
+                        <rect key="frame" x="75" y="77" width="30" height="30"/>
+                        <state key="normal" title="深圳"/>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="1pR-1w-Miv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="56" id="43Q-gA-Szq"/>
-                    <constraint firstItem="iMs-1G-k5z" firstAttribute="top" secondItem="EvP-Xg-eJH" secondAttribute="bottom" constant="27" id="5td-Pn-zs9"/>
-                    <constraint firstItem="iMs-1G-k5z" firstAttribute="leading" secondItem="GBM-4w-wKd" secondAttribute="trailing" constant="63" id="E2p-cd-8BZ"/>
-                    <constraint firstItem="vSa-jx-nlX" firstAttribute="top" secondItem="4g7-L6-Bn7" secondAttribute="bottom" constant="27" id="IA1-AM-BPo"/>
-                    <constraint firstItem="GBM-4w-wKd" firstAttribute="top" secondItem="1pR-1w-Miv" secondAttribute="bottom" constant="27" id="TJO-XM-Yme"/>
-                    <constraint firstItem="EvP-Xg-eJH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="13" id="TL6-gu-dnf"/>
-                    <constraint firstItem="4g7-L6-Bn7" firstAttribute="leading" secondItem="EvP-Xg-eJH" secondAttribute="trailing" constant="67" id="Vgs-JU-qVX"/>
-                    <constraint firstItem="4g7-L6-Bn7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="13" id="ZgD-oK-Wwu"/>
-                    <constraint firstItem="1pR-1w-Miv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="13" id="fdA-nQ-Pzl"/>
-                    <constraint firstItem="EvP-Xg-eJH" firstAttribute="leading" secondItem="1pR-1w-Miv" secondAttribute="trailing" constant="63" id="gaw-3P-K1g"/>
-                    <constraint firstItem="GBM-4w-wKd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="56" id="puG-rZ-Jz9"/>
-                    <constraint firstItem="vSa-jx-nlX" firstAttribute="leading" secondItem="iMs-1G-k5z" secondAttribute="trailing" constant="67" id="uAr-Mm-O1Z"/>
+                    <constraint firstItem="w66-9f-YPK" firstAttribute="leading" secondItem="aG7-mz-4br" secondAttribute="trailing" constant="77" id="8TQ-rm-sKT"/>
+                    <constraint firstItem="fR7-I2-jmM" firstAttribute="leading" secondItem="8pR-0W-mIu" secondAttribute="trailing" constant="77" id="Fb5-IN-eRr"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="fR7-I2-jmM" secondAttribute="bottom" constant="15" id="Mdp-Zc-fon"/>
+                    <constraint firstItem="qE1-oX-hrE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="NTl-t3-7R5"/>
+                    <constraint firstItem="w66-9f-YPK" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Qka-PF-C3c"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="8pR-0W-mIu" secondAttribute="bottom" constant="15" id="Xon-xp-DjN"/>
+                    <constraint firstItem="aG7-mz-4br" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="dLQ-ox-Jjt"/>
+                    <constraint firstItem="w66-9f-YPK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="gwV-hE-3O8"/>
+                    <constraint firstItem="8pR-0W-mIu" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="o2s-Ao-rfD"/>
+                    <constraint firstItem="8pR-0W-mIu" firstAttribute="leading" secondItem="fBg-LB-mEe" secondAttribute="trailing" constant="77" id="osA-Gs-O6d"/>
+                    <constraint firstItem="qE1-oX-hrE" firstAttribute="leading" secondItem="w66-9f-YPK" secondAttribute="trailing" constant="77" id="pNr-dd-QeF"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="fBg-LB-mEe" secondAttribute="bottom" constant="15" id="xVD-Iu-XP3"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outletCollection property="hotCity" destination="qE1-oX-hrE" id="wIy-fu-Dt2"/>
+            </connections>
             <point key="canvasLocation" x="248.5" y="171.5"/>
         </tableViewCell>
     </objects>
