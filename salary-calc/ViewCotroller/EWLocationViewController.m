@@ -146,4 +146,5 @@
     [userDefaults setObject:city forKey:kSelectedCityKey];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+#pragma mark table view delegate end
 @end
