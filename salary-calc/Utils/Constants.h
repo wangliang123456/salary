@@ -8,4 +8,4 @@
 
 #import <Foundation/Foundation.h>
 
-const NSString* kSelectedCityKey = @"SelectedCityKey";
+#define kSelectedCityKey  @"SelectedCityKey"

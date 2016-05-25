@@ -19,11 +19,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"calc";
+    self.title = @"薪资计算";
     left = [[UIBarButtonItem alloc] initWithTitle:@"北京" style:UIBarButtonItemStylePlain target:self action:@selector(changeCity:)];
     right = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(changeSetting:)];
     self.navigationItem.leftBarButtonItem = left;
     self.navigationItem.rightBarButtonItem = right;
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSUserDefaults* userDefault = [NSUserDefaults standardUserDefaults];
+    left.title = [userDefault valueForKey:kSelectedCityKey];
 }
 
 - (void)didReceiveMemoryWarning {

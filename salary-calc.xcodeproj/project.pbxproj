@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0725FAD41CF5D68B007A6088 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725FAD31CF5D68B007A6088 /* BaseViewController.m */; };
 		0730A4EC1CF3EFD500949058 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A4EB1CF3EFD500949058 /* main.m */; };
 		0730A4EF1CF3EFD500949058 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A4EE1CF3EFD500949058 /* AppDelegate.m */; };
 		0730A4F51CF3EFD500949058 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0730A4F31CF3EFD500949058 /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		0725FABF1CF4A105007A6088 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		0725FAD21CF5D68B007A6088 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		0725FAD31CF5D68B007A6088 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		0730A4E71CF3EFD500949058 /* salary-calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "salary-calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0730A4EB1CF3EFD500949058 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0730A4ED1CF3EFD500949058 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				0730A5281CF401CF00949058 /* EWLocationViewController.m */,
 				0730A52A1CF401DF00949058 /* EWSettingViewController.h */,
 				0730A52B1CF401DF00949058 /* EWSettingViewController.m */,
+				0725FAD21CF5D68B007A6088 /* BaseViewController.h */,
+				0725FAD31CF5D68B007A6088 /* BaseViewController.m */,
 			);
 			path = ViewCotroller;
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0730A5261CF3F84400949058 /* EWRootViewController.m in Sources */,
+				0725FAD41CF5D68B007A6088 /* BaseViewController.m in Sources */,
 				0730A52C1CF401DF00949058 /* EWSettingViewController.m in Sources */,
 				078449F01CF4580200A2460C /* City.m in Sources */,
 				0730A5291CF401CF00949058 /* EWLocationViewController.m in Sources */,
