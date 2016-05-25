@@ -17,27 +17,39 @@
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w66-9f-YPK">
                         <rect key="frame" x="182" y="23" width="30" height="30"/>
-                        <state key="normal" title="上海"/>
+                        <state key="normal" title="上海">
+                            <color key="titleColor" red="0.071539594240000004" green="0.071539594240000004" blue="0.071539594240000004" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-mz-4br">
                         <rect key="frame" x="75" y="23" width="30" height="30"/>
-                        <state key="normal" title="北京"/>
+                        <state key="normal" title="北京">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qE1-oX-hrE">
                         <rect key="frame" x="289" y="23" width="30" height="30"/>
-                        <state key="normal" title="广州"/>
+                        <state key="normal" title="广州">
+                            <color key="titleColor" red="0.071539594240000004" green="0.071539594240000004" blue="0.071539594240000004" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pR-0W-mIu">
                         <rect key="frame" x="182" y="77" width="30" height="30"/>
-                        <state key="normal" title="杭州"/>
+                        <state key="normal" title="杭州">
+                            <color key="titleColor" red="0.071539594240000004" green="0.071539594240000004" blue="0.071539594240000004" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fR7-I2-jmM">
                         <rect key="frame" x="289" y="77" width="30" height="30"/>
-                        <state key="normal" title="苏州"/>
+                        <state key="normal" title="苏州">
+                            <color key="titleColor" red="0.071539594240000004" green="0.071539594240000004" blue="0.071539594240000004" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBg-LB-mEe">
                         <rect key="frame" x="75" y="77" width="30" height="30"/>
-                        <state key="normal" title="深圳"/>
+                        <state key="normal" title="深圳">
+                            <color key="titleColor" red="0.071539594240000004" green="0.071539594240000004" blue="0.071539594240000004" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
                     </button>
                 </subviews>
                 <constraints>

@@ -8,6 +8,8 @@
 
 #import "EWLocationViewController.h"
 
+static const CGFloat kHotCityCellHeight = 130;
+
 @interface EWLocationViewController ()
 
 @end
@@ -89,11 +91,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString* identifier = @"contentCell";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    EWHotCityCell* hotCell = nil;
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     if (indexPath.row == 0 && indexPath.section == 0) {
-        cell.textLabel.text = @"热门城市";
+        NSArray* list = [[NSBundle mainBundle] loadNibNamed:@"EWHotCityCell" owner:self options:nil];
+        hotCell = list.firstObject;
+        hotCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return hotCell;
     } else {
         NSString* text = @"";
         NSString* key = [allKeys objectAtIndex:indexPath.section - 1];
@@ -137,10 +143,21 @@
         return titleIndex;
     }
 }
+
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return kHotCityCellHeight;
+    } else {
+        return UITableViewAutomaticDimension;
+    }
+}
 #pragma mark table view datasource end
 
 #pragma mark table view delegate start
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return;
+    }
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
     NSString* city = @"";
     NSArray* cityArray = [cities valueForKey:[allKeys objectAtIndex:indexPath.section - 1]];

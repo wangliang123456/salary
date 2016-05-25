@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CityManager.h"
 #import "BaseViewController.h"
+#import "EWHotCityCell.h"
 
 @interface EWLocationViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *contentView;
