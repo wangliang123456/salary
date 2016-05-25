@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="131" id="KGk-i7-Jjw" customClass="EWHotCityCell">
+            <rect key="frame" x="0.0" y="0.0" width="395" height="131"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="395" height="130.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pR-1w-Miv">
+                        <rect key="frame" x="64" y="21" width="46" height="30"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvP-Xg-eJH">
+                        <rect key="frame" x="173" y="21" width="46" height="30"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4g7-L6-Bn7">
+                        <rect key="frame" x="286" y="21" width="46" height="30"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBM-4w-wKd">
+                        <rect key="frame" x="64" y="78" width="46" height="30"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSa-jx-nlX">
+                        <rect key="frame" x="286" y="78" width="46" height="30"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMs-1G-k5z">
+                        <rect key="frame" x="173" y="78" width="46" height="30"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1pR-1w-Miv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="56" id="43Q-gA-Szq"/>
+                    <constraint firstItem="iMs-1G-k5z" firstAttribute="top" secondItem="EvP-Xg-eJH" secondAttribute="bottom" constant="27" id="5td-Pn-zs9"/>
+                    <constraint firstItem="iMs-1G-k5z" firstAttribute="leading" secondItem="GBM-4w-wKd" secondAttribute="trailing" constant="63" id="E2p-cd-8BZ"/>
+                    <constraint firstItem="vSa-jx-nlX" firstAttribute="top" secondItem="4g7-L6-Bn7" secondAttribute="bottom" constant="27" id="IA1-AM-BPo"/>
+                    <constraint firstItem="GBM-4w-wKd" firstAttribute="top" secondItem="1pR-1w-Miv" secondAttribute="bottom" constant="27" id="TJO-XM-Yme"/>
+                    <constraint firstItem="EvP-Xg-eJH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="13" id="TL6-gu-dnf"/>
+                    <constraint firstItem="4g7-L6-Bn7" firstAttribute="leading" secondItem="EvP-Xg-eJH" secondAttribute="trailing" constant="67" id="Vgs-JU-qVX"/>
+                    <constraint firstItem="4g7-L6-Bn7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="13" id="ZgD-oK-Wwu"/>
+                    <constraint firstItem="1pR-1w-Miv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="13" id="fdA-nQ-Pzl"/>
+                    <constraint firstItem="EvP-Xg-eJH" firstAttribute="leading" secondItem="1pR-1w-Miv" secondAttribute="trailing" constant="63" id="gaw-3P-K1g"/>
+                    <constraint firstItem="GBM-4w-wKd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="56" id="puG-rZ-Jz9"/>
+                    <constraint firstItem="vSa-jx-nlX" firstAttribute="leading" secondItem="iMs-1G-k5z" secondAttribute="trailing" constant="67" id="uAr-Mm-O1Z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="248.5" y="171.5"/>
+        </tableViewCell>
+    </objects>
+</document>

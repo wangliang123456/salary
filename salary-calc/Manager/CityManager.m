@@ -28,4 +28,9 @@ static CityManager* instance;
     NSDictionary* dict = [[NSDictionary alloc]initWithContentsOfFile:plistPath];
     return dict;
 }
+
+-(NSArray*) hotCities {
+    NSArray* hotCities = @[@"北京",@"上海",@"广州",@"深圳",@"杭州",@"苏州"];
+    return hotCities;
+}
 @end

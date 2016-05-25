@@ -12,4 +12,6 @@
 
 +(instancetype) sharedInstance;
 -(NSDictionary*) allCities;
+-(NSArray*) hotCities;
+
 @end

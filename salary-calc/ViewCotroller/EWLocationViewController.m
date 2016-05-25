@@ -17,6 +17,7 @@
     NSDictionary* cities;
     NSArray* allKeys;
     UIBarButtonItem* cancel;
+    NSArray* hotCities;
 }
 
 - (void)viewDidLoad {
@@ -55,6 +56,7 @@
         }
         return NSOrderedSame;
     }];
+    hotCities = [[CityManager sharedInstance] hotCities];
     [self.contentView reloadData];
 }
 
