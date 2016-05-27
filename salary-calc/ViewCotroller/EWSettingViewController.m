@@ -12,6 +12,7 @@ static const NSUInteger kSettingSectionCount = 3;
 static const CGFloat kHeaderViewHieght = 25;
 
 @interface EWSettingViewController ()
+
 @property (weak, nonatomic) IBOutlet DFPBannerView *bannerView;
 
 @end
@@ -19,6 +20,13 @@ static const CGFloat kHeaderViewHieght = 25;
 @implementation EWSettingViewController
 {
     UIBarButtonItem* right;
+}
+
+#pragma mark load the banner ad
+-(void) loadBannerAD {
+    self.bannerView.adUnitID = @"ca-app-pub-6212992129754905/3625975674";
+    self.bannerView.rootViewController = self;
+    [self.bannerView loadRequest:[GADRequest request]];
 }
 
 - (void)viewDidLoad {
