@@ -37,7 +37,7 @@ static const CGFloat kHotCityCellHeight = 130;
 }
 
 -(void) cancel:(id) sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 -(void) loadCities {
@@ -163,7 +163,7 @@ static const CGFloat kHotCityCellHeight = 130;
     NSArray* cityArray = [cities valueForKey:[allKeys objectAtIndex:indexPath.section - 1]];
     city = [cityArray objectAtIndex:indexPath.row];
     [userDefaults setObject:city forKey:kSelectedCityKey];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 #pragma mark table view delegate end
 @end

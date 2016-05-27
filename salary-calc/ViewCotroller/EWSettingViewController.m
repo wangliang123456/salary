@@ -36,7 +36,7 @@ static const CGFloat kHeaderViewHieght = 25;
 
 #pragma mark done logic
 -(void) doneSetting {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
