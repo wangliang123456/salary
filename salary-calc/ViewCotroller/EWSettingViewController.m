@@ -31,6 +31,7 @@ static const CGFloat kHeaderViewHieght = 25;
     [self.bannerView loadRequest:request];
 }
 
+#pragma mark life cycle method
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"设置";
@@ -38,6 +39,7 @@ static const CGFloat kHeaderViewHieght = 25;
     [self loadBannerAD];
 }
 
+#pragma mark init view
 -(void) initView {
     right = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneSetting)];
     self.navigationItem.rightBarButtonItem = right;
