@@ -147,6 +147,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7of-3y-aM6"/>
                     <connections>
+                        <outlet property="bannerView" destination="csP-wn-NNx" id="Sa4-Sz-6ys"/>
                         <outlet property="contentView" destination="uRS-5K-n5k" id="ma5-hC-ROs"/>
                     </connections>
                 </viewController>

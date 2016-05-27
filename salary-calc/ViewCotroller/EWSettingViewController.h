@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@import GoogleMobileAds;
+
 @interface EWSettingViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *contentView;

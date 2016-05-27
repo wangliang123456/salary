@@ -12,6 +12,7 @@ static const NSUInteger kSettingSectionCount = 3;
 static const CGFloat kHeaderViewHieght = 25;
 
 @interface EWSettingViewController ()
+@property (weak, nonatomic) IBOutlet DFPBannerView *bannerView;
 
 @end
 
