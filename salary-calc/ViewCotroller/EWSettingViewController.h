@@ -10,7 +10,7 @@
 
 @import GoogleMobileAds;
 
-@interface EWSettingViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface EWSettingViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,GADBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *contentView;
 
