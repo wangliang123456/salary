@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0711E7171CF7DC8A00B6D752 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0711E7161CF7DC8A00B6D752 /* GoogleMobileAds.framework */; };
 		0725FAD41CF5D68B007A6088 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725FAD31CF5D68B007A6088 /* BaseViewController.m */; };
 		0725FAD81CF5DAF5007A6088 /* EWHotCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725FAD61CF5DAF5007A6088 /* EWHotCityCell.m */; };
 		0725FAD91CF5DAF5007A6088 /* EWHotCityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0725FAD71CF5DAF5007A6088 /* EWHotCityCell.xib */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0711E7161CF7DC8A00B6D752 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		0725FABF1CF4A105007A6088 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		0725FAD21CF5D68B007A6088 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		0725FAD31CF5D68B007A6088 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0711E7171CF7DC8A00B6D752 /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +110,7 @@
 		0711E7151CF7DC2F00B6D752 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				0711E7161CF7DC8A00B6D752 /* GoogleMobileAds.framework */,
 			);
 			path = libs;
 			sourceTree = "<group>";
@@ -523,6 +527,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/salary-calc/libs",
+				);
 				INFOPLIST_FILE = "salary-calc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.salary-calc";
@@ -535,6 +543,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/salary-calc/libs",
+				);
 				INFOPLIST_FILE = "salary-calc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.salary-calc";
