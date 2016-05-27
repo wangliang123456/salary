@@ -126,13 +126,23 @@
                                 <rect key="frame" x="0.0" y="50" width="600" height="500"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csP-wn-NNx" customClass="DFPBannerView">
+                                <rect key="frame" x="140" y="550" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="1Ar-1u-exw"/>
+                                    <constraint firstAttribute="height" constant="50" id="NwZ-6Y-1xm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="grs-gd-b17" firstAttribute="top" secondItem="uRS-5K-n5k" secondAttribute="bottom" constant="50" id="6Mj-gw-7zK"/>
                             <constraint firstItem="uRS-5K-n5k" firstAttribute="centerY" secondItem="37w-Vw-sBh" secondAttribute="centerY" id="EKP-sR-FEp"/>
                             <constraint firstItem="uRS-5K-n5k" firstAttribute="width" secondItem="37w-Vw-sBh" secondAttribute="width" id="Osv-Va-1Ri"/>
+                            <constraint firstItem="csP-wn-NNx" firstAttribute="centerX" secondItem="37w-Vw-sBh" secondAttribute="centerX" id="dmj-Bf-x0I"/>
                             <constraint firstItem="uRS-5K-n5k" firstAttribute="centerX" secondItem="37w-Vw-sBh" secondAttribute="centerX" id="usu-GR-gc0"/>
+                            <constraint firstItem="grs-gd-b17" firstAttribute="top" secondItem="csP-wn-NNx" secondAttribute="bottom" id="yG1-Bv-QlC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7of-3y-aM6"/>
