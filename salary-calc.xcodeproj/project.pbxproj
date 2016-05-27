@@ -104,6 +104,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0711E7151CF7DC2F00B6D752 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
 		0730A4DE1CF3EFD500949058 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +134,7 @@
 		0730A4E91CF3EFD500949058 /* salary-calc */ = {
 			isa = PBXGroup;
 			children = (
+				0711E7151CF7DC2F00B6D752 /* libs */,
 				078449ED1CF457F100A2460C /* Entity */,
 				078449E91CF457C800A2460C /* Manager */,
 				0730A5331CF43DB000949058 /* Utils */,
