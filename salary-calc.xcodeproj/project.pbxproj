@@ -118,6 +118,8 @@
 		0711E7181CF7E0BB00B6D752 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				0730A4F31CF3EFD500949058 /* Main.storyboard */,
+				0730A4F81CF3EFD500949058 /* LaunchScreen.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -155,9 +157,7 @@
 				0730A51D1CF3F61600949058 /* ViewCotroller */,
 				0730A4ED1CF3EFD500949058 /* AppDelegate.h */,
 				0730A4EE1CF3EFD500949058 /* AppDelegate.m */,
-				0730A4F31CF3EFD500949058 /* Main.storyboard */,
 				0730A4F61CF3EFD500949058 /* Assets.xcassets */,
-				0730A4F81CF3EFD500949058 /* LaunchScreen.storyboard */,
 				0730A4FB1CF3EFD500949058 /* Info.plist */,
 				0730A4EA1CF3EFD500949058 /* Supporting Files */,
 			);
@@ -434,6 +434,7 @@
 				0730A4F41CF3EFD500949058 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		0730A4F81CF3EFD500949058 /* LaunchScreen.storyboard */ = {
@@ -442,6 +443,7 @@
 				0730A4F91CF3EFD500949058 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
