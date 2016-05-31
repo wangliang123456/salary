@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 
+@import GoogleMobileAds;
+
 @interface EWRootViewController : BaseViewController
 
 @end

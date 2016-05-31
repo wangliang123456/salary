@@ -32,10 +32,25 @@
                     <view key="view" contentMode="scaleToFill" id="fHi-y2-hDk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oIV-ef-AKO" customClass="DFPBannerView">
+                                <rect key="frame" x="140" y="550" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IkH-tJ-5eP"/>
+                                    <constraint firstAttribute="width" constant="320" id="TiO-76-ddq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="02f-7d-2LH" firstAttribute="top" secondItem="oIV-ef-AKO" secondAttribute="bottom" id="Kja-LU-1bD"/>
+                            <constraint firstItem="oIV-ef-AKO" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="dTy-vE-giT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zVD-DS-EoW"/>
                     <connections>
+                        <outlet property="bannerView" destination="oIV-ef-AKO" id="O0V-LO-Zaa"/>
                         <segue destination="7eg-JF-gag" kind="presentation" identifier="Location" id="xLq-9k-T4N"/>
                         <segue destination="CvU-kQ-7MQ" kind="presentation" identifier="Setting" id="lVH-0o-eGH"/>
                     </connections>
@@ -124,7 +139,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="uRS-5K-n5k">
                                 <rect key="frame" x="0.0" y="50" width="600" height="500"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csP-wn-NNx" customClass="DFPBannerView">
                                 <rect key="frame" x="140" y="550" width="320" height="50"/>
