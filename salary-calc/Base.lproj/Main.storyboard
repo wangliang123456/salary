@@ -47,23 +47,66 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VDc-DN-IFt">
-                                <rect key="frame" x="260" y="154" width="80" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入您的税前工资" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VDc-DN-IFt">
+                                <rect key="frame" x="220" y="154" width="160" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="HgI-WL-OaI"/>
+                                    <constraint firstAttribute="width" constant="160" id="HgI-WL-OaI"/>
+                                    <constraint firstAttribute="height" constant="35" id="qUV-5n-Jj1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="社保基数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6T-P8-JXg">
+                                <rect key="frame" x="264" y="218" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9F3-oe-iMP">
+                                <rect key="frame" x="180" y="265" width="239" height="29"/>
+                                <segments>
+                                    <segment title="最高额度"/>
+                                    <segment title="最低额度"/>
+                                    <segment title="自定义额度"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公积金基数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5R-pS-InB">
+                                <rect key="frame" x="255" y="326" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="C2Y-EV-yWI">
+                                <rect key="frame" x="180" y="379" width="239" height="29"/>
+                                <segments>
+                                    <segment title="最高额度"/>
+                                    <segment title="最低额度"/>
+                                    <segment title="自定义额度"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eN-yR-zDb">
+                                <rect key="frame" x="255" y="518" width="90" height="30"/>
+                                <state key="normal" title="计算税后工资"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="e6T-P8-JXg" firstAttribute="top" secondItem="VDc-DN-IFt" secondAttribute="bottom" constant="29" id="A7W-Rd-fpE"/>
+                            <constraint firstItem="9F3-oe-iMP" firstAttribute="top" secondItem="e6T-P8-JXg" secondAttribute="bottom" constant="26" id="DG0-S5-N1u"/>
                             <constraint firstItem="VDc-DN-IFt" firstAttribute="top" secondItem="Q4x-4Y-2Fk" secondAttribute="bottom" constant="29" id="Fxj-HS-7b4"/>
                             <constraint firstItem="Q4x-4Y-2Fk" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="IxK-TT-a6S"/>
                             <constraint firstItem="02f-7d-2LH" firstAttribute="top" secondItem="oIV-ef-AKO" secondAttribute="bottom" id="Kja-LU-1bD"/>
+                            <constraint firstItem="E5R-pS-InB" firstAttribute="top" secondItem="9F3-oe-iMP" secondAttribute="bottom" constant="33" id="L0x-f5-ZYH"/>
                             <constraint firstItem="Q4x-4Y-2Fk" firstAttribute="top" secondItem="i7M-0j-4Gg" secondAttribute="bottom" constant="40" id="N0G-Wx-PR4"/>
                             <constraint firstItem="VDc-DN-IFt" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="S0U-1G-mXs"/>
+                            <constraint firstItem="E5R-pS-InB" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="SMB-9t-OY7"/>
                             <constraint firstItem="oIV-ef-AKO" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="dTy-vE-giT"/>
+                            <constraint firstItem="e6T-P8-JXg" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="e4R-5c-NZU"/>
+                            <constraint firstItem="C2Y-EV-yWI" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="hQO-6t-Uxz"/>
+                            <constraint firstItem="2eN-yR-zDb" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="mQ3-hd-iXH"/>
+                            <constraint firstItem="9F3-oe-iMP" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="pNs-rY-Aq4"/>
+                            <constraint firstItem="oIV-ef-AKO" firstAttribute="top" secondItem="2eN-yR-zDb" secondAttribute="bottom" constant="2" id="pWL-Il-O6p"/>
+                            <constraint firstItem="C2Y-EV-yWI" firstAttribute="top" secondItem="E5R-pS-InB" secondAttribute="bottom" constant="32" id="uxn-sY-CDR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zVD-DS-EoW"/>
