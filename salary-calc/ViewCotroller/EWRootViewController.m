@@ -8,6 +8,31 @@
 
 #import "EWRootViewController.h"
 
+static const NSUInteger kBaseHighSocialInsuranceValue = 19389;//五险最高基数
+//养老保险
+static const double kEndowmentInsuranceCompanyRate = 0.2;
+static const double kEndowmentInsurancePersonalRate = 0.08;
+static const double kEndowmentInsurancLowValue = 2585;
+//失业保险
+static const double kUnemploymentInsuranceCompanyRate = 0.01;
+static const double kUnemploymentInsurancePersonalRate = 0.002;
+static const double kUnemploymentInsuranceValie = 2585;
+//工伤保险
+static const double kEmploymentInjuryInsuranceCompanyRate = 0.005;
+static const double kEmploymentInjuryInsuranceLowValue = 3878;
+//生育保险
+static const double kChildbirthInsuranceCompanyRate = 0.008;
+static const double kChildbirthInsuranceLowValue = 3878;
+//医疗保险
+static const double kMedicalInsuranceCompanyRate = 0.1;
+static const double kMedicalInsurancePersonalRate = 0.02;//别忘记加3元
+static const double kMedicalInsuranceLowValue = 3878;
+//住房公积金
+static const double kHousingFundCompanyRate = 0.12;
+static const double kHousingFundPersonalRate = 0.12;
+static const double kHousingFundLowValue = 1720;
+
+
 @interface EWRootViewController ()
 {
     UIBarButtonItem* left;
@@ -19,6 +44,21 @@
 @end
 
 @implementation EWRootViewController
+
+#pragma mark text field resign first responder
+- (IBAction)doTap:(id)sender {
+    [self.salaryValue resignFirstResponder];
+}
+
+#pragma mark 社保发生变化
+- (IBAction)socialInsuranceBaseValueChange:(id)sender {
+    NSLog(@"socialInsuranceBaseValueChange");
+}
+
+#pragma mark 公积金发生变化
+- (IBAction)providentFundValueChange:(id)sender {
+    NSLog(@"providentFundValueChange");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

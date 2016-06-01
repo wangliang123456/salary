@@ -12,5 +12,6 @@
 @import GoogleMobileAds;
 
 @interface EWRootViewController : BaseViewController
+@property (weak, nonatomic) IBOutlet UITextField *salaryValue;
 
 @end
