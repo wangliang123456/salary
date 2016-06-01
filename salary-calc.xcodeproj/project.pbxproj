@@ -42,6 +42,34 @@
 			remoteGlobalIDString = 0730A4E61CF3EFD500949058;
 			remoteInfo = "salary-calc";
 		};
+		07B024C21CFF3414000C60FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07B024BB1CFF3413000C60FA /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
+		07B024C41CFF3414000C60FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07B024BB1CFF3413000C60FA /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
+			remoteInfo = "Charts-TV";
+		};
+		07B024C61CFF3414000C60FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07B024BB1CFF3413000C60FA /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65B3F5BF1C7370BE000983D0;
+			remoteInfo = "Charts-OSX";
+		};
+		07B024C81CFF3414000C60FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07B024BB1CFF3413000C60FA /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
+			remoteInfo = ChartsTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +107,7 @@
 		078449EB1CF457E100A2460C /* CityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityManager.m; sourceTree = "<group>"; };
 		078449EE1CF4580200A2460C /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
 		078449EF1CF4580200A2460C /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		07B024BB1CFF3413000C60FA /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/Charts-master/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +139,7 @@
 		0711E7151CF7DC2F00B6D752 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				07B024BB1CFF3413000C60FA /* Charts.xcodeproj */,
 				0711E7161CF7DC8A00B6D752 /* GoogleMobileAds.framework */,
 			);
 			path = libs;
@@ -251,6 +281,17 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		07B024BC1CFF3413000C60FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07B024C31CFF3414000C60FA /* Charts.framework */,
+				07B024C51CFF3414000C60FA /* Charts.framework */,
+				07B024C71CFF3414000C60FA /* Charts.framework */,
+				07B024C91CFF3414000C60FA /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -340,6 +381,12 @@
 			mainGroup = 0730A4DE1CF3EFD500949058;
 			productRefGroup = 0730A4E81CF3EFD500949058 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 07B024BC1CFF3413000C60FA /* Products */;
+					ProjectRef = 07B024BB1CFF3413000C60FA /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0730A4E61CF3EFD500949058 /* salary-calc */,
@@ -348,6 +395,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		07B024C31CFF3414000C60FA /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 07B024C21CFF3414000C60FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		07B024C51CFF3414000C60FA /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 07B024C41CFF3414000C60FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		07B024C71CFF3414000C60FA /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 07B024C61CFF3414000C60FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		07B024C91CFF3414000C60FA /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 07B024C81CFF3414000C60FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0730A4E51CF3EFD500949058 /* Resources */ = {
