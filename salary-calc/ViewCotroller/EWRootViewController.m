@@ -44,6 +44,22 @@ static const double kHousingFundLowValue = 1720;
 @end
 
 @implementation EWRootViewController
+{
+    double finalSalary;//税后工资
+    double endowmentInsurancePersonalValue;//个人养老金
+    double unemploymentInsurancePersonalValue;//个人失业金
+    double employmentInjuryInsurancePersonalValue;//个人工伤
+    double medicalInsurancePersoalValue;//个人医疗
+    double housingFundPersonalValue;//个人公积金
+    double childbirthInsurancePersonalValue;//个人生育
+    
+    double endowmentInsuranceCompanyValue;//公司养老金
+    double unemploymentInsuranceCompanyValue;//公司失业金
+    double employmentInjuryInsuranceCompanyValue;//公司工伤
+    double medicalInsuranceCompanyValue;//公司医疗
+    double housingFundCompanyValue;//公司公积金
+    double childbirthInsuranceCompanyValue;//公司生育
+}
 
 #pragma mark text field resign first responder
 - (IBAction)doTap:(id)sender {
@@ -62,7 +78,28 @@ static const double kHousingFundLowValue = 1720;
 
 #pragma mark 计算税后工资
 -(void) calc:(double) salary {
+    double originSalary = salary;
+    if (salary > kBaseHighSocialInsuranceValue) {
+        salary = kBaseHighSocialInsuranceValue;
+    }
+    endowmentInsurancePersonalValue = salary * kEndowmentInsurancePersonalRate;
+    endowmentInsuranceCompanyValue = salary * kEndowmentInsuranceCompanyRate;
     
+    unemploymentInsurancePersonalValue = salary * kUnemploymentInsurancePersonalRate;
+    unemploymentInsuranceCompanyValue = salary * kUnemploymentInsuranceCompanyRate;
+    
+    employmentInjuryInsurancePersonalValue = 0;
+    employmentInjuryInsuranceCompanyValue = salary * kEmploymentInjuryInsuranceCompanyRate;
+    
+    medicalInsurancePersoalValue = salary * kMedicalInsurancePersonalRate;
+    medicalInsuranceCompanyValue = salary * kMedicalInsuranceCompanyRate;
+    
+    childbirthInsurancePersonalValue = 0;
+    childbirthInsurancePersonalValue = salary * kChildbirthInsuranceCompanyRate;
+    
+    housingFundPersonalValue = salary * kHousingFundPersonalRate;
+    housingFundCompanyValue = salary * kHousingFundCompanyRate;
+    finalSalary = originSalary - endowmentInsurancePersonalValue - unemploymentInsurancePersonalValue - employmentInjuryInsurancePersonalValue - medicalInsurancePersoalValue - childbirthInsurancePersonalValue;
 }
 
 - (void)viewDidLoad {
@@ -85,6 +122,7 @@ static const double kHousingFundLowValue = 1720;
     right = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(changeSetting:)];
     self.navigationItem.leftBarButtonItem = left;
     self.navigationItem.rightBarButtonItem = right;
+    self.salaryValue.delegate = self;
 }
 
 -(void) viewWillAppear:(BOOL)animated {
@@ -105,5 +143,11 @@ static const double kHousingFundLowValue = 1720;
 #pragma mark change setting
 -(void) changeSetting:(id) sender {
     [self performSegueWithIdentifier:@"Setting" sender:nil];
+}
+
+#pragma mark text field delegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self calc:[textField.text doubleValue]];
+    return YES;
 }
 @end
