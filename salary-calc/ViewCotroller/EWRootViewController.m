@@ -60,6 +60,11 @@ static const double kHousingFundLowValue = 1720;
     NSLog(@"providentFundValueChange");
 }
 
+#pragma mark 计算税后工资
+-(void) calc:(double) salary {
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"薪资计算";
