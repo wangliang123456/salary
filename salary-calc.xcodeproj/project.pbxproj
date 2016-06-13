@@ -11,6 +11,8 @@
 		0725FAD41CF5D68B007A6088 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725FAD31CF5D68B007A6088 /* BaseViewController.m */; };
 		0725FAD81CF5DAF5007A6088 /* EWHotCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725FAD61CF5DAF5007A6088 /* EWHotCityCell.m */; };
 		0725FAD91CF5DAF5007A6088 /* EWHotCityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0725FAD71CF5DAF5007A6088 /* EWHotCityCell.xib */; };
+		07302C491D0EE8FC00CAE7FD /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07302C361D0EE84000CAE7FD /* Charts.framework */; };
+		07302C4A1D0EE8FC00CAE7FD /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07302C361D0EE84000CAE7FD /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0730A4EC1CF3EFD500949058 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A4EB1CF3EFD500949058 /* main.m */; };
 		0730A4EF1CF3EFD500949058 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A4EE1CF3EFD500949058 /* AppDelegate.m */; };
 		0730A4F51CF3EFD500949058 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0730A4F31CF3EFD500949058 /* Main.storyboard */; };
@@ -56,6 +58,13 @@
 			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
 			remoteInfo = ChartsTests;
 		};
+		07302C4B1D0EE8FC00CAE7FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07302C0D1D0EE78100CAE7FD /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
 		0730A5011CF3EFD500949058 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0730A4DF1CF3EFD500949058 /* Project object */;
@@ -73,12 +82,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		07302C2E1D0EE82C00CAE7FD /* Embed Frameworks */ = {
+		07302C4D1D0EE8FD00CAE7FD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				07302C4A1D0EE8FC00CAE7FD /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0711E7171CF7DC8A00B6D752 /* GoogleMobileAds.framework in Frameworks */,
+				07302C491D0EE8FC00CAE7FD /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,11 +326,12 @@
 				0730A4E31CF3EFD500949058 /* Sources */,
 				0730A4E41CF3EFD500949058 /* Frameworks */,
 				0730A4E51CF3EFD500949058 /* Resources */,
-				07302C2E1D0EE82C00CAE7FD /* Embed Frameworks */,
+				07302C4D1D0EE8FD00CAE7FD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				07302C4C1D0EE8FC00CAE7FD /* PBXTargetDependency */,
 			);
 			name = "salary-calc";
 			productName = "salary-calc";
@@ -507,6 +519,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		07302C4C1D0EE8FC00CAE7FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Charts-iOS";
+			targetProxy = 07302C4B1D0EE8FC00CAE7FD /* PBXContainerItemProxy */;
+		};
 		0730A5021CF3EFD500949058 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0730A4E61CF3EFD500949058 /* salary-calc */;

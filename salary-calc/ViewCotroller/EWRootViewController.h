@@ -10,7 +10,7 @@
 #import "BaseViewController.h"
 
 @import GoogleMobileAds;
-//@import
+@import Charts;
 
 @interface EWRootViewController : BaseViewController<UITextFieldDelegate>
 
