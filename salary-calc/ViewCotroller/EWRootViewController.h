@@ -12,8 +12,9 @@
 @import GoogleMobileAds;
 @import Charts;
 
-@interface EWRootViewController : BaseViewController<UITextFieldDelegate>
+@interface EWRootViewController : BaseViewController<UITextFieldDelegate,ChartViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *salaryValue;
+@property (weak, nonatomic) IBOutlet PieChartView *salaryPieChart;
 
 @end

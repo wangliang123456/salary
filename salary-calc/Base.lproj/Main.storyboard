@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navi View Controller-->
@@ -90,13 +91,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" keyboardAppearance="alert" returnKeyType="done"/>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yf2-uv-9Ez" customClass="PieChartView">
+                                <rect key="frame" x="0.0" y="373" width="600" height="177"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="Yf2-uv-9Ez" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="1t2-2P-P7g"/>
+                            <constraint firstItem="oIV-ef-AKO" firstAttribute="top" secondItem="Yf2-uv-9Ez" secondAttribute="bottom" id="4wp-RH-cNQ"/>
                             <constraint firstItem="e6T-P8-JXg" firstAttribute="top" secondItem="VDc-DN-IFt" secondAttribute="bottom" constant="30" id="A7W-Rd-fpE"/>
                             <constraint firstItem="9F3-oe-iMP" firstAttribute="top" secondItem="e6T-P8-JXg" secondAttribute="bottom" constant="20" id="DG0-S5-N1u"/>
+                            <constraint firstItem="Yf2-uv-9Ez" firstAttribute="top" secondItem="C2Y-EV-yWI" secondAttribute="bottom" constant="15" id="FBB-b3-a2f"/>
                             <constraint firstItem="VDc-DN-IFt" firstAttribute="top" secondItem="Q4x-4Y-2Fk" secondAttribute="bottom" constant="20" id="Fxj-HS-7b4"/>
+                            <constraint firstItem="Yf2-uv-9Ez" firstAttribute="width" secondItem="fHi-y2-hDk" secondAttribute="width" id="HDi-Yi-6bd"/>
+                            <constraint firstItem="Yf2-uv-9Ez" firstAttribute="leading" secondItem="fHi-y2-hDk" secondAttribute="leadingMargin" id="Iol-Sy-rGH"/>
                             <constraint firstItem="Q4x-4Y-2Fk" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="IxK-TT-a6S"/>
                             <constraint firstItem="02f-7d-2LH" firstAttribute="top" secondItem="oIV-ef-AKO" secondAttribute="bottom" id="Kja-LU-1bD"/>
                             <constraint firstItem="E5R-pS-InB" firstAttribute="top" secondItem="9F3-oe-iMP" secondAttribute="bottom" constant="30" id="L0x-f5-ZYH"/>
@@ -107,8 +116,15 @@
                             <constraint firstItem="e6T-P8-JXg" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="e4R-5c-NZU"/>
                             <constraint firstItem="C2Y-EV-yWI" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="hQO-6t-Uxz"/>
                             <constraint firstItem="9F3-oe-iMP" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="pNs-rY-Aq4"/>
+                            <constraint firstItem="Yf2-uv-9Ez" firstAttribute="width" secondItem="fHi-y2-hDk" secondAttribute="width" id="sDX-TQ-RSN"/>
                             <constraint firstItem="C2Y-EV-yWI" firstAttribute="top" secondItem="E5R-pS-InB" secondAttribute="bottom" constant="20" id="uxn-sY-CDR"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Iol-Sy-rGH"/>
+                                <exclude reference="sDX-TQ-RSN"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="EHa-OQ-Tht" appends="YES" id="DSG-Wd-sQl"/>
                         </connections>
@@ -116,6 +132,7 @@
                     <navigationItem key="navigationItem" id="zVD-DS-EoW"/>
                     <connections>
                         <outlet property="bannerView" destination="oIV-ef-AKO" id="O0V-LO-Zaa"/>
+                        <outlet property="salaryPieChart" destination="Yf2-uv-9Ez" id="zK9-4v-qGs"/>
                         <outlet property="salaryValue" destination="VDc-DN-IFt" id="sfN-2L-6sf"/>
                         <segue destination="7eg-JF-gag" kind="presentation" identifier="Location" id="xLq-9k-T4N"/>
                         <segue destination="CvU-kQ-7MQ" kind="presentation" identifier="Setting" id="lVH-0o-eGH"/>
