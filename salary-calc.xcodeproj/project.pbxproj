@@ -28,6 +28,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		07302C351D0EE84000CAE7FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07302C0D1D0EE78100CAE7FD /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
+		07302C371D0EE84000CAE7FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07302C0D1D0EE78100CAE7FD /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
+			remoteInfo = "Charts-TV";
+		};
+		07302C391D0EE84000CAE7FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07302C0D1D0EE78100CAE7FD /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65B3F5BF1C7370BE000983D0;
+			remoteInfo = "Charts-OSX";
+		};
+		07302C3B1D0EE84000CAE7FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07302C0D1D0EE78100CAE7FD /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
+			remoteInfo = ChartsTests;
+		};
 		0730A5011CF3EFD500949058 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0730A4DF1CF3EFD500949058 /* Project object */;
@@ -44,6 +72,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		07302C2E1D0EE82C00CAE7FD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0711E7161CF7DC8A00B6D752 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		0725FABF1CF4A105007A6088 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -52,6 +93,7 @@
 		0725FAD51CF5DAF5007A6088 /* EWHotCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWHotCityCell.h; sourceTree = "<group>"; };
 		0725FAD61CF5DAF5007A6088 /* EWHotCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWHotCityCell.m; sourceTree = "<group>"; };
 		0725FAD71CF5DAF5007A6088 /* EWHotCityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EWHotCityCell.xib; sourceTree = "<group>"; };
+		07302C0D1D0EE78100CAE7FD /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/Charts-master/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 		0730A4E71CF3EFD500949058 /* salary-calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "salary-calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0730A4EB1CF3EFD500949058 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0730A4ED1CF3EFD500949058 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +152,7 @@
 		0711E7151CF7DC2F00B6D752 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				07302C0D1D0EE78100CAE7FD /* Charts.xcodeproj */,
 				0711E7161CF7DC8A00B6D752 /* GoogleMobileAds.framework */,
 			);
 			path = libs;
@@ -122,6 +165,17 @@
 				0730A4F81CF3EFD500949058 /* LaunchScreen.storyboard */,
 			);
 			path = storyboard;
+			sourceTree = "<group>";
+		};
+		07302C2F1D0EE84000CAE7FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07302C361D0EE84000CAE7FD /* Charts.framework */,
+				07302C381D0EE84000CAE7FD /* Charts.framework */,
+				07302C3A1D0EE84000CAE7FD /* Charts.framework */,
+				07302C3C1D0EE84000CAE7FD /* ChartsTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		0730A4DE1CF3EFD500949058 = {
@@ -261,6 +315,7 @@
 				0730A4E31CF3EFD500949058 /* Sources */,
 				0730A4E41CF3EFD500949058 /* Frameworks */,
 				0730A4E51CF3EFD500949058 /* Resources */,
+				07302C2E1D0EE82C00CAE7FD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -340,6 +395,12 @@
 			mainGroup = 0730A4DE1CF3EFD500949058;
 			productRefGroup = 0730A4E81CF3EFD500949058 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 07302C2F1D0EE84000CAE7FD /* Products */;
+					ProjectRef = 07302C0D1D0EE78100CAE7FD /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0730A4E61CF3EFD500949058 /* salary-calc */,
@@ -348,6 +409,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		07302C361D0EE84000CAE7FD /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 07302C351D0EE84000CAE7FD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		07302C381D0EE84000CAE7FD /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 07302C371D0EE84000CAE7FD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		07302C3A1D0EE84000CAE7FD /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 07302C391D0EE84000CAE7FD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		07302C3C1D0EE84000CAE7FD /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 07302C3B1D0EE84000CAE7FD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0730A4E51CF3EFD500949058 /* Resources */ = {
