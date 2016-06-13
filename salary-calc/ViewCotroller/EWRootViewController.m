@@ -127,8 +127,75 @@ static const double kHousingFundLowValue = 1720;
     //set the pie chart view
     self.salaryPieChart.legend.enabled = NO;
     self.salaryPieChart.delegate = self;
-    
     [self.salaryPieChart setExtraOffsetsWithLeft:0.f top:50.f right:0.f bottom:50.f];
+    [self slidersValueChanged:nil];
+    [self.salaryPieChart animateWithYAxisDuration:1.4 easingOption:ChartEasingOptionEaseOutBack];
+}
+
+-(void) slidersValueChanged:(id)sender {
+    [self setDataCount:4 range:100];
+}
+
+- (void)setDataCount:(int)count range:(double)range
+{
+    NSArray* parties = @[
+                                   @"Party A", @"Party B", @"Party C", @"Party D", @"Party E", @"Party F",
+                                   @"Party G", @"Party H", @"Party I", @"Party J", @"Party K", @"Party L",
+                                   @"Party M", @"Party N", @"Party O", @"Party P", @"Party Q", @"Party R",
+                                   @"Party S", @"Party T", @"Party U", @"Party V", @"Party W", @"Party X",
+                                   @"Party Y", @"Party Z"
+                                   ];
+    double mult = range;
+    
+    NSMutableArray *yVals1 = [[NSMutableArray alloc] init];
+    
+    // IMPORTANT: In a PieChart, no values (Entry) should have the same xIndex (even if from different DataSets), since no values can be drawn above each other.
+    for (int i = 0; i < count; i++)
+    {
+        [yVals1 addObject:[[BarChartDataEntry alloc] initWithValue:(arc4random_uniform(mult) + mult / 5) xIndex:i]];
+    }
+    
+    NSMutableArray *xVals = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < count; i++)
+    {
+        [xVals addObject:parties[i % parties.count]];
+    }
+    
+    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithYVals:yVals1 label:@"Election Results"];
+    dataSet.sliceSpace = 2.0;
+    
+    // add a lot of colors
+    
+    NSMutableArray *colors = [[NSMutableArray alloc] init];
+    [colors addObjectsFromArray:ChartColorTemplates.vordiplom];
+    [colors addObjectsFromArray:ChartColorTemplates.joyful];
+    [colors addObjectsFromArray:ChartColorTemplates.colorful];
+    [colors addObjectsFromArray:ChartColorTemplates.liberty];
+    [colors addObjectsFromArray:ChartColorTemplates.pastel];
+    [colors addObject:[UIColor colorWithRed:51/255.f green:181/255.f blue:229/255.f alpha:1.f]];
+    
+    dataSet.colors = colors;
+    
+    dataSet.valueLinePart1OffsetPercentage = 0.8;
+    dataSet.valueLinePart1Length = 0.3;
+    dataSet.valueLinePart2Length = 0.4;
+    //dataSet.xValuePosition = PieChartValuePositionOutsideSlice;
+    dataSet.yValuePosition = PieChartValuePositionOutsideSlice;
+    
+    PieChartData *data = [[PieChartData alloc] initWithXVals:xVals dataSet:dataSet];
+    
+    NSNumberFormatter *pFormatter = [[NSNumberFormatter alloc] init];
+    pFormatter.numberStyle = NSNumberFormatterPercentStyle;
+    pFormatter.maximumFractionDigits = 1;
+    pFormatter.multiplier = @1.f;
+    pFormatter.percentSymbol = @" %";
+    [data setValueFormatter:pFormatter];
+    [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:11.f]];
+    [data setValueTextColor:UIColor.blackColor];
+    
+    self.salaryPieChart.data = data;
+    [self.salaryPieChart highlightValues:nil];
 }
 
 - (void)setupPieChartView:(PieChartView *)chartView

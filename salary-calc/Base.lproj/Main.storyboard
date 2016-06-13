@@ -91,7 +91,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" keyboardAppearance="alert" returnKeyType="done"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yf2-uv-9Ez" customClass="PieChartView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yf2-uv-9Ez" customClass="PieChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="373" width="600" height="177"/>
                             </view>
                         </subviews>

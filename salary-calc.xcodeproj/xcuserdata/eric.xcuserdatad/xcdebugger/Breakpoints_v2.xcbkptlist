@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "salary-calc/ViewCotroller/EWRootViewController.m"
-            timestampString = "487522041.149809"
+            timestampString = "487523585.025309"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
             landmarkName = "-textFieldShouldReturn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,6 +42,22 @@
             startingLineNumber = "102"
             endingLineNumber = "102"
             landmarkName = "-calc:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "salary-calc/ViewCotroller/EWRootViewController.m"
+            timestampString = "487523782.527626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
+            landmarkName = "-setupPieChartView:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
