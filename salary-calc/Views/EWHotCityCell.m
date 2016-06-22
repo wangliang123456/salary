@@ -18,4 +18,8 @@
     [super setSelected:selected animated:animated];
 }
 
+- (IBAction)hotCitySelected:(id)sender {
+    
+}
+
 @end

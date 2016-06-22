@@ -20,28 +20,46 @@
                         <state key="normal" title="上海">
                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="hotCitySelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="sPZ-ES-hdc"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-mz-4br">
                         <rect key="frame" x="75" y="23" width="30" height="30"/>
                         <state key="normal" title="北京">
                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="hotCitySelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DTl-4N-cDT"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qE1-oX-hrE">
                         <rect key="frame" x="289" y="23" width="30" height="30"/>
                         <state key="normal" title="广州"/>
+                        <connections>
+                            <action selector="hotCitySelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1Ub-t8-KBC"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pR-0W-mIu">
                         <rect key="frame" x="182" y="77" width="30" height="30"/>
                         <state key="normal" title="杭州"/>
+                        <connections>
+                            <action selector="hotCitySelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vVR-3E-6vE"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fR7-I2-jmM">
                         <rect key="frame" x="289" y="77" width="30" height="30"/>
                         <state key="normal" title="苏州"/>
+                        <connections>
+                            <action selector="hotCitySelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TpR-Nk-nj7"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBg-LB-mEe">
                         <rect key="frame" x="75" y="77" width="30" height="30"/>
                         <state key="normal" title="深圳"/>
+                        <connections>
+                            <action selector="hotCitySelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7gZ-aj-SSO"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
