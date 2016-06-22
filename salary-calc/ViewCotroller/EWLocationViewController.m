@@ -99,6 +99,7 @@ static const CGFloat kHotCityCellHeight = 130;
         NSArray* list = [[NSBundle mainBundle] loadNibNamed:@"EWHotCityCell" owner:self options:nil];
         hotCell = list.firstObject;
         hotCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        hotCell.delegate = self;
         return hotCell;
     } else {
         NSString* text = @"";
@@ -166,4 +167,11 @@ static const CGFloat kHotCityCellHeight = 130;
     [self dismissViewControllerAnimated:true completion:nil];
 }
 #pragma mark table view delegate end
+
+-(void) hotCityDidSelected:(id) sender {
+    UIButton *btn = (UIButton*) sender;
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:btn.titleLabel.text forKey:kSelectedCityKey];
+    [self dismissViewControllerAnimated:true completion:nil];
+}
 @end

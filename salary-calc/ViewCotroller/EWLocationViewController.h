@@ -11,7 +11,7 @@
 #import "BaseViewController.h"
 #import "EWHotCityCell.h"
 
-@interface EWLocationViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
+@interface EWLocationViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource,HotCityDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *contentView;
 
 @end
