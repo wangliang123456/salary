@@ -12,6 +12,11 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    [self renderView];
+}
+
+-(void) renderView {
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -19,7 +24,9 @@
 }
 
 - (IBAction)hotCitySelected:(id)sender {
-    
+    if(self.delegate) {
+        [self.delegate hotCityDidSelected:sender];
+    }
 }
 
 @end
