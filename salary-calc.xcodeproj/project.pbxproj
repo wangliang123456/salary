@@ -11,8 +11,6 @@
 		0725FAD41CF5D68B007A6088 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725FAD31CF5D68B007A6088 /* BaseViewController.m */; };
 		0725FAD81CF5DAF5007A6088 /* EWHotCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0725FAD61CF5DAF5007A6088 /* EWHotCityCell.m */; };
 		0725FAD91CF5DAF5007A6088 /* EWHotCityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0725FAD71CF5DAF5007A6088 /* EWHotCityCell.xib */; };
-		07302C491D0EE8FC00CAE7FD /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07302C361D0EE84000CAE7FD /* Charts.framework */; };
-		07302C4A1D0EE8FC00CAE7FD /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07302C361D0EE84000CAE7FD /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0730A4EC1CF3EFD500949058 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A4EB1CF3EFD500949058 /* main.m */; };
 		0730A4EF1CF3EFD500949058 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A4EE1CF3EFD500949058 /* AppDelegate.m */; };
 		0730A4F51CF3EFD500949058 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0730A4F31CF3EFD500949058 /* Main.storyboard */; };
@@ -30,41 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		07302C351D0EE84000CAE7FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07302C0D1D0EE78100CAE7FD /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
-			remoteInfo = "Charts-iOS";
-		};
-		07302C371D0EE84000CAE7FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07302C0D1D0EE78100CAE7FD /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
-			remoteInfo = "Charts-TV";
-		};
-		07302C391D0EE84000CAE7FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07302C0D1D0EE78100CAE7FD /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 65B3F5BF1C7370BE000983D0;
-			remoteInfo = "Charts-OSX";
-		};
-		07302C3B1D0EE84000CAE7FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07302C0D1D0EE78100CAE7FD /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
-			remoteInfo = ChartsTests;
-		};
-		07302C4B1D0EE8FC00CAE7FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07302C0D1D0EE78100CAE7FD /* Charts.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
-			remoteInfo = "Charts-iOS";
-		};
 		0730A5011CF3EFD500949058 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0730A4DF1CF3EFD500949058 /* Project object */;
@@ -88,7 +51,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				07302C4A1D0EE8FC00CAE7FD /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,7 +65,6 @@
 		0725FAD51CF5DAF5007A6088 /* EWHotCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWHotCityCell.h; sourceTree = "<group>"; };
 		0725FAD61CF5DAF5007A6088 /* EWHotCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWHotCityCell.m; sourceTree = "<group>"; };
 		0725FAD71CF5DAF5007A6088 /* EWHotCityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EWHotCityCell.xib; sourceTree = "<group>"; };
-		07302C0D1D0EE78100CAE7FD /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/Charts-master/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 		0730A4E71CF3EFD500949058 /* salary-calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "salary-calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0730A4EB1CF3EFD500949058 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0730A4ED1CF3EFD500949058 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -139,7 +100,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0711E7171CF7DC8A00B6D752 /* GoogleMobileAds.framework in Frameworks */,
-				07302C491D0EE8FC00CAE7FD /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +123,6 @@
 		0711E7151CF7DC2F00B6D752 /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				07302C0D1D0EE78100CAE7FD /* Charts.xcodeproj */,
 				0711E7161CF7DC8A00B6D752 /* GoogleMobileAds.framework */,
 			);
 			path = libs;
@@ -176,17 +135,6 @@
 				0730A4F81CF3EFD500949058 /* LaunchScreen.storyboard */,
 			);
 			path = storyboard;
-			sourceTree = "<group>";
-		};
-		07302C2F1D0EE84000CAE7FD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				07302C361D0EE84000CAE7FD /* Charts.framework */,
-				07302C381D0EE84000CAE7FD /* Charts.framework */,
-				07302C3A1D0EE84000CAE7FD /* Charts.framework */,
-				07302C3C1D0EE84000CAE7FD /* ChartsTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		0730A4DE1CF3EFD500949058 = {
@@ -331,7 +279,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				07302C4C1D0EE8FC00CAE7FD /* PBXTargetDependency */,
 			);
 			name = "salary-calc";
 			productName = "salary-calc";
@@ -385,6 +332,7 @@
 				TargetAttributes = {
 					0730A4E61CF3EFD500949058 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6FQCK6BVF7;
 					};
 					0730A4FF1CF3EFD500949058 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -407,12 +355,6 @@
 			mainGroup = 0730A4DE1CF3EFD500949058;
 			productRefGroup = 0730A4E81CF3EFD500949058 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 07302C2F1D0EE84000CAE7FD /* Products */;
-					ProjectRef = 07302C0D1D0EE78100CAE7FD /* Charts.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				0730A4E61CF3EFD500949058 /* salary-calc */,
@@ -421,37 +363,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		07302C361D0EE84000CAE7FD /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 07302C351D0EE84000CAE7FD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		07302C381D0EE84000CAE7FD /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 07302C371D0EE84000CAE7FD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		07302C3A1D0EE84000CAE7FD /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 07302C391D0EE84000CAE7FD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		07302C3C1D0EE84000CAE7FD /* ChartsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ChartsTests.xctest;
-			remoteRef = 07302C3B1D0EE84000CAE7FD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0730A4E51CF3EFD500949058 /* Resources */ = {
@@ -519,11 +430,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		07302C4C1D0EE8FC00CAE7FD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Charts-iOS";
-			targetProxy = 07302C4B1D0EE8FC00CAE7FD /* PBXContainerItemProxy */;
-		};
 		0730A5021CF3EFD500949058 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0730A4E61CF3EFD500949058 /* salary-calc */;
@@ -646,12 +552,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6FQCK6BVF7;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/salary-calc/libs",
 				);
 				INFOPLIST_FILE = "salary-calc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.salary-calc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -663,12 +571,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6FQCK6BVF7;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/salary-calc/libs",
 				);
 				INFOPLIST_FILE = "salary-calc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.salary-calc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
