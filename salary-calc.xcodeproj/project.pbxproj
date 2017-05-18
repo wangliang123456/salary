@@ -25,6 +25,7 @@
 		0730A52F1CF41C7A00949058 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0730A52E1CF41C7A00949058 /* city.plist */; };
 		078449EC1CF457E100A2460C /* CityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078449EB1CF457E100A2460C /* CityManager.m */; };
 		078449F01CF4580200A2460C /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 078449EF1CF4580200A2460C /* City.m */; };
+		C19E77AE8C98A39ABDF909F8 /* Pods_salary_calc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57528E0EFF5A8CF314453031 /* Pods_salary_calc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,9 @@
 		078449EB1CF457E100A2460C /* CityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityManager.m; sourceTree = "<group>"; };
 		078449EE1CF4580200A2460C /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
 		078449EF1CF4580200A2460C /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		57528E0EFF5A8CF314453031 /* Pods_salary_calc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_salary_calc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A94CDB078068F27413FB547A /* Pods-salary-calc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-salary-calc.release.xcconfig"; path = "Pods/Target Support Files/Pods-salary-calc/Pods-salary-calc.release.xcconfig"; sourceTree = "<group>"; };
+		FB4771875733DDE963F9E91E /* Pods-salary-calc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-salary-calc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-salary-calc/Pods-salary-calc.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0711E7171CF7DC8A00B6D752 /* GoogleMobileAds.framework in Frameworks */,
+				C19E77AE8C98A39ABDF909F8 /* Pods_salary_calc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +149,8 @@
 				0730A5031CF3EFD500949058 /* salary-calcTests */,
 				0730A50E1CF3EFD500949058 /* salary-calcUITests */,
 				0730A4E81CF3EFD500949058 /* Products */,
+				C157F3A850BB400353BCBAEA /* Pods */,
+				91C935268E1312F9BF3F1BEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,6 +271,23 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		91C935268E1312F9BF3F1BEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57528E0EFF5A8CF314453031 /* Pods_salary_calc.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C157F3A850BB400353BCBAEA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB4771875733DDE963F9E91E /* Pods-salary-calc.debug.xcconfig */,
+				A94CDB078068F27413FB547A /* Pods-salary-calc.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,10 +295,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0730A5141CF3EFD500949058 /* Build configuration list for PBXNativeTarget "salary-calc" */;
 			buildPhases = (
+				9A4185322512F19897E986BE /* [CP] Check Pods Manifest.lock */,
 				0730A4E31CF3EFD500949058 /* Sources */,
 				0730A4E41CF3EFD500949058 /* Frameworks */,
 				0730A4E51CF3EFD500949058 /* Resources */,
 				07302C4D1D0EE8FD00CAE7FD /* Embed Frameworks */,
+				3F0C1767D10DECC183054FEF /* [CP] Embed Pods Frameworks */,
+				3D5FEA72FC2FA7C6B8343481 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -392,6 +419,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D5FEA72FC2FA7C6B8343481 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-salary-calc/Pods-salary-calc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F0C1767D10DECC183054FEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-salary-calc/Pods-salary-calc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A4185322512F19897E986BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0730A4E31CF3EFD500949058 /* Sources */ = {
@@ -550,6 +625,7 @@
 		};
 		0730A5151CF3EFD500949058 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB4771875733DDE963F9E91E /* Pods-salary-calc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6FQCK6BVF7;
@@ -569,6 +645,7 @@
 		};
 		0730A5161CF3EFD500949058 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A94CDB078068F27413FB547A /* Pods-salary-calc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6FQCK6BVF7;
