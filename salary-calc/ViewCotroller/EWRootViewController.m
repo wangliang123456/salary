@@ -129,10 +129,10 @@ static const double kHousingFundLowValue = 1720;
     pieCharView = [[PieChartView alloc] initWithFrame:CGRectZero];
     pieCharView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:pieCharView];
-    NSLayoutConstraint *pieChartHeight = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0 constant:60];
+    NSLayoutConstraint *pieChartHeight = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0 constant:120];
     NSLayoutConstraint *pieChartWidth = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0];
     NSLayoutConstraint *pieChartLeading = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0];
-    NSLayoutConstraint *pieChartBottom = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-60];
+    NSLayoutConstraint *pieChartBottom = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-120];
         [self.view addConstraints:@[pieChartHeight,pieChartWidth,pieChartLeading,pieChartBottom]];
     pieCharView.backgroundColor = [UIColor purpleColor];
     pieCharView.legend.enabled = NO;
@@ -153,24 +153,20 @@ static const double kHousingFundLowValue = 1720;
                 ];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self setDataCount:4 range:100];
+    [self setupPieChartView:pieCharView];
 }
 
 - (void)setDataCount:(int)count range:(double)range
 {
     double mult = range;
-    
     NSMutableArray *entries = [[NSMutableArray alloc] init];
-    
     for (int i = 0; i < count; i++)
     {
         [entries addObject:[[PieChartDataEntry alloc] initWithValue:(arc4random_uniform(mult) + mult / 5) label:parties[i % parties.count]]];
     }
-    
     PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:entries label:@"Election Results"];
     dataSet.sliceSpace = 2.0;
-    
     // add a lot of colors
-    
     NSMutableArray *colors = [[NSMutableArray alloc] init];
     [colors addObjectsFromArray:ChartColorTemplates.vordiplom];
     [colors addObjectsFromArray:ChartColorTemplates.joyful];
@@ -178,17 +174,14 @@ static const double kHousingFundLowValue = 1720;
     [colors addObjectsFromArray:ChartColorTemplates.liberty];
     [colors addObjectsFromArray:ChartColorTemplates.pastel];
     [colors addObject:[UIColor colorWithRed:51/255.f green:181/255.f blue:229/255.f alpha:1.f]];
-    
     dataSet.colors = colors;
-    
     dataSet.valueLinePart1OffsetPercentage = 0.8;
     dataSet.valueLinePart1Length = 0.2;
     dataSet.valueLinePart2Length = 0.4;
-    //dataSet.xValuePosition = PieChartValuePositionOutsideSlice;
+    dataSet.xValuePosition = PieChartValuePositionOutsideSlice;
     dataSet.yValuePosition = PieChartValuePositionOutsideSlice;
     
     PieChartData *data = [[PieChartData alloc] initWithDataSet:dataSet];
-    
     NSNumberFormatter *pFormatter = [[NSNumberFormatter alloc] init];
     pFormatter.numberStyle = NSNumberFormatterPercentStyle;
     pFormatter.maximumFractionDigits = 1;
@@ -197,9 +190,53 @@ static const double kHousingFundLowValue = 1720;
     [data setValueFormatter:[[ChartDefaultValueFormatter alloc] initWithFormatter:pFormatter]];
     [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:11.f]];
     [data setValueTextColor:UIColor.blackColor];
-    
     pieCharView.data = data;
     [pieCharView highlightValues:nil];
+}
+
+- (void)setupPieChartView:(PieChartView *)chartView
+{
+    chartView.usePercentValuesEnabled = YES;
+    chartView.drawSlicesUnderHoleEnabled = NO;
+    chartView.holeRadiusPercent = 0.58;
+    chartView.transparentCircleRadiusPercent = 0.61;
+    chartView.chartDescription.enabled = NO;
+    [chartView setExtraOffsetsWithLeft:5.f top:10.f right:5.f bottom:5.f];
+    
+    chartView.drawCenterTextEnabled = YES;
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+    
+    NSMutableAttributedString *centerText = [[NSMutableAttributedString alloc] initWithString:@"Charts\nby Daniel Cohen Gindi"];
+    [centerText setAttributes:@{
+                                NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:13.f],
+                                NSParagraphStyleAttributeName: paragraphStyle
+                                } range:NSMakeRange(0, centerText.length)];
+    [centerText addAttributes:@{
+                                NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:11.f],
+                                NSForegroundColorAttributeName: UIColor.grayColor
+                                } range:NSMakeRange(10, centerText.length - 10)];
+    [centerText addAttributes:@{
+                                NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-LightItalic" size:11.f],
+                                NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.f green:181/255.f blue:229/255.f alpha:1.f]
+                                } range:NSMakeRange(centerText.length - 19, 19)];
+    chartView.centerAttributedText = centerText;
+    
+    chartView.drawHoleEnabled = YES;
+    chartView.rotationAngle = 0.0;
+    chartView.rotationEnabled = YES;
+    chartView.highlightPerTapEnabled = YES;
+    
+    ChartLegend *l = chartView.legend;
+    l.horizontalAlignment = ChartLegendHorizontalAlignmentRight;
+    l.verticalAlignment = ChartLegendVerticalAlignmentTop;
+    l.orientation = ChartLegendOrientationVertical;
+    l.drawInside = NO;
+    l.xEntrySpace = 7.0;
+    l.yEntrySpace = 0.0;
+    l.yOffset = 0.0;
 }
 
 #pragma mark - ChartViewDelegate
