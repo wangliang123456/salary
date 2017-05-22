@@ -13,9 +13,7 @@
 		0725FAD91CF5DAF5007A6088 /* EWHotCityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0725FAD71CF5DAF5007A6088 /* EWHotCityCell.xib */; };
 		0730A4EC1CF3EFD500949058 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A4EB1CF3EFD500949058 /* main.m */; };
 		0730A4EF1CF3EFD500949058 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A4EE1CF3EFD500949058 /* AppDelegate.m */; };
-		0730A4F51CF3EFD500949058 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0730A4F31CF3EFD500949058 /* Main.storyboard */; };
 		0730A4F71CF3EFD500949058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0730A4F61CF3EFD500949058 /* Assets.xcassets */; };
-		0730A4FA1CF3EFD500949058 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0730A4F81CF3EFD500949058 /* LaunchScreen.storyboard */; };
 		0730A5051CF3EFD500949058 /* salary_calcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A5041CF3EFD500949058 /* salary_calcTests.m */; };
 		0730A5101CF3EFD500949058 /* salary_calcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A50F1CF3EFD500949058 /* salary_calcUITests.m */; };
 		0730A5231CF3F75900949058 /* EWNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A5221CF3F75900949058 /* EWNaviViewController.m */; };
@@ -26,6 +24,8 @@
 		078449EC1CF457E100A2460C /* CityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078449EB1CF457E100A2460C /* CityManager.m */; };
 		078449F01CF4580200A2460C /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 078449EF1CF4580200A2460C /* City.m */; };
 		C19E77AE8C98A39ABDF909F8 /* Pods_salary_calc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57528E0EFF5A8CF314453031 /* Pods_salary_calc.framework */; };
+		EFFCE3131ED2B3B100A35DF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFCE3111ED2B3B100A35DF9 /* LaunchScreen.storyboard */; };
+		EFFCE3141ED2B3B100A35DF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFCE3121ED2B3B100A35DF9 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,9 +70,7 @@
 		0730A4EB1CF3EFD500949058 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0730A4ED1CF3EFD500949058 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0730A4EE1CF3EFD500949058 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0730A4F41CF3EFD500949058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0730A4F61CF3EFD500949058 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0730A4F91CF3EFD500949058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0730A4FB1CF3EFD500949058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0730A5001CF3EFD500949058 /* salary-calcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "salary-calcTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0730A5041CF3EFD500949058 /* salary_calcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = salary_calcTests.m; sourceTree = "<group>"; };
@@ -95,6 +93,8 @@
 		078449EF1CF4580200A2460C /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 		57528E0EFF5A8CF314453031 /* Pods_salary_calc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_salary_calc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94CDB078068F27413FB547A /* Pods-salary-calc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-salary-calc.release.xcconfig"; path = "Pods/Target Support Files/Pods-salary-calc/Pods-salary-calc.release.xcconfig"; sourceTree = "<group>"; };
+		EFFCE3111ED2B3B100A35DF9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFFCE3121ED2B3B100A35DF9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FB4771875733DDE963F9E91E /* Pods-salary-calc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-salary-calc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-salary-calc/Pods-salary-calc.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,15 +133,6 @@
 			path = libs;
 			sourceTree = "<group>";
 		};
-		0711E7181CF7E0BB00B6D752 /* storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				0730A4F31CF3EFD500949058 /* Main.storyboard */,
-				0730A4F81CF3EFD500949058 /* LaunchScreen.storyboard */,
-			);
-			path = storyboard;
-			sourceTree = "<group>";
-		};
 		0730A4DE1CF3EFD500949058 = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +158,7 @@
 		0730A4E91CF3EFD500949058 /* salary-calc */ = {
 			isa = PBXGroup;
 			children = (
-				0711E7181CF7E0BB00B6D752 /* storyboard */,
+				EFFCE3101ED2B39100A35DF9 /* StoryBorads */,
 				0711E7151CF7DC2F00B6D752 /* libs */,
 				078449ED1CF457F100A2460C /* Entity */,
 				078449E91CF457C800A2460C /* Manager */,
@@ -288,6 +279,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EFFCE3101ED2B39100A35DF9 /* StoryBorads */ = {
+			isa = PBXGroup;
+			children = (
+				EFFCE3111ED2B3B100A35DF9 /* LaunchScreen.storyboard */,
+				EFFCE3121ED2B3B100A35DF9 /* Main.storyboard */,
+			);
+			path = StoryBorads;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -396,11 +396,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0730A4FA1CF3EFD500949058 /* LaunchScreen.storyboard in Resources */,
 				0725FAD91CF5DAF5007A6088 /* EWHotCityCell.xib in Resources */,
+				EFFCE3141ED2B3B100A35DF9 /* Main.storyboard in Resources */,
+				EFFCE3131ED2B3B100A35DF9 /* LaunchScreen.storyboard in Resources */,
 				0730A4F71CF3EFD500949058 /* Assets.xcassets in Resources */,
 				0730A52F1CF41C7A00949058 /* city.plist in Resources */,
-				0730A4F51CF3EFD500949058 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +463,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -516,27 +516,6 @@
 			targetProxy = 0730A50C1CF3EFD500949058 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		0730A4F31CF3EFD500949058 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0730A4F41CF3EFD500949058 /* Base */,
-			);
-			name = Main.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		0730A4F81CF3EFD500949058 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0730A4F91CF3EFD500949058 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0730A5121CF3EFD500949058 /* Debug */ = {
