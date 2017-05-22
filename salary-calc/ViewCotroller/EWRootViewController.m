@@ -37,6 +37,8 @@ static const double kHousingFundLowValue = 1720;
 {
     UIBarButtonItem* left;
     UIBarButtonItem* right;
+    PieChartView *pieCharView;
+    NSArray *parties;
 }
 
 @property (weak, nonatomic) IBOutlet DFPBannerView *bannerView;
@@ -124,15 +126,95 @@ static const double kHousingFundLowValue = 1720;
     self.navigationItem.rightBarButtonItem = right;
     self.salaryValue.delegate = self;
     //set the pie chart view
-}
-
--(void) slidersValueChanged:(id)sender {
+    pieCharView = [[PieChartView alloc] initWithFrame:CGRectZero];
+    pieCharView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:pieCharView];
+    NSLayoutConstraint *pieChartHeight = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0 constant:60];
+    NSLayoutConstraint *pieChartWidth = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0];
+    NSLayoutConstraint *pieChartLeading = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0];
+    NSLayoutConstraint *pieChartBottom = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-60];
+        [self.view addConstraints:@[pieChartHeight,pieChartWidth,pieChartLeading,pieChartBottom]];
+    pieCharView.backgroundColor = [UIColor purpleColor];
+    pieCharView.legend.enabled = NO;
+    pieCharView.delegate = self;
+    
+    [pieCharView setExtraOffsetsWithLeft:20.f top:0.f right:20.f bottom:0.f];
+    
+//    pieCharView.val
+//    [self slidersValueChanged:nil];
+    
+    [pieCharView animateWithYAxisDuration:1.4 easingOption:ChartEasingOptionEaseOutBack];
+    parties = @[
+                @"Party A", @"Party B", @"Party C", @"Party D", @"Party E", @"Party F",
+                @"Party G", @"Party H", @"Party I", @"Party J", @"Party K", @"Party L",
+                @"Party M", @"Party N", @"Party O", @"Party P", @"Party Q", @"Party R",
+                @"Party S", @"Party T", @"Party U", @"Party V", @"Party W", @"Party X",
+                @"Party Y", @"Party Z"
+                ];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     [self setDataCount:4 range:100];
 }
 
 - (void)setDataCount:(int)count range:(double)range
 {
+    double mult = range;
     
+    NSMutableArray *entries = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < count; i++)
+    {
+        [entries addObject:[[PieChartDataEntry alloc] initWithValue:(arc4random_uniform(mult) + mult / 5) label:parties[i % parties.count]]];
+    }
+    
+    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:entries label:@"Election Results"];
+    dataSet.sliceSpace = 2.0;
+    
+    // add a lot of colors
+    
+    NSMutableArray *colors = [[NSMutableArray alloc] init];
+    [colors addObjectsFromArray:ChartColorTemplates.vordiplom];
+    [colors addObjectsFromArray:ChartColorTemplates.joyful];
+    [colors addObjectsFromArray:ChartColorTemplates.colorful];
+    [colors addObjectsFromArray:ChartColorTemplates.liberty];
+    [colors addObjectsFromArray:ChartColorTemplates.pastel];
+    [colors addObject:[UIColor colorWithRed:51/255.f green:181/255.f blue:229/255.f alpha:1.f]];
+    
+    dataSet.colors = colors;
+    
+    dataSet.valueLinePart1OffsetPercentage = 0.8;
+    dataSet.valueLinePart1Length = 0.2;
+    dataSet.valueLinePart2Length = 0.4;
+    //dataSet.xValuePosition = PieChartValuePositionOutsideSlice;
+    dataSet.yValuePosition = PieChartValuePositionOutsideSlice;
+    
+    PieChartData *data = [[PieChartData alloc] initWithDataSet:dataSet];
+    
+    NSNumberFormatter *pFormatter = [[NSNumberFormatter alloc] init];
+    pFormatter.numberStyle = NSNumberFormatterPercentStyle;
+    pFormatter.maximumFractionDigits = 1;
+    pFormatter.multiplier = @1.f;
+    pFormatter.percentSymbol = @" %";
+    [data setValueFormatter:[[ChartDefaultValueFormatter alloc] initWithFormatter:pFormatter]];
+    [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:11.f]];
+    [data setValueTextColor:UIColor.blackColor];
+    
+    pieCharView.data = data;
+    [pieCharView highlightValues:nil];
+}
+
+#pragma mark - ChartViewDelegate
+- (void)chartValueSelected:(ChartViewBase * __nonnull)chartView entry:(ChartDataEntry * __nonnull)entry highlight:(ChartHighlight * __nonnull)highlight
+{
+    NSLog(@"chartValueSelected");
+}
+
+- (void)chartValueNothingSelected:(ChartViewBase * __nonnull)chartView
+{
+    NSLog(@"chartValueNothingSelected");
+}
+
+-(void) slidersValueChanged:(id)sender {
+    [self setDataCount:4 range:100];
 }
 
 -(void) viewWillAppear:(BOOL)animated {
