@@ -134,7 +134,6 @@ static const double kHousingFundLowValue = 1720;
     NSLayoutConstraint *pieChartLeading = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0];
     NSLayoutConstraint *pieChartBottom = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-120];
         [self.view addConstraints:@[pieChartHeight,pieChartWidth,pieChartLeading,pieChartBottom]];
-    pieCharView.backgroundColor = [UIColor purpleColor];
     pieCharView.legend.enabled = NO;
     pieCharView.delegate = self;
     
@@ -192,6 +191,7 @@ static const double kHousingFundLowValue = 1720;
     [data setValueTextColor:UIColor.blackColor];
     pieCharView.data = data;
     [pieCharView highlightValues:nil];
+    [pieCharView animateWithYAxisDuration:1.4 easingOption:ChartEasingOptionEaseOutBack];
 }
 
 - (void)setupPieChartView:(PieChartView *)chartView
