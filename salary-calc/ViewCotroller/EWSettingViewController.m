@@ -102,6 +102,7 @@ static const CGFloat kHeaderViewHieght = 25;
         }
     } else {
         contentCell.textLabel.text = @"软件版本";
+        contentCell.selectionStyle = UITableViewCellSelectionStyleNone;
         UILabel* version = [[UILabel alloc] initWithFrame:CGRectZero];
         version.translatesAutoresizingMaskIntoConstraints = false;
         [contentCell.contentView addSubview:version];
