@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationBar.barStyle = UIBarStyleDefault;
+    self.navigationBar.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {
