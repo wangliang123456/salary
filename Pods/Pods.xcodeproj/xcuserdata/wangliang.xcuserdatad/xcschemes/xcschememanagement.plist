@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-salary-calc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,6 +42,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>00103D6C821BE85971C563025527BA5D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>47D6CA1DB99796279033702A1C025450</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>683FA93B40B2E388EB44CBEFF725ED29</key>
 		<dict>
 			<key>primary</key>
@@ -53,11 +68,6 @@
 			<true/>
 		</dict>
 		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E2364576BCBA7A7A9D04A087F8BB9F7A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

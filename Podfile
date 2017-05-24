@@ -2,7 +2,8 @@ target 'salary-calc' do
   pod 'AFNetworking', '~> 3.0'
   pod 'Charts'
   pod 'ChartsRealm'
-  
+  pod 'Firebase/Core'
+  pod 'Firebase/AdMob'
   post_install do |installer|
     installer.pods_project.targets.each do |target|
       target.build_configurations.each do |config|
