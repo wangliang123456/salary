@@ -41,7 +41,7 @@ static const CGFloat kHeaderViewHieght = 25;
 
 #pragma mark init view
 -(void) initView {
-    right = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneSetting)];
+    right = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(doneSetting)];
     self.navigationItem.rightBarButtonItem = right;
     self.contentView.delegate = self;
     self.contentView.dataSource = self;
