@@ -125,6 +125,8 @@ static const double kHousingFundLowValue = 1720;
     self.navigationItem.leftBarButtonItem = left;
     self.navigationItem.rightBarButtonItem = right;
     self.salaryValue.delegate = self;
+    self.salaryValue.layer.borderWidth = 0.5;
+    self.salaryValue.layer.borderColor = [UIColor orangeColor].CGColor;
     //set the pie chart view
     pieCharView = [[PieChartView alloc] initWithFrame:CGRectZero];
     pieCharView.translatesAutoresizingMaskIntoConstraints = NO;
