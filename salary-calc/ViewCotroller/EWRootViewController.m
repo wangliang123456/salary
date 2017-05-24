@@ -146,7 +146,7 @@ static const double kHousingFundLowValue = 1720;
                 @"Party Y", @"Party Z"
                 ];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    [self setDataCount:4 range:100];
+    [self setDataCount:6 range:100];
     [self setupPieChartView:pieCharView];
 }
 
