@@ -64,6 +64,7 @@
                                     <segment title="最低额度"/>
                                     <segment title="自定义额度"/>
                                 </segments>
+                                <color key="tintColor" red="0.95294117649999999" green="0.4431372549" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="socialInsuranceBaseValueChange:" destination="bzY-tZ-Ag7" eventType="valueChanged" id="vDR-1K-3eS"/>
                                 </connections>
@@ -81,6 +82,7 @@
                                     <segment title="最低额度"/>
                                     <segment title="自定义额度"/>
                                 </segments>
+                                <color key="tintColor" red="0.95294117649999999" green="0.4431372549" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="providentFundValueChange:" destination="bzY-tZ-Ag7" eventType="valueChanged" id="4At-RW-lTd"/>
                                 </connections>
