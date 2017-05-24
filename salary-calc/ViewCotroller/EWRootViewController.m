@@ -252,7 +252,11 @@ static const double kHousingFundLowValue = 1720;
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     NSUserDefaults* userDefault = [NSUserDefaults standardUserDefaults];
-    left.title = [userDefault valueForKey:kSelectedCityKey];
+    NSString *title = [userDefault valueForKey:kSelectedCityKey];
+    if (title.length == 0) {
+        title = @"北京";
+    }
+    left.title = title;
 }
 
 - (void)didReceiveMemoryWarning {
