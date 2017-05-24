@@ -213,7 +213,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="uRS-5K-n5k">
-                                <rect key="frame" x="0.0" y="50" width="414" height="636"/>
+                                <rect key="frame" x="0.0" y="10" width="414" height="676"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csP-wn-NNx" customClass="DFPBannerView">
@@ -228,7 +228,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="grs-gd-b17" firstAttribute="top" secondItem="uRS-5K-n5k" secondAttribute="bottom" constant="50" id="6Mj-gw-7zK"/>
-                            <constraint firstItem="uRS-5K-n5k" firstAttribute="centerY" secondItem="37w-Vw-sBh" secondAttribute="centerY" id="EKP-sR-FEp"/>
+                            <constraint firstItem="uRS-5K-n5k" firstAttribute="centerY" secondItem="37w-Vw-sBh" secondAttribute="centerY" constant="-20" id="EKP-sR-FEp"/>
                             <constraint firstItem="uRS-5K-n5k" firstAttribute="width" secondItem="37w-Vw-sBh" secondAttribute="width" id="Osv-Va-1Ri"/>
                             <constraint firstItem="csP-wn-NNx" firstAttribute="centerX" secondItem="37w-Vw-sBh" secondAttribute="centerX" id="dmj-Bf-x0I"/>
                             <constraint firstItem="uRS-5K-n5k" firstAttribute="centerX" secondItem="37w-Vw-sBh" secondAttribute="centerX" id="usu-GR-gc0"/>
