@@ -32,7 +32,7 @@ static const CGFloat kHotCityCellHeight = 130;
 }
 
 -(void) initView {
-    cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
+    cancel = [[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancel:)];
     self.navigationItem.leftBarButtonItem = cancel;
 }
 
