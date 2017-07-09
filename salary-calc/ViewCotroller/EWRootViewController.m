@@ -18,7 +18,7 @@ static const double kUnemploymentInsuranceCompanyRate = 0.01;
 static const double kUnemploymentInsurancePersonalRate = 0.002;
 static const double kUnemploymentInsuranceValie = 2585;
 //工伤保险
-static const double kEmploymentInjuryInsuranceCompanyRate = 0.005;
+static const double kEmploymentInjuryInsuranceCompanyRate = 0.01;
 static const double kEmploymentInjuryInsuranceLowValue = 3878;
 //生育保险
 static const double kChildbirthInsuranceCompanyRate = 0.008;
@@ -96,7 +96,7 @@ static NSString *kCenterText = @"税后";
     employmentInjuryInsurancePersonalValue = 0;
     employmentInjuryInsuranceCompanyValue = salary * kEmploymentInjuryInsuranceCompanyRate;
     //医疗保险
-    medicalInsurancePersoalValue = salary * kMedicalInsurancePersonalRate;
+    medicalInsurancePersoalValue = salary * kMedicalInsurancePersonalRate + 3;
     medicalInsuranceCompanyValue = salary * kMedicalInsuranceCompanyRate;
     //生育险
     childbirthInsurancePersonalValue = 0;
@@ -152,19 +152,14 @@ static NSString *kCenterText = @"税后";
                 @"Party Y", @"Party Z"
                 ];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    [self setDataCount:5 range:100];
+    NSArray *dataArray = @[@(0),@(0),@(0),@(0),@(0)];
+    [self setDataSet:dataArray];
     [self setupPieChartView:pieCharView];
 }
 
-- (void)setDataCount:(int)count range:(double)range
+- (void)setDataSet:(NSArray *) dataArray
 {
-    double mult = range;
-    NSMutableArray *entries = [[NSMutableArray alloc] init];
-    for (int i = 0; i < count; i++)
-    {
-        [entries addObject:[[PieChartDataEntry alloc] initWithValue:(arc4random_uniform(mult) + mult / 5) label:parties[i % parties.count]]];
-    }
-    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:entries label:@"Election Results"];
+    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:dataArray label:@"Election Results"];
     dataSet.sliceSpace = 2.0;
     // add a lot of colors
     NSMutableArray *colors = [[NSMutableArray alloc] init];
@@ -175,7 +170,7 @@ static NSString *kCenterText = @"税后";
     [colors addObjectsFromArray:ChartColorTemplates.pastel];
     [colors addObject:[UIColor colorWithRed:51/255.f green:181/255.f blue:229/255.f alpha:1.f]];
     dataSet.colors = colors;
-    dataSet.valueLinePart1OffsetPercentage = 0.8;
+    dataSet.valueLinePart1OffsetPercentage = 0.5;
     dataSet.valueLinePart1Length = 0.2;
     dataSet.valueLinePart2Length = 0.4;
     dataSet.xValuePosition = PieChartValuePositionOutsideSlice;
@@ -234,7 +229,7 @@ static NSString *kCenterText = @"税后";
 }
 
 -(void) slidersValueChanged:(id)sender {
-    [self setDataCount:4 range:100];
+//    [self setDataCount:4 range:100];
 }
 
 -(void) viewWillAppear:(BOOL)animated {
