@@ -106,6 +106,8 @@ static NSString *kCenterText = @"税后";
     housingFundCompanyValue = salary * kHousingFundCompanyRate;
     finalSalary = originSalary - endowmentInsurancePersonalValue - unemploymentInsurancePersonalValue - employmentInjuryInsurancePersonalValue - medicalInsurancePersoalValue - childbirthInsurancePersonalValue;
     pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",finalSalary];
+    NSArray *dataArray = @[@(endowmentInsurancePersonalValue / originSalary),@(unemploymentInsurancePersonalValue / originSalary),@(employmentInjuryInsurancePersonalValue / originSalary),@(medicalInsurancePersoalValue / originSalary),@(childbirthInsurancePersonalValue / originSalary),@(housingFundPersonalValue / originSalary)];
+    [self setDataSet:dataArray];
 }
 
 - (void)viewDidLoad {
@@ -152,7 +154,7 @@ static NSString *kCenterText = @"税后";
                 @"Party Y", @"Party Z"
                 ];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    NSArray *dataArray = @[@(0),@(0),@(0),@(0),@(0)];
+    NSArray *dataArray = @[@(0.0),@(0.0),@(0.0),@(0.0),@(0.0)];
     [self setDataSet:dataArray];
     [self setupPieChartView:pieCharView];
 }
