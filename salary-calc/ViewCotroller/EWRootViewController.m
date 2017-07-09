@@ -32,6 +32,8 @@ static const double kHousingFundCompanyRate = 0.12;
 static const double kHousingFundPersonalRate = 0.12;
 static const double kHousingFundLowValue = 1720;
 
+static NSString *kCenterText = @"税后";
+
 
 @interface EWRootViewController ()
 {
@@ -102,6 +104,7 @@ static const double kHousingFundLowValue = 1720;
     housingFundPersonalValue = salary * kHousingFundPersonalRate;
     housingFundCompanyValue = salary * kHousingFundCompanyRate;
     finalSalary = originSalary - endowmentInsurancePersonalValue - unemploymentInsurancePersonalValue - employmentInjuryInsurancePersonalValue - medicalInsurancePersoalValue - childbirthInsurancePersonalValue;
+    pieCharView.centerText = [NSString stringWithFormat:@"税后:%f",finalSalary];
 }
 
 - (void)viewDidLoad {
@@ -234,6 +237,7 @@ static const double kHousingFundLowValue = 1720;
     l.xEntrySpace = 7.0;
     l.yEntrySpace = 0.0;
     l.yOffset = 0.0;
+    pieCharView.centerText = kCenterText;
 }
 
 #pragma mark - ChartViewDelegate
