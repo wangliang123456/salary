@@ -132,8 +132,8 @@ static const double kHousingFundLowValue = 1720;
     pieCharView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:pieCharView];
     NSLayoutConstraint *pieChartHeight = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0 constant:230];
-    NSLayoutConstraint *pieChartWidth = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0];
-    NSLayoutConstraint *pieChartLeading = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:-128];
+    NSLayoutConstraint *pieChartWidth = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0];
+    NSLayoutConstraint *pieChartLeading = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0];
     NSLayoutConstraint *pieChartBottom = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-50];
         [self.view addConstraints:@[pieChartHeight,pieChartWidth,pieChartLeading,pieChartBottom]];
     pieCharView.legend.enabled = NO;
@@ -148,7 +148,7 @@ static const double kHousingFundLowValue = 1720;
                 @"Party Y", @"Party Z"
                 ];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    [self setDataCount:6 range:100];
+    [self setDataCount:5 range:100];
     [self setupPieChartView:pieCharView];
 }
 
@@ -253,7 +253,7 @@ static const double kHousingFundLowValue = 1720;
 
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSUserDefaults* userDefault = [NSUserDefaults standardUserDefaults];
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     NSString *title = [userDefault valueForKey:kSelectedCityKey];
     if (title.length == 0) {
         title = @"北京";
@@ -276,8 +276,7 @@ static const double kHousingFundLowValue = 1720;
 }
 
 #pragma mark text field delegate
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+- (void)textFieldDidEndEditing:(UITextField *)textField {
     [self calc:[textField.text doubleValue]];
-    return YES;
 }
 @end
