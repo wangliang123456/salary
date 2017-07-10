@@ -159,7 +159,7 @@ static NSString *kCenterText = @"税后";
                 @"Party Y", @"Party Z"
                 ];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    NSArray *dataArray = @[@(0.0),@(0.0),@(0.0),@(0.0),@(0.0)];
+    NSArray *dataArray = @[[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"]];
     [self setDataSet:dataArray];
     [self setupPieChartView:pieCharView];
 }
