@@ -106,7 +106,12 @@ static NSString *kCenterText = @"税后";
     housingFundCompanyValue = salary * kHousingFundCompanyRate;
     finalSalary = originSalary - endowmentInsurancePersonalValue - unemploymentInsurancePersonalValue - employmentInjuryInsurancePersonalValue - medicalInsurancePersoalValue - childbirthInsurancePersonalValue;
     pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",finalSalary];
-    NSArray *dataArray = @[@(endowmentInsurancePersonalValue / originSalary),@(unemploymentInsurancePersonalValue / originSalary),@(employmentInjuryInsurancePersonalValue / originSalary),@(medicalInsurancePersoalValue / originSalary),@(childbirthInsurancePersonalValue / originSalary),@(housingFundPersonalValue / originSalary)];
+    PieChartDataEntry *endowmentInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:endowmentInsurancePersonalValue / originSalary label:@"dsadsadsadsa"];
+    PieChartDataEntry *unemploymentInjuryInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:unemploymentInsurancePersonalValue / originSalary label:@"dsadsadsadsa"];
+    PieChartDataEntry *medicalInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:medicalInsurancePersoalValue / originSalary label:@"dsadsadsadsa"];
+    PieChartDataEntry *childbirthInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:childbirthInsurancePersonalValue / originSalary label:@"dsadsadsadsa"];
+    PieChartDataEntry *employmentInjuryInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:employmentInjuryInsurancePersonalValue / originSalary label:@"dsadsadsadsa"];
+    NSArray *dataArray = @[endowmentInsuranceEntry,unemploymentInjuryInsuranceEntry,medicalInsuranceEntry,childbirthInsuranceEntry,employmentInjuryInsuranceEntry];
     [self setDataSet:dataArray];
 }
 
@@ -161,6 +166,7 @@ static NSString *kCenterText = @"税后";
 
 - (void)setDataSet:(NSArray *) dataArray
 {
+    
     PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:dataArray label:@"Election Results"];
     dataSet.sliceSpace = 2.0;
     // add a lot of colors
