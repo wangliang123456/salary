@@ -117,7 +117,7 @@ static NSString *kCenterText = @"税后";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"薪资计算";
+    self.title = @"薪算";
     [self initView];
     [self loadBanerAD];
 }
@@ -159,7 +159,7 @@ static NSString *kCenterText = @"税后";
                 @"Party Y", @"Party Z"
                 ];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    NSArray *dataArray = @[[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"]];
+    NSArray *dataArray = @[[[PieChartDataEntry alloc] initWithValue:0 label:@""],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"]];
     [self setDataSet:dataArray];
     [self setupPieChartView:pieCharView];
 }

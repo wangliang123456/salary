@@ -1,5 +1,5 @@
 target 'salary-calc' do
-  pod 'AFNetworking', '~> 3.0'
+  pod 'AFNetworking'
   pod 'Charts'
   pod 'ChartsRealm'
   pod 'Firebase/Core'
