@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CityDao.h"
 
 @interface CityManager : NSObject
+
+@property(strong, nonatomic) CityDao *cityDao;
 
 +(instancetype) sharedInstance;
 -(NSDictionary*) allCities;
