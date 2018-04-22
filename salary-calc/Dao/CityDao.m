@@ -11,9 +11,10 @@
 
 static CityDao *instance;
 
-
-
 @implementation CityDao
+{
+    FMDatabaseQueue *databaseQueue;
+}
 
 /*
  单利
@@ -23,21 +24,30 @@ static CityDao *instance;
     dispatch_once(&onceToken, ^{
         if (!instance) {
             instance = [[CityDao alloc] init];
-            NSString *path = NSHomeDirectory();
-            NSString *userName = NSUserName();
-            NSString *rootPath = NSHomeDirectoryForUser(userName);
             NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
             NSString *documentsDirectory = [paths objectAtIndex:0];
-            NSString *docPath = [documentsDirectory stringByAppendingString:@"/salary-calc.db"];
-            dataBase = [FMDatabase databaseWithPath:docPath];
+            NSString *dbPath = [documentsDirectory stringByAppendingString:@"/salary-calc.db"];
+            instance->databaseQueue = [FMDatabaseQueue databaseQueueWithPath:dbPath];
+            [instance->databaseQueue inDatabase:^(FMDatabase * _Nonnull db) {
+                NSString *create = @"create table is not exist City (id INTEGER PRIMARY KEY AUTOINCREMENT, formula TEXT, city_name TEXT, city_initial TEXT，is_hot INTEGER)";
+                BOOL isSuccess = [db executeUpdate:create];
+                if (isSuccess) {
+                    NSLog(@"create City table success");
+                } else {
+                    NSLog(@"create City table fail");
+                }
+                
+            }];
         }
     });
     return instance;
 }
+
 //获得所有城市
 -(NSDictionary*) allCities {
     return [[NSDictionary alloc] init];
 }
+
 //货得热门城市
 -(NSArray*) hotCities {
     return [NSArray array];
