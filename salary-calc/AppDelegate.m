@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CityDao.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [CityDao sharedInstance];
     return true;
 }
 
