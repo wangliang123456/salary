@@ -8,6 +8,7 @@
 
 #import "CityDao.h"
 #import "FMDB.h"
+#import "City.h"
 
 static CityDao *instance;
 
@@ -94,18 +95,49 @@ static const NSString *kIsHot = @"is_hot";
 
 //获得所有城市
 -(NSDictionary*) allCities {
+    __weak NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     [self->databaseQueue inDatabase:^(FMDatabase * _Nonnull db) {
-        NSString *sql = @"SELECT * FROM City GROUP BY city_initial";
+        NSString *sql = @"SELECT * FROM City ORDER BY city_initial ASC";
         FMResultSet *resultSet = [db executeQuery:sql];
+        NSMutableArray *array = nil;
         while ([resultSet next]) {
-            //[resultSet stringForColumn:]
+            City *city = [self getCity:resultSet];
+            NSString *cityInitial = [resultSet stringForColumn:@"city_initial"];
+            array = [dict valueForKey:cityInitial];
+            if (array == nil) {
+                array = [NSMutableArray array];
+                [array addObject:city];
+                [dict setObject:array forKey:cityInitial];
+            }
         }
     }];
-    return [[NSDictionary alloc] init];
+    return dict;
+}
+
+-(City *) getCity:(FMResultSet *) resultSet {
+    City *city = [[City alloc] init];
+    NSString *cityName = [resultSet stringForColumn:@"city_name"];
+    city.cityName = cityName;
+    int isHot = [resultSet intForColumn:@"is_hot"];
+    city.isHot = isHot;
+    NSString *cityInitial = [resultSet stringForColumn:@"city_initial"];
+    city.cityInitial = cityInitial;
+    NSString *formula = [resultSet stringForColumn:@"formula"];
+    city.formula = formula;
+    return city;
 }
 
 //货得热门城市
 -(NSArray*) hotCities {
-    return [NSArray array];
+    __weak NSMutableArray *hotCities = [NSMutableArray array];
+    [self->databaseQueue inDatabase:^(FMDatabase * _Nonnull db) {
+        NSString *sql = @"SELECT * FROM City where is_hot = 1";
+        FMResultSet *resultSet = [db executeQuery:sql];
+        while ([resultSet next]) {
+            City *city = [self getCity:resultSet];
+            [hotCities addObject:city];
+        }
+    }];
+    return hotCities;
 }
 @end
