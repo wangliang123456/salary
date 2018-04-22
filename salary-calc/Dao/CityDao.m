@@ -11,6 +11,12 @@
 
 static CityDao *instance;
 
+static const NSString *kCityName = @"city_name";
+
+static const NSString *kCitynInitial = @"city_initial";
+
+static const NSString *kIsHot = @"is_hot";
+
 @implementation CityDao
 {
     FMDatabaseQueue *databaseQueue;
@@ -31,7 +37,7 @@ static CityDao *instance;
             [instance->databaseQueue inDatabase:^(FMDatabase * _Nonnull db) {
                 @try {
                     [db beginTransaction];
-                    NSString *create = @"create table if not exists City (id INTEGER PRIMARY KEY AUTOINCREMENT, formula TEXT, city_name TEXT UNIQUE, city_initial TEXT, is_hot INTEGER)";
+                    NSString *create = @"CREATE TABLE IF NOT EXISTS City (id INTEGER PRIMARY KEY AUTOINCREMENT, formula TEXT, city_name TEXT UNIQUE, city_initial TEXT, is_hot INTEGER)";
                     BOOL isSuccess = [db executeUpdate:create];
                     if (isSuccess) {
                         NSLog(@"create City table success");
@@ -88,6 +94,13 @@ static CityDao *instance;
 
 //获得所有城市
 -(NSDictionary*) allCities {
+    [self->databaseQueue inDatabase:^(FMDatabase * _Nonnull db) {
+        NSString *sql = @"SELECT * FROM City GROUP BY city_initial";
+        FMResultSet *resultSet = [db executeQuery:sql];
+        while ([resultSet next]) {
+            //[resultSet stringForColumn:]
+        }
+    }];
     return [[NSDictionary alloc] init];
 }
 
