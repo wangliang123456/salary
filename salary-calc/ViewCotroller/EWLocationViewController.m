@@ -7,6 +7,7 @@
 //
 
 #import "EWLocationViewController.h"
+#import "City.h"
 
 static const CGFloat kHotCityCellHeight = 130;
 
@@ -105,8 +106,8 @@ static const CGFloat kHotCityCellHeight = 130;
         NSString* text = @"";
         NSString* key = [allKeys objectAtIndex:indexPath.section - 1];
         NSArray* values = [cities valueForKey:key];
-        text = [values objectAtIndex:indexPath.row];
-        cell.textLabel.text = text;
+        City *city = [values objectAtIndex:indexPath.row];
+        cell.textLabel.text = city.cityName;
     }
     return cell;
 }
