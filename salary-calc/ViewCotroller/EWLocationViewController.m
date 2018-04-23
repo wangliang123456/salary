@@ -107,7 +107,8 @@ static const CGFloat kHotCityCellHeight = 130;
         NSString* key = [allKeys objectAtIndex:indexPath.section - 1];
         NSArray* values = [cities valueForKey:key];
         City *city = [values objectAtIndex:indexPath.row];
-        cell.textLabel.text = city.cityName;
+        text = city.cityName;
+        cell.textLabel.text = text;
     }
     return cell;
 }

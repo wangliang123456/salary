@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,16 +16,16 @@
             <rect key="frame" x="0.0" y="0.0" width="395" height="131"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="395" height="130.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="395" height="130.66666666666666"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w66-9f-YPK">
-                        <rect key="frame" x="182" y="23" width="30" height="33"/>
+                        <rect key="frame" x="182" y="26" width="30" height="33"/>
                         <state key="normal">
                             <attributedString key="attributedTitle">
                                 <fragment content="上海">
                                     <attributes>
-                                        <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <font key="NSFont" size="15" name="PingFangSC-Regular"/>
                                         <integer key="NSUnderline" value="1"/>
                                     </attributes>
@@ -33,12 +37,12 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-mz-4br">
-                        <rect key="frame" x="75" y="23" width="30" height="33"/>
+                        <rect key="frame" x="75" y="26" width="30" height="33"/>
                         <state key="normal">
                             <attributedString key="attributedTitle">
                                 <fragment content="北京">
                                     <attributes>
-                                        <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <font key="NSFont" size="15" name="PingFangSC-Regular"/>
                                         <integer key="NSUnderline" value="1"/>
                                     </attributes>
@@ -50,7 +54,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8pR-0W-mIu">
-                        <rect key="frame" x="182" y="74" width="30" height="33"/>
+                        <rect key="frame" x="182" y="72" width="30" height="33"/>
                         <state key="normal">
                             <attributedString key="attributedTitle">
                                 <fragment content="杭州">
@@ -66,7 +70,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fR7-I2-jmM">
-                        <rect key="frame" x="289" y="74" width="30" height="33"/>
+                        <rect key="frame" x="289" y="72" width="30" height="33"/>
                         <state key="normal">
                             <attributedString key="attributedTitle">
                                 <fragment content="苏州">
@@ -82,7 +86,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fBg-LB-mEe">
-                        <rect key="frame" x="75" y="74" width="30" height="33"/>
+                        <rect key="frame" x="75" y="72" width="30" height="33"/>
                         <state key="normal">
                             <attributedString key="attributedTitle">
                                 <fragment content="深圳">
@@ -98,7 +102,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qE1-oX-hrE">
-                        <rect key="frame" x="289" y="23" width="30" height="33"/>
+                        <rect key="frame" x="289" y="26" width="30" height="33"/>
                         <state key="normal">
                             <attributedString key="attributedTitle">
                                 <fragment content="广州">
@@ -132,7 +136,7 @@
             <connections>
                 <outletCollection property="hotCity" destination="qE1-oX-hrE" id="wIy-fu-Dt2"/>
             </connections>
-            <point key="canvasLocation" x="248.5" y="171.5"/>
+            <point key="canvasLocation" x="-10" y="100"/>
         </tableViewCell>
     </objects>
 </document>
