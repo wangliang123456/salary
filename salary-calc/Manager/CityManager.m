@@ -7,6 +7,7 @@
 //
 
 #import "CityManager.h"
+#import "CityDao.h"
 
 @implementation CityManager
 
@@ -23,9 +24,10 @@ static CityManager* instance;
 }
 
 -(NSDictionary*) allCities {
-    NSBundle* bundle = [NSBundle mainBundle];
-    NSString* plistPath = [bundle pathForResource:@"city" ofType:@"plist"];
-    NSDictionary* dict = [[NSDictionary alloc]initWithContentsOfFile:plistPath];
+//    NSBundle* bundle = [NSBundle mainBundle];
+//    NSString* plistPath = [bundle pathForResource:@"city" ofType:@"plist"];
+//    NSDictionary* dict = [[NSDictionary alloc]initWithContentsOfFile:plistPath];
+    NSDictionary *dict = [[CityDao sharedInstance] allCities];
     return dict;
 }
 

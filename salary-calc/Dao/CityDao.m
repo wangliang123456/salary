@@ -84,7 +84,7 @@ static const NSString *kIsHot = @"is_hot";
                 } @catch (NSException *exception) {
                     [db rollback];
                 } @finally {
-                    [db close];
+//                    [db close];
                 }
                 
             }];
@@ -95,7 +95,7 @@ static const NSString *kIsHot = @"is_hot";
 
 //获得所有城市
 -(NSDictionary*) allCities {
-    __weak NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     [self->databaseQueue inDatabase:^(FMDatabase * _Nonnull db) {
         NSString *sql = @"SELECT * FROM City ORDER BY city_initial ASC";
         FMResultSet *resultSet = [db executeQuery:sql];
@@ -108,8 +108,11 @@ static const NSString *kIsHot = @"is_hot";
                 array = [NSMutableArray array];
                 [array addObject:city];
                 [dict setObject:array forKey:cityInitial];
+            } else {
+                [array addObject:city];
             }
         }
+        [resultSet close];
     }];
     return dict;
 }
@@ -131,12 +134,13 @@ static const NSString *kIsHot = @"is_hot";
 -(NSArray*) hotCities {
     __weak NSMutableArray *hotCities = [NSMutableArray array];
     [self->databaseQueue inDatabase:^(FMDatabase * _Nonnull db) {
-        NSString *sql = @"SELECT * FROM City where is_hot = 1";
+        NSString *sql = @"SELECT * FROM City WHERE is_hot = 1";
         FMResultSet *resultSet = [db executeQuery:sql];
         while ([resultSet next]) {
             City *city = [self getCity:resultSet];
             [hotCities addObject:city];
         }
+        [resultSet close];
     }];
     return hotCities;
 }

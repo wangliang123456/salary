@@ -9,13 +9,92 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "salary-calc/Dao/CityDao.m"
-            timestampString = "546094848.8796279"
+            filePath = "salary-calc/Manager/CityManager.m"
+            timestampString = "546099105.1523809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "+sharedInstance"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-allCities"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "salary-calc/Dao/CityDao.m"
+            timestampString = "546136959.427317"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "-allCities"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CityDao allCities]"
+                  moduleName = "salary-calc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wangliang/Desktop/ios/salary/salary-calc/Dao/CityDao.m"
+                  timestampString = "546136959.492677"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "66">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__20-[CityDao allCities]_block_invoke"
+                  moduleName = "salary-calc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wangliang/Desktop/ios/salary/salary-calc/Dao/CityDao.m"
+                  timestampString = "546136959.500001"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_"
+                  moduleName = "salary-calc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wangliang/Desktop/ios/salary/salary-calc/Dao/CityDao.m"
+                  timestampString = "546136959.5047539"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "salary-calc/Dao/CityDao.m"
+            timestampString = "546136959.427776"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "-allCities"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
