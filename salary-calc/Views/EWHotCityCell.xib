@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,123 +18,66 @@
                 <rect key="frame" x="0.0" y="0.0" width="395" height="130.66666666666666"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w66-9f-YPK">
-                        <rect key="frame" x="182" y="26" width="30" height="33"/>
-                        <state key="normal">
-                            <attributedString key="attributedTitle">
-                                <fragment content="上海">
-                                    <attributes>
-                                        <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <font key="NSFont" size="15" name="PingFangSC-Regular"/>
-                                        <integer key="NSUnderline" value="1"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
-                        </state>
-                        <connections>
-                            <action selector="hotCitySelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="sPZ-ES-hdc"/>
-                        </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-mz-4br">
-                        <rect key="frame" x="75" y="26" width="30" height="33"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Son-un-N64">
+                        <rect key="frame" x="32" y="21" width="31" height="30"/>
                         <state key="normal">
                             <attributedString key="attributedTitle">
                                 <fragment content="北京">
                                     <attributes>
-                                        <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <font key="NSFont" size="15" name="PingFangSC-Regular"/>
-                                        <integer key="NSUnderline" value="1"/>
+                                        <font key="NSFont" metaFont="system" size="15"/>
                                     </attributes>
                                 </fragment>
                             </attributedString>
                         </state>
-                        <connections>
-                            <action selector="hotCitySelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DTl-4N-cDT"/>
-                        </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8pR-0W-mIu">
-                        <rect key="frame" x="182" y="72" width="30" height="33"/>
-                        <state key="normal">
-                            <attributedString key="attributedTitle">
-                                <fragment content="杭州">
-                                    <attributes>
-                                        <font key="NSFont" size="15" name="PingFangSC-Regular"/>
-                                        <integer key="NSUnderline" value="1"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
-                        </state>
-                        <connections>
-                            <action selector="hotCitySelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vVR-3E-6vE"/>
-                        </connections>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nre-mu-0Je">
+                        <rect key="frame" x="125" y="21" width="31" height="30"/>
+                        <state key="normal" title="上海"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fR7-I2-jmM">
-                        <rect key="frame" x="289" y="72" width="30" height="33"/>
-                        <state key="normal">
-                            <attributedString key="attributedTitle">
-                                <fragment content="苏州">
-                                    <attributes>
-                                        <font key="NSFont" size="15" name="PingFangSC-Regular"/>
-                                        <integer key="NSUnderline" value="1"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
-                        </state>
-                        <connections>
-                            <action selector="hotCitySelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TpR-Nk-nj7"/>
-                        </connections>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLz-Nz-Z2M">
+                        <rect key="frame" x="218" y="21" width="31" height="30"/>
+                        <state key="normal" title="广州"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fBg-LB-mEe">
-                        <rect key="frame" x="75" y="72" width="30" height="33"/>
-                        <state key="normal">
-                            <attributedString key="attributedTitle">
-                                <fragment content="深圳">
-                                    <attributes>
-                                        <font key="NSFont" size="15" name="PingFangSC-Regular"/>
-                                        <integer key="NSUnderline" value="1"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
-                        </state>
-                        <connections>
-                            <action selector="hotCitySelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7gZ-aj-SSO"/>
-                        </connections>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdQ-wc-ICu">
+                        <rect key="frame" x="311" y="21" width="31" height="30"/>
+                        <state key="normal" title="深圳"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qE1-oX-hrE">
-                        <rect key="frame" x="289" y="26" width="30" height="33"/>
-                        <state key="normal">
-                            <attributedString key="attributedTitle">
-                                <fragment content="广州">
-                                    <attributes>
-                                        <font key="NSFont" size="15" name="PingFangSC-Regular"/>
-                                        <integer key="NSUnderline" value="1"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
-                        </state>
-                        <connections>
-                            <action selector="hotCitySelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1Ub-t8-KBC"/>
-                        </connections>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6t-Xt-Omf">
+                        <rect key="frame" x="32" y="70" width="31" height="30"/>
+                        <state key="normal" title="杭州"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jT-fW-iD9">
+                        <rect key="frame" x="125" y="70" width="31" height="30"/>
+                        <state key="normal" title="苏州"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuW-L8-cTX">
+                        <rect key="frame" x="218" y="70" width="31" height="30"/>
+                        <state key="normal" title="成都"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pr-Rx-s38">
+                        <rect key="frame" x="311" y="70" width="31" height="30"/>
+                        <state key="normal" title="武汉"/>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="w66-9f-YPK" firstAttribute="leading" secondItem="aG7-mz-4br" secondAttribute="trailing" constant="77" id="8TQ-rm-sKT"/>
-                    <constraint firstItem="fR7-I2-jmM" firstAttribute="leading" secondItem="8pR-0W-mIu" secondAttribute="trailing" constant="77" id="Fb5-IN-eRr"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="fR7-I2-jmM" secondAttribute="bottom" constant="15" id="Mdp-Zc-fon"/>
-                    <constraint firstItem="qE1-oX-hrE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="NTl-t3-7R5"/>
-                    <constraint firstItem="w66-9f-YPK" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Qka-PF-C3c"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="8pR-0W-mIu" secondAttribute="bottom" constant="15" id="Xon-xp-DjN"/>
-                    <constraint firstItem="aG7-mz-4br" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="dLQ-ox-Jjt"/>
-                    <constraint firstItem="w66-9f-YPK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="gwV-hE-3O8"/>
-                    <constraint firstItem="8pR-0W-mIu" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="o2s-Ao-rfD"/>
-                    <constraint firstItem="8pR-0W-mIu" firstAttribute="leading" secondItem="fBg-LB-mEe" secondAttribute="trailing" constant="77" id="osA-Gs-O6d"/>
-                    <constraint firstItem="qE1-oX-hrE" firstAttribute="leading" secondItem="w66-9f-YPK" secondAttribute="trailing" constant="77" id="pNr-dd-QeF"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="fBg-LB-mEe" secondAttribute="bottom" constant="15" id="xVD-Iu-XP3"/>
+                    <constraint firstItem="d6t-Xt-Omf" firstAttribute="leading" secondItem="Son-un-N64" secondAttribute="leading" id="1O4-CQ-o5l"/>
+                    <constraint firstItem="eLz-Nz-Z2M" firstAttribute="top" secondItem="Nre-mu-0Je" secondAttribute="top" id="7DU-8U-Qc0"/>
+                    <constraint firstItem="qdQ-wc-ICu" firstAttribute="leading" secondItem="eLz-Nz-Z2M" secondAttribute="trailing" constant="62" id="7aw-y1-d1y"/>
+                    <constraint firstItem="qdQ-wc-ICu" firstAttribute="top" secondItem="eLz-Nz-Z2M" secondAttribute="top" id="93a-A8-kbB"/>
+                    <constraint firstItem="3Pr-Rx-s38" firstAttribute="leading" secondItem="HuW-L8-cTX" secondAttribute="trailing" constant="62" id="Fq6-1T-Gi9"/>
+                    <constraint firstItem="Nre-mu-0Je" firstAttribute="leading" secondItem="Son-un-N64" secondAttribute="trailing" constant="62" id="Ld7-kW-saM"/>
+                    <constraint firstItem="Nre-mu-0Je" firstAttribute="top" secondItem="Son-un-N64" secondAttribute="top" id="O4G-DM-WMK"/>
+                    <constraint firstItem="eLz-Nz-Z2M" firstAttribute="leading" secondItem="Nre-mu-0Je" secondAttribute="trailing" constant="62" id="PeE-CM-r05"/>
+                    <constraint firstItem="3jT-fW-iD9" firstAttribute="top" secondItem="d6t-Xt-Omf" secondAttribute="top" id="Rv8-zX-7YE"/>
+                    <constraint firstItem="Son-un-N64" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="fva-Tc-G2o"/>
+                    <constraint firstItem="3jT-fW-iD9" firstAttribute="leading" secondItem="d6t-Xt-Omf" secondAttribute="trailing" constant="62" id="g3M-iN-UPy"/>
+                    <constraint firstItem="Son-un-N64" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="iSs-jQ-oqa"/>
+                    <constraint firstItem="3Pr-Rx-s38" firstAttribute="top" secondItem="HuW-L8-cTX" secondAttribute="top" id="k0R-Oi-3Kp"/>
+                    <constraint firstItem="HuW-L8-cTX" firstAttribute="top" secondItem="3jT-fW-iD9" secondAttribute="top" id="nSs-J0-Mpr"/>
+                    <constraint firstAttribute="bottom" secondItem="d6t-Xt-Omf" secondAttribute="bottom" constant="30.666666666666657" id="pNF-bj-T79"/>
+                    <constraint firstItem="HuW-L8-cTX" firstAttribute="leading" secondItem="3jT-fW-iD9" secondAttribute="trailing" constant="62" id="xtT-CA-lIg"/>
                 </constraints>
             </tableViewCellContentView>
-            <connections>
-                <outletCollection property="hotCity" destination="qE1-oX-hrE" id="wIy-fu-Dt2"/>
-            </connections>
             <point key="canvasLocation" x="-10" y="100"/>
         </tableViewCell>
     </objects>
