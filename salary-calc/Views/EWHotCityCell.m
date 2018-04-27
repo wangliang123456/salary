@@ -16,7 +16,14 @@
 }
 
 -(void) renderView {
-    
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGFloat space = (width - self.labelObj.bounds.size.width * 4 - 64) / 3;
+    self.topFirst.constant = space;
+    self.secondTop.constant = space;
+    self.thirdTop.constant = space;
+    self.firstBottom.constant = space;
+    self.secondBottom.constant = space;
+    self.thirdBottom.constant = space;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

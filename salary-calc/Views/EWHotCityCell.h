@@ -16,6 +16,14 @@
 @end
 
 @interface EWHotCityCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topFirst;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *secondTop;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *thirdTop;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *firstBottom;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *secondBottom;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *thirdBottom;
+@property (weak, nonatomic) IBOutlet UIButton *labelObj;
 
 @property (weak, nonatomic) id<HotCityDelegate> delegate;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *hotCity;

@@ -78,6 +78,23 @@
                     <constraint firstItem="HuW-L8-cTX" firstAttribute="leading" secondItem="3jT-fW-iD9" secondAttribute="trailing" constant="62" id="xtT-CA-lIg"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="first" destination="Ld7-kW-saM" id="sKe-iF-WWu"/>
+                <outlet property="firstBottom" destination="g3M-iN-UPy" id="LRB-e7-pHa"/>
+                <outlet property="labelObj" destination="Nre-mu-0Je" id="dII-nx-7wJ"/>
+                <outlet property="secondBottom" destination="xtT-CA-lIg" id="PUL-aj-IqI"/>
+                <outlet property="secondTop" destination="PeE-CM-r05" id="j7J-hF-Vrj"/>
+                <outlet property="thirdBottom" destination="Fq6-1T-Gi9" id="pLP-PZ-jGK"/>
+                <outlet property="thirdTop" destination="7aw-y1-d1y" id="yY2-Tk-sjG"/>
+                <outlet property="topFirst" destination="Ld7-kW-saM" id="lXy-2z-uPv"/>
+                <outletCollection property="hotCity" destination="Son-un-N64" id="DZJ-fs-7WX"/>
+                <outletCollection property="hotCity" destination="Nre-mu-0Je" id="pb0-lN-vfR"/>
+                <outletCollection property="hotCity" destination="qdQ-wc-ICu" id="jZa-WU-jgj"/>
+                <outletCollection property="hotCity" destination="d6t-Xt-Omf" id="PlK-7b-uYC"/>
+                <outletCollection property="hotCity" destination="3jT-fW-iD9" id="1Yr-yo-wuK"/>
+                <outletCollection property="hotCity" destination="HuW-L8-cTX" id="DwQ-AP-Rsb"/>
+                <outletCollection property="hotCity" destination="3Pr-Rx-s38" id="jnW-jV-1Ll"/>
+            </connections>
             <point key="canvasLocation" x="-10" y="100"/>
         </tableViewCell>
     </objects>
