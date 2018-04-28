@@ -12,20 +12,16 @@
 
 @required
 -(void) hotCityDidSelected:(id) sender;
+-(void) reloadData;
 
 @end
 
 @interface EWHotCityCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topFirst;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *secondTop;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *thirdTop;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *firstBottom;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *secondBottom;
-
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *thirdBottom;
+@property (strong, nonatomic) IBOutletCollection(NSLayoutConstraint) NSArray *topCollection;
 @property (weak, nonatomic) IBOutlet UIButton *labelObj;
-
+@property (strong, nonatomic) NSArray *dataSource;
 @property (weak, nonatomic) id<HotCityDelegate> delegate;
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *hotCity;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *btns;
+
 
 @end

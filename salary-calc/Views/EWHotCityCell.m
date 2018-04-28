@@ -7,6 +7,7 @@
 //
 
 #import "EWHotCityCell.h"
+#import "City.h"
 
 @implementation EWHotCityCell
 
@@ -18,19 +19,27 @@
 -(void) renderView {
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat space = (width - self.labelObj.bounds.size.width * 4 - 64) / 3;
-    self.topFirst.constant = space;
-    self.secondTop.constant = space;
-    self.thirdTop.constant = space;
-    self.firstBottom.constant = space;
-    self.secondBottom.constant = space;
-    self.thirdBottom.constant = space;
+    for (NSLayoutConstraint *con in self.topCollection) {
+        con.constant = space;
+    }
+    NSInteger index = 0;
+    for (UIButton *btn in self.btns) {
+        [btn addTarget:self action:@selector(hotCityDidSelected:) forControlEvents:UIControlEventTouchUpInside];
+        City *city = (City *)[self.dataSource objectAtIndex:index];
+        btn.titleLabel.text = city.cityName;
+        index++;
+    }
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+- (void) setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 }
 
-- (IBAction)hotCitySelected:(id)sender {
+-(void) hotCityDidSelected:(id) sender {
+    NSLog(@"hotCityDidSelected");
+}
+
+- (void) hotCitySelected:(id)sender {
     if(self.delegate) {
         [self.delegate hotCityDidSelected:sender];
     }
