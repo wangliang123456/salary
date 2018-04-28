@@ -127,6 +127,7 @@ static const NSString *kIsHot = @"is_hot";
     city.cityInitial = cityInitial;
     NSString *formula = [resultSet stringForColumn:@"formula"];
     city.formula = formula;
+    city.ID = [resultSet stringForColumn:@"id"];
     return city;
 }
 

@@ -102,7 +102,7 @@ static const CGFloat kHotCityCellHeight = 130;
         hotCell.selectionStyle = UITableViewCellSelectionStyleNone;
         hotCell.delegate = self;
         hotCell.dataSource = hotCities;
-        [hotCell.delegate reloadData];
+        [self reloadData];
         return hotCell;
     } else {
         NSString* text = @"";
@@ -164,10 +164,10 @@ static const CGFloat kHotCityCellHeight = 130;
         return;
     }
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString* city = @"";
     NSArray* cityArray = [cities valueForKey:[allKeys objectAtIndex:indexPath.section - 1]];
-    city = [cityArray objectAtIndex:indexPath.row];
-    [userDefaults setObject:city forKey:kSelectedCityKey];
+    City *city = [cityArray objectAtIndex:indexPath.row];
+    [userDefaults setObject:city.cityName forKey:kSelectedCityKey];
+    [userDefaults setObject:city.ID forKey:kSelectedCityId];
     [self dismissViewControllerAnimated:true completion:nil];
 }
 

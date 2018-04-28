@@ -9,3 +9,4 @@
 #import <Foundation/Foundation.h>
 
 #define kSelectedCityKey  @"SelectedCityKey"
+#define kSelectedCityId @"SelectedCityId"
