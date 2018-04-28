@@ -24,15 +24,11 @@ static CityManager* instance;
 }
 
 -(NSDictionary*) allCities {
-//    NSBundle* bundle = [NSBundle mainBundle];
-//    NSString* plistPath = [bundle pathForResource:@"city" ofType:@"plist"];
-//    NSDictionary* dict = [[NSDictionary alloc]initWithContentsOfFile:plistPath];
     NSDictionary *dict = [[CityDao sharedInstance] allCities];
     return dict;
 }
 
 -(NSArray*) hotCities {
-    NSArray* hotCities = @[@"北京",@"上海",@"广州",@"深圳",@"杭州",@"苏州"];
-    return hotCities;
+    return [[CityDao sharedInstance] hotCities];
 }
 @end
