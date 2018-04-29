@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "FMDB.h"
+#import "InsuranceBase.h"
 
 @interface InsuranceDao : NSObject
 
 +(instancetype) sharedInstance;
+
+-(InsuranceBase *) queryBaseByCityId:(int) cityId;
 
 @end

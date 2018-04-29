@@ -49,4 +49,26 @@ static InsuranceDao *instance;
     [db executeUpdate:insert];
 }
 
+-(InsuranceBase *) buildBase:(FMResultSet *) rs {
+    InsuranceBase *insuranceBase = [[InsuranceBase alloc] init];
+    insuranceBase.endowmentInsurance = [rs stringForColumn:@"endowment_insurance"];
+    insuranceBase.medicalInsurance = [rs stringForColumn:@"medical_insurance"];
+    insuranceBase.unemploymentInsurance = [rs stringForColumn:@"unemployment_insurance"];
+    insuranceBase.maternityInsurance = [rs stringForColumn:@"maternity_insurance"];
+    insuranceBase.employmentInjuryInsurance = [rs stringForColumn:@"employment_injury_insurance"];
+    insuranceBase.houseFund = [rs stringForColumn:@"house_fund"];
+    return insuranceBase;
+}
+
+-(InsuranceBase *) queryBaseByCityId:(int) cityId {
+    __block InsuranceBase *insuranceBase = nil;
+    [instance->databaseQueue inDatabase:^(FMDatabase * _Nonnull db) {
+        NSString *query = @"select * from Insurance_data where city_id = ?";
+        FMResultSet *rs = [db executeQuery:query,cityId];
+        while ([rs next]) {
+            insuranceBase = [instance buildBase:rs];
+        }
+    }];
+    return insuranceBase;
+}
 @end
