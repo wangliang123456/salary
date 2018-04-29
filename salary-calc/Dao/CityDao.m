@@ -79,7 +79,6 @@ static const NSString *kIsHot = @"is_hot";
                     } else {
                         NSLog(@"create City table fail");
                     }
-                    
                     [db commit];
                 } @catch (NSException *exception) {
                     [db rollback];
