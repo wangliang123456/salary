@@ -1,0 +1,6 @@
+framework module Pods_salary_calc {
+  umbrella header "Pods-salary-calc-umbrella.h"
+
+  export *
+  module * { export * }
+}
