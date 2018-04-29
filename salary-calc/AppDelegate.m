@@ -18,8 +18,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [CityDao sharedInstance];
-    [InsuranceDao sharedInstance];
+    dispatch_queue_t concurrentQueue =
+    dispatch_queue_create("initBaseDataQueue",
+                          DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(concurrentQueue, ^{
+        [CityDao sharedInstance];
+        [InsuranceDao sharedInstance];
+    })
     return true;
 }
 

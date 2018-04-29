@@ -7,6 +7,8 @@
 //
 
 #import "EWRootViewController.h"
+#import "InsuranceBase.h"
+#import "InsuranceDao.h"
 
 static const NSUInteger kBaseHighSocialInsuranceValue = 23118;//五险最高基数
 
@@ -65,7 +67,9 @@ static NSString *kCenterText = @"税后";
         salary = kBaseHighSocialInsuranceValue;
     }
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    NSInteger currentCityId = [userDefault valueForKey:kSelectedCityId];
+    int currentCityId = [[userDefault valueForKey:kSelectedCityId] intValue];
+    InsuranceBase *insuranceBase= [[InsuranceDao sharedInstance] queryBaseByCityId:currentCityId];
+    
     pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",finalSalary];
     PieChartDataEntry *endowmentInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:endowmentInsurancePersonalValue / originSalary label:@"养老保险"];
     PieChartDataEntry *unemploymentInjuryInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:unemploymentInsurancePersonalValue / originSalary label:@""];
