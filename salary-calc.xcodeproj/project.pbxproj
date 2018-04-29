@@ -23,6 +23,7 @@
 		078449EC1CF457E100A2460C /* CityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078449EB1CF457E100A2460C /* CityManager.m */; };
 		078449F01CF4580200A2460C /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 078449EF1CF4580200A2460C /* City.m */; };
 		C19E77AE8C98A39ABDF909F8 /* Pods_salary_calc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57528E0EFF5A8CF314453031 /* Pods_salary_calc.framework */; };
+		EF16DC242095CF6D00CBA361 /* InsuranceDao.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16DC232095CF6D00CBA361 /* InsuranceDao.m */; };
 		EF8FEE49208C6A670016338D /* CityDao.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FEE48208C6A670016338D /* CityDao.m */; };
 		EFFCE3131ED2B3B100A35DF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFCE3111ED2B3B100A35DF9 /* LaunchScreen.storyboard */; };
 		EFFCE3141ED2B3B100A35DF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFCE3121ED2B3B100A35DF9 /* Main.storyboard */; };
@@ -92,6 +93,8 @@
 		078449EF1CF4580200A2460C /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 		57528E0EFF5A8CF314453031 /* Pods_salary_calc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_salary_calc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94CDB078068F27413FB547A /* Pods-salary-calc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-salary-calc.release.xcconfig"; path = "Pods/Target Support Files/Pods-salary-calc/Pods-salary-calc.release.xcconfig"; sourceTree = "<group>"; };
+		EF16DC222095CF6D00CBA361 /* InsuranceDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsuranceDao.h; sourceTree = "<group>"; };
+		EF16DC232095CF6D00CBA361 /* InsuranceDao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsuranceDao.m; sourceTree = "<group>"; };
 		EF8FEE47208C6A670016338D /* CityDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityDao.h; sourceTree = "<group>"; };
 		EF8FEE48208C6A670016338D /* CityDao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityDao.m; sourceTree = "<group>"; };
 		EFFCE3111ED2B3B100A35DF9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -276,6 +279,8 @@
 			children = (
 				EF8FEE47208C6A670016338D /* CityDao.h */,
 				EF8FEE48208C6A670016338D /* CityDao.m */,
+				EF16DC222095CF6D00CBA361 /* InsuranceDao.h */,
+				EF16DC232095CF6D00CBA361 /* InsuranceDao.m */,
 			);
 			path = Dao;
 			sourceTree = "<group>";
@@ -487,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0730A5261CF3F84400949058 /* EWRootViewController.m in Sources */,
+				EF16DC242095CF6D00CBA361 /* InsuranceDao.m in Sources */,
 				0725FAD41CF5D68B007A6088 /* BaseViewController.m in Sources */,
 				0725FAD81CF5DAF5007A6088 /* EWHotCityCell.m in Sources */,
 				0730A52C1CF401DF00949058 /* EWSettingViewController.m in Sources */,
