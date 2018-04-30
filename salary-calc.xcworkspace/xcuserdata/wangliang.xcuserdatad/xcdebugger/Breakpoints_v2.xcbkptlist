@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "salary-calc/Dao/InsuranceDao.m"
-            timestampString = "546705260.1424741"
+            timestampString = "546770413.1878541"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "salary-calc/Dao/InsuranceDao.m"
-            timestampString = "546705260.1430171"
+            timestampString = "546770413.1882679"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "-queryBaseByCityId:"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "salary-calc/Dao/InsuranceDao.m"
-            timestampString = "546705260.143393"
+            timestampString = "546770413.188485"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "-queryBaseByCityId:"
             landmarkType = "7">
          </BreakpointContent>

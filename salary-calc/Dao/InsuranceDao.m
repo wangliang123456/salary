@@ -63,9 +63,8 @@ static InsuranceDao *instance;
 -(InsuranceBase *) queryBaseByCityId:(int) cityId {
     __block InsuranceBase *insuranceBase = nil;
     [instance->databaseQueue inDatabase:^(FMDatabase * _Nonnull db) {
-        NSString *query = @"select * from Insurance_data where city_id = ?";
-        NSArray *param = @[@(cityId)];
-        FMResultSet *rs = [db executeQuery:query,param];
+        NSString *query = [@"select * from Insurance_data where city_id = " stringByAppendingFormat:@"%d",cityId];
+        FMResultSet *rs = [db executeQuery:query];
         while ([rs next]) {
             insuranceBase = [instance buildBase:rs];
         }
