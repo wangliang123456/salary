@@ -24,7 +24,7 @@
     dispatch_async(concurrentQueue, ^{
         [CityDao sharedInstance];
         [InsuranceDao sharedInstance];
-    })
+    });
     return true;
 }
 

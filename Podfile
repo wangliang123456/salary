@@ -1,8 +1,8 @@
 target 'salary-calc' do
   pod 'AFNetworking'
   pod 'Charts', '~> 3.0.4'
-  pod 'Firebase/Core'
-  pod 'Firebase/AdMob'
+  pod 'Firebase/Core','~>4.4.0'
+  pod 'Firebase/AdMob','~>4.4.0'
   pod 'FMDB', '~> 2.7.2'
   post_install do |installer|
     installer.pods_project.targets.each do |target|

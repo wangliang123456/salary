@@ -64,10 +64,12 @@ static InsuranceDao *instance;
     __block InsuranceBase *insuranceBase = nil;
     [instance->databaseQueue inDatabase:^(FMDatabase * _Nonnull db) {
         NSString *query = @"select * from Insurance_data where city_id = ?";
-        FMResultSet *rs = [db executeQuery:query,cityId];
+        NSArray *param = @[@(cityId)];
+        FMResultSet *rs = [db executeQuery:query,param];
         while ([rs next]) {
             insuranceBase = [instance buildBase:rs];
         }
+        NSLog(@"");
     }];
     return insuranceBase;
 }
