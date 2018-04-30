@@ -25,6 +25,7 @@
 		C19E77AE8C98A39ABDF909F8 /* Pods_salary_calc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57528E0EFF5A8CF314453031 /* Pods_salary_calc.framework */; };
 		EF16DC242095CF6D00CBA361 /* InsuranceDao.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16DC232095CF6D00CBA361 /* InsuranceDao.m */; };
 		EF16DC272095FA4400CBA361 /* InsuranceBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16DC262095FA4400CBA361 /* InsuranceBase.m */; };
+		EF632AB7209757EF0041FA30 /* Salary.m in Sources */ = {isa = PBXBuildFile; fileRef = EF632AB6209757EF0041FA30 /* Salary.m */; };
 		EF8FEE49208C6A670016338D /* CityDao.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FEE48208C6A670016338D /* CityDao.m */; };
 		EFFCE3131ED2B3B100A35DF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFCE3111ED2B3B100A35DF9 /* LaunchScreen.storyboard */; };
 		EFFCE3141ED2B3B100A35DF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFCE3121ED2B3B100A35DF9 /* Main.storyboard */; };
@@ -98,6 +99,8 @@
 		EF16DC232095CF6D00CBA361 /* InsuranceDao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsuranceDao.m; sourceTree = "<group>"; };
 		EF16DC252095FA4400CBA361 /* InsuranceBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsuranceBase.h; sourceTree = "<group>"; };
 		EF16DC262095FA4400CBA361 /* InsuranceBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsuranceBase.m; sourceTree = "<group>"; };
+		EF632AB5209757EF0041FA30 /* Salary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Salary.h; sourceTree = "<group>"; };
+		EF632AB6209757EF0041FA30 /* Salary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Salary.m; sourceTree = "<group>"; };
 		EF8FEE47208C6A670016338D /* CityDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityDao.h; sourceTree = "<group>"; };
 		EF8FEE48208C6A670016338D /* CityDao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityDao.m; sourceTree = "<group>"; };
 		EFFCE3111ED2B3B100A35DF9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -258,6 +261,8 @@
 				078449EF1CF4580200A2460C /* City.m */,
 				EF16DC252095FA4400CBA361 /* InsuranceBase.h */,
 				EF16DC262095FA4400CBA361 /* InsuranceBase.m */,
+				EF632AB5209757EF0041FA30 /* Salary.h */,
+				EF632AB6209757EF0041FA30 /* Salary.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 				EF8FEE49208C6A670016338D /* CityDao.m in Sources */,
 				0730A5291CF401CF00949058 /* EWLocationViewController.m in Sources */,
 				0730A5231CF3F75900949058 /* EWNaviViewController.m in Sources */,
+				EF632AB7209757EF0041FA30 /* Salary.m in Sources */,
 				0730A4EF1CF3EFD500949058 /* AppDelegate.m in Sources */,
 				0730A4EC1CF3EFD500949058 /* main.m in Sources */,
 				078449EC1CF457E100A2460C /* CityManager.m in Sources */,

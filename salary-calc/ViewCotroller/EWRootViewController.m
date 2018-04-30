@@ -9,6 +9,7 @@
 #import "EWRootViewController.h"
 #import "InsuranceBase.h"
 #import "InsuranceDao.h"
+#import "Salary.h"
 
 static const NSUInteger kBaseHighSocialInsuranceValue = 23118;//五险最高基数
 
@@ -29,20 +30,7 @@ static NSString *kCenterText = @"税后";
 
 @implementation EWRootViewController
 {
-    double finalSalary;//税后工资
-    double endowmentInsurancePersonalValue;//个人养老金
-    double unemploymentInsurancePersonalValue;//个人失业金
-    double employmentInjuryInsurancePersonalValue;//个人工伤
-    double medicalInsurancePersoalValue;//个人医疗
-    double housingFundPersonalValue;//个人公积金
-    double childbirthInsurancePersonalValue;//个人生育
     
-    double endowmentInsuranceCompanyValue;//公司养老金
-    double unemploymentInsuranceCompanyValue;//公司失业金
-    double employmentInjuryInsuranceCompanyValue;//公司工伤
-    double medicalInsuranceCompanyValue;//公司医疗
-    double housingFundCompanyValue;//公司公积金
-    double childbirthInsuranceCompanyValue;//公司生育
 }
 
 #pragma mark text field resign first responder
@@ -69,12 +57,13 @@ static NSString *kCenterText = @"税后";
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     int currentCityId = [[userDefault valueForKey:kSelectedCityId] intValue];
     InsuranceBase *insuranceBase= [[InsuranceDao sharedInstance] queryBaseByCityId:currentCityId];
-    pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",finalSalary];
-    PieChartDataEntry *endowmentInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:endowmentInsurancePersonalValue / originSalary label:@"养老保险"];
-    PieChartDataEntry *unemploymentInjuryInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:unemploymentInsurancePersonalValue / originSalary label:@""];
-    PieChartDataEntry *medicalInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:medicalInsurancePersoalValue / originSalary label:@""];
-    PieChartDataEntry *childbirthInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:childbirthInsurancePersonalValue / originSalary label:@""];
-    PieChartDataEntry *employmentInjuryInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:employmentInjuryInsurancePersonalValue / originSalary label:@""];
+    
+//    pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",finalSalary];
+//    PieChartDataEntry *endowmentInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:endowmentInsurancePersonalValue / originSalary label:@"养老保险"];
+//    PieChartDataEntry *unemploymentInjuryInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:unemploymentInsurancePersonalValue / originSalary label:@""];
+//    PieChartDataEntry *medicalInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:medicalInsurancePersoalValue / originSalary label:@""];
+//    PieChartDataEntry *childbirthInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:childbirthInsurancePersonalValue / originSalary label:@""];
+//    PieChartDataEntry *employmentInjuryInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:employmentInjuryInsurancePersonalValue / originSalary label:@""];
     NSArray *dataArray = @[endowmentInsuranceEntry,unemploymentInjuryInsuranceEntry,medicalInsuranceEntry,childbirthInsuranceEntry,employmentInjuryInsuranceEntry];
     [self setDataSet:dataArray];
 }
