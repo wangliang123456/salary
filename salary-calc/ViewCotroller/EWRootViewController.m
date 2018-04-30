@@ -69,7 +69,6 @@ static NSString *kCenterText = @"税后";
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     int currentCityId = [[userDefault valueForKey:kSelectedCityId] intValue];
     InsuranceBase *insuranceBase= [[InsuranceDao sharedInstance] queryBaseByCityId:currentCityId];
-    
     pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",finalSalary];
     PieChartDataEntry *endowmentInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:endowmentInsurancePersonalValue / originSalary label:@"养老保险"];
     PieChartDataEntry *unemploymentInjuryInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:unemploymentInsurancePersonalValue / originSalary label:@""];
