@@ -12,6 +12,7 @@
 
 @property(nonatomic, assign) double salaryWithoutTax;//税前工资
 @property(nonatomic, assign) double salaryWithTax;//税后工资
+@property(nonatomic, assign) double tax;//个人所得税
 @property(nonatomic, assign) double endowmentInsurancePersonalValue;//个人养老金
 @property(nonatomic, assign) double unemploymentInsurancePersonalValue;//个人失业金
 @property(nonatomic, assign) double employmentInjuryInsurancePersonalValue;//个人工伤

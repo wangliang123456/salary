@@ -140,8 +140,27 @@ static NSString *kCenterText = @"税后";
         salary.housingFundPersonalValue = [[mhouseFundDict valueForKey:kLowBase] doubleValue] * [[mhouseFundDict valueForKey:kPersonalRate] doubleValue];
         salary.housingFundCompanyValue = [[mhouseFundDict valueForKey:kLowBase] doubleValue] * [[mhouseFundDict valueForKey:kCompanyRate] doubleValue];
     }
-//    pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",salary.];
-//    PieChartDataEntry *endowmentInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:endowmentInsurancePersonalValue / originSalary label:@"养老保险"];
+    salary.salaryWithTax = salary.salaryWithoutTax - salary.housingFundPersonalValue - salary.unemploymentInsurancePersonalValue - salary.medicalInsurancePersoalValue - salary.childbirthInsurancePersonalValue - salary.employmentInjuryInsurancePersonalValue - salary.endowmentInsurancePersonalValue;
+    double tax = 0;
+    double baseTax = salary.salaryWithTax - 3500;
+    if (baseTax < 1500) {
+        tax = baseTax * 0.03;
+    } else if (baseTax <= 4500 && baseTax >= 1500) {
+        tax = (baseTax - 105) * 0.1;
+    } else if (baseTax <= 9000 && baseTax > 4500) {
+        tax = (baseTax - 555) * 0.1;
+    } else if (baseTax <= 35000 && baseTax > 9000) {
+        tax = (baseTax - 1005) * 0.1;
+    } else if (baseTax <= 55000 && baseTax > 35000) {
+        tax = (baseTax - 2755) * 0.1;
+    } else if (baseTax <= 80000 && baseTax > 55000) {
+        tax = (baseTax - 5505) * 0.1;
+    } else {
+        tax = (baseTax - 13505) * 0.1;
+    }
+    salary.salaryWithTax = salary.salaryWithTax - tax;
+//    pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",salary.salaryWithTax];
+//    PieChartDataEntry *endowmentInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:endowmentInsurancePersonalValue / salary label:@"养老保险"];
 //    PieChartDataEntry *unemploymentInjuryInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:unemploymentInsurancePersonalValue / originSalary label:@""];
 //    PieChartDataEntry *medicalInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:medicalInsurancePersoalValue / originSalary label:@""];
 //    PieChartDataEntry *childbirthInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:childbirthInsurancePersonalValue / originSalary label:@""];
