@@ -10,3 +10,7 @@
 
 #define kSelectedCityKey  @"SelectedCityKey"
 #define kSelectedCityId @"SelectedCityId"
+#define kHighBase @"high_base"
+#define kLowBase @"low_base"
+#define kPersonalRate @"personal_rate"
+#define kCompanyRate @"company_rate"
