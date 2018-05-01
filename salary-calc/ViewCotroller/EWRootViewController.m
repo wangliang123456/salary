@@ -102,9 +102,9 @@ static NSString *kCenterText = @"税后";
     }
     //生育保险
     NSString *maternityInsuranceData = [insuranceBase.maternityInsurance dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *maternityInsuranceDict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:maternityInsuranceData options:kNilOptions error:&error];
-    if ((salaryParam > [[maternityInsuranceData valueForKey:kLowBase] doubleValue] && salaryParam < [[maternityInsuranceData valueForKey:kHighBase] doubleValue]) || salaryParam < [[maternityInsuranceData valueForKey:kLowBase] doubleValue]) {
-        salary.childbirthInsurancePersonalValue = salaryParam * [[maternityInsuranceData valueForKey:kPersonalRate] doubleValue];
+    NSDictionary *maternityInsuranceDict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:maternityInsuranceDict options:kNilOptions error:&error];
+    if ((salaryParam > [[maternityInsuranceDict valueForKey:kLowBase] doubleValue] && salaryParam < [[maternityInsuranceDict valueForKey:kHighBase] doubleValue]) || salaryParam < [[maternityInsuranceDict valueForKey:kLowBase] doubleValue]) {
+        salary.childbirthInsurancePersonalValue = salaryParam * [[maternityInsuranceDict valueForKey:kPersonalRate] doubleValue];
         salary.childbirthInsuranceCompanyValue = salaryParam * [[employmentInjuryInsuranceDict valueForKey:kCompanyRate] doubleValue];
     } else if (salaryParam > [[maternityInsuranceData valueForKey:kHighBase] doubleValue]) {
         salary.childbirthInsurancePersonalValue = [[maternityInsuranceData valueForKey:kHighBase] doubleValue] * [[maternityInsuranceData valueForKey:kPersonalRate] doubleValue];
