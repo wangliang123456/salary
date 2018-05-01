@@ -45,7 +45,7 @@ static InsuranceDao *instance;
 }
 
 -(void) initInsuranceData:(FMDatabase *) db {
-    NSString *insert = [NSString stringWithFormat:@"insert into Insurance_data(endowment_insurance,medical_insurance,unemployment_insurance,maternity_insurance,employment_injury_insurance,house_fund,city_id) values('%@','%@','%@','%@','%@','%@',%d)",@"{\"high_base\":23118,\"low_base\":3082,\"personal_rate\":0.08,\"company_rate\":0.2}",@"{\"high_base\":23118,\"low_base\":4624,\"personal_rate\":0.1,\"company_rate\":\"0.02+3\"}",@"{\"high_base\":23118,\"low_base\":3082,\"personal_rate\":0.008,\"company_rate\":0.002}",@"{\"high_base\":23118,\"low_base\":4624,\"personal_rate\":0.008,\"company_rate\":0}",@"{\"high_base\":23118,\"low_base\":4624,\"personal_rate\":0.005,\"company_rate\":0}",@"{\"high_base\":23118,\"low_base\":5548,\"personal_rate\":0.12,\"company_rate\":0.12}",1];
+    NSString *insert = [NSString stringWithFormat:@"insert into Insurance_data(endowment_insurance,medical_insurance,unemployment_insurance,maternity_insurance,employment_injury_insurance,house_fund,city_id) values('%@','%@','%@','%@','%@','%@',%d)",@"{\"high_base\":23118,\"low_base\":3082,\"personal_rate\":0.08,\"company_rate\":0.19}",@"{\"high_base\":23118,\"low_base\":4624,\"personal_rate\":0.1,\"company_rate\":\"0.02+3\"}",@"{\"high_base\":23118,\"low_base\":3082,\"personal_rate\":0.008,\"company_rate\":0.002}",@"{\"high_base\":23118,\"low_base\":4624,\"personal_rate\":0.008,\"company_rate\":0}",@"{\"high_base\":23118,\"low_base\":4624,\"personal_rate\":0.005,\"company_rate\":0}",@"{\"high_base\":23118,\"low_base\":5548,\"personal_rate\":0.12,\"company_rate\":0.12}",1];
     BOOL success = [db executeUpdate:insert];
     if (success) {
         NSLog(@"社保基数插入成功");
