@@ -148,15 +148,15 @@ static NSString *kCenterText = @"税后";
     } else if (baseTax <= 4500 && baseTax >= 1500) {
         tax = (baseTax - 105) * 0.1;
     } else if (baseTax <= 9000 && baseTax > 4500) {
-        tax = (baseTax - 555) * 0.1;
+        tax = (baseTax - 555) * 0.2;
     } else if (baseTax <= 35000 && baseTax > 9000) {
-        tax = (baseTax - 1005) * 0.1;
+        tax = (baseTax - 1005) * 0.25;
     } else if (baseTax <= 55000 && baseTax > 35000) {
-        tax = (baseTax - 2755) * 0.1;
+        tax = (baseTax - 2755) * 0.3;
     } else if (baseTax <= 80000 && baseTax > 55000) {
-        tax = (baseTax - 5505) * 0.1;
+        tax = (baseTax - 5505) * 0.35;
     } else {
-        tax = (baseTax - 13505) * 0.1;
+        tax = (baseTax - 13505) * 0.45;
     }
     salary.salaryWithTax = salary.salaryWithTax - tax;
 //    pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",salary.salaryWithTax];
