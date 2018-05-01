@@ -65,7 +65,7 @@ static NSString *kCenterText = @"税后";
         salary.endowmentInsuranceCompanyValue = salaryParam * [[endowmentInsuranceDataDict valueForKey:kCompanyRate] doubleValue];
     } else if (salaryParam > [[endowmentInsuranceDataDict valueForKey:kHighBase] doubleValue]) {
         salary.endowmentInsurancePersonalValue = [[endowmentInsuranceDataDict valueForKey:kHighBase] doubleValue] * [[endowmentInsuranceDataDict valueForKey:kPersonalRate] doubleValue];
-        salary.endowmentInsurancePersonalValue = [[endowmentInsuranceDataDict valueForKey:kHighBase] doubleValue] * [[endowmentInsuranceDataDict valueForKey:kCompanyRate] doubleValue];
+        salary.endowmentInsuranceCompanyValue = [[endowmentInsuranceDataDict valueForKey:kHighBase] doubleValue] * [[endowmentInsuranceDataDict valueForKey:kCompanyRate] doubleValue];
     }
     
     //医疗保险
@@ -102,10 +102,10 @@ static NSString *kCenterText = @"税后";
     }
     //生育保险
     NSString *maternityInsuranceData = [insuranceBase.maternityInsurance dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *maternityInsuranceDict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:maternityInsuranceDict options:kNilOptions error:&error];
+    NSDictionary *maternityInsuranceDict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:maternityInsuranceData options:kNilOptions error:&error];
     if ((salaryParam > [[maternityInsuranceDict valueForKey:kLowBase] doubleValue] && salaryParam < [[maternityInsuranceDict valueForKey:kHighBase] doubleValue]) || salaryParam < [[maternityInsuranceDict valueForKey:kLowBase] doubleValue]) {
         salary.childbirthInsurancePersonalValue = salaryParam * [[maternityInsuranceDict valueForKey:kPersonalRate] doubleValue];
-        salary.childbirthInsuranceCompanyValue = salaryParam * [[employmentInjuryInsuranceDict valueForKey:kCompanyRate] doubleValue];
+        salary.childbirthInsuranceCompanyValue = salaryParam * [[maternityInsuranceDict valueForKey:kCompanyRate] doubleValue];
     } else if (salaryParam > [[maternityInsuranceData valueForKey:kHighBase] doubleValue]) {
         salary.childbirthInsurancePersonalValue = [[maternityInsuranceData valueForKey:kHighBase] doubleValue] * [[maternityInsuranceData valueForKey:kPersonalRate] doubleValue];
         salary.childbirthInsuranceCompanyValue = [[maternityInsuranceData valueForKey:kHighBase] doubleValue] * [[maternityInsuranceData valueForKey:kCompanyRate] doubleValue];
