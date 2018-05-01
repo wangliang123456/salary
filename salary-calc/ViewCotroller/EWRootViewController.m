@@ -60,12 +60,15 @@ static NSString *kCenterText = @"税后";
     NSString *endowmentInsuranceData = [insuranceBase.endowmentInsurance dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error;
     NSDictionary *endowmentInsuranceDataDict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:endowmentInsuranceData options:kNilOptions error:&error];
-    if ((salaryParam > [[endowmentInsuranceDataDict valueForKey:kLowBase] doubleValue] && salaryParam < [[endowmentInsuranceDataDict valueForKey:kHighBase] doubleValue]) || salaryParam < [[endowmentInsuranceDataDict valueForKey:kLowBase] doubleValue]) {
+    if (salaryParam > [[endowmentInsuranceDataDict valueForKey:kLowBase] doubleValue] && salaryParam < [[endowmentInsuranceDataDict valueForKey:kHighBase] doubleValue]) {
         salary.endowmentInsurancePersonalValue = salaryParam * [[endowmentInsuranceDataDict valueForKey:kPersonalRate] doubleValue];
         salary.endowmentInsuranceCompanyValue = salaryParam * [[endowmentInsuranceDataDict valueForKey:kCompanyRate] doubleValue];
     } else if (salaryParam > [[endowmentInsuranceDataDict valueForKey:kHighBase] doubleValue]) {
         salary.endowmentInsurancePersonalValue = [[endowmentInsuranceDataDict valueForKey:kHighBase] doubleValue] * [[endowmentInsuranceDataDict valueForKey:kPersonalRate] doubleValue];
         salary.endowmentInsuranceCompanyValue = [[endowmentInsuranceDataDict valueForKey:kHighBase] doubleValue] * [[endowmentInsuranceDataDict valueForKey:kCompanyRate] doubleValue];
+    } else if (salaryParam < [[endowmentInsuranceDataDict valueForKey:kLowBase] doubleValue]) {
+        salary.endowmentInsurancePersonalValue = [[endowmentInsuranceDataDict valueForKey:kLowBase] doubleValue] * [[endowmentInsuranceDataDict valueForKey:kPersonalRate] doubleValue];
+        salary.endowmentInsuranceCompanyValue = [[endowmentInsuranceDataDict valueForKey:kLowBase] doubleValue] * [[endowmentInsuranceDataDict valueForKey:kCompanyRate] doubleValue];
     }
     
     //医疗保险
@@ -137,7 +140,7 @@ static NSString *kCenterText = @"税后";
         salary.housingFundPersonalValue = [[mhouseFundDict valueForKey:kLowBase] doubleValue] * [[mhouseFundDict valueForKey:kPersonalRate] doubleValue];
         salary.housingFundCompanyValue = [[mhouseFundDict valueForKey:kLowBase] doubleValue] * [[mhouseFundDict valueForKey:kCompanyRate] doubleValue];
     }
-//    pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",finalSalary];
+//    pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",salary.];
 //    PieChartDataEntry *endowmentInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:endowmentInsurancePersonalValue / originSalary label:@"养老保险"];
 //    PieChartDataEntry *unemploymentInjuryInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:unemploymentInsurancePersonalValue / originSalary label:@""];
 //    PieChartDataEntry *medicalInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:medicalInsurancePersoalValue / originSalary label:@""];
