@@ -62,7 +62,7 @@ static const CGFloat kHeaderViewHieght = 25;
     if (section == 0) {
         return 1;
     } else if (section == 1) {
-        return 2;
+        return 3;
     } else {
         return 1;
     }
@@ -93,6 +93,13 @@ static const CGFloat kHeaderViewHieght = 25;
             case 1:
             {
                 contentCell.textLabel.text = @"意见反馈";
+                contentCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            }
+                break;
+                
+            case 2:
+            {
+                contentCell.textLabel.text = @"去除广告";
                 contentCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             }
                 break;
