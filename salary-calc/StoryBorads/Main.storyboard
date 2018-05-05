@@ -66,7 +66,7 @@
                                 </segments>
                                 <color key="tintColor" red="0.012972190979999999" green="0.74898833040000001" blue="0.99893575909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="socialInsuranceBaseValueChange:" destination="bzY-tZ-Ag7" eventType="valueChanged" id="vDR-1K-3eS"/>
+                                    <action selector="insuranceBaseChange:" destination="bzY-tZ-Ag7" eventType="valueChanged" id="bbf-qq-yky"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公积金基数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5R-pS-InB">
@@ -84,7 +84,7 @@
                                 </segments>
                                 <color key="tintColor" red="0.0" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="providentFundValueChange:" destination="bzY-tZ-Ag7" eventType="valueChanged" id="4At-RW-lTd"/>
+                                    <action selector="houseFundBaseChange:" destination="bzY-tZ-Ag7" eventType="valueChanged" id="y8T-Zm-amY"/>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入您的税前工资" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VDc-DN-IFt">
@@ -105,6 +105,9 @@
                                     <segment title="公司详情"/>
                                 </segments>
                                 <color key="tintColor" red="0.012972190979999999" green="0.74898833040000001" blue="0.99893575909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="resultDetailChange:" destination="bzY-tZ-Ag7" eventType="valueChanged" id="8Ub-Cc-clY"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -20,6 +20,10 @@ static NSString *kCenterText = @"税后工资:";
     UIBarButtonItem* right;
     PieChartView *pieCharView;
     NSArray *parties;
+    BOOL insuranceBaseIsHighBase;
+    BOOL houseFundBaseIsHighBase;
+    int selfDefineHouseFundBase;
+    int selfDefineInsuranceBase;
 }
 
 @property (weak, nonatomic) IBOutlet DFPBannerView *bannerView;
@@ -32,19 +36,46 @@ static NSString *kCenterText = @"税后工资:";
     InsuranceBase *insuranceBase;
 }
 
+#pragma mark 社保基数变化
+- (IBAction)insuranceBaseChange:(UISegmentedControl *)sender {
+    if (sender.selectedSegmentIndex == 0) {//high base
+        
+    } else if (sender.selectedSegmentIndex == 1) {//low base
+        
+    } else {//self define
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"请输入你的社保基数" message:@"" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"完成", nil];
+        alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+        [alertView textFieldAtIndex:0].keyboardType = UIKeyboardTypeNumberPad;
+        [alertView show];
+    }
+}
+
+#pragma mark 公积金基数变化
+- (IBAction)houseFundBaseChange:(UISegmentedControl *)sender {
+    if (sender.selectedSegmentIndex == 0) {//high base
+        
+    } else if (sender.selectedSegmentIndex == 1) {//low base
+        
+    } else {//self define
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"请输入你的公积金基数" message:@"" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"完成", nil];
+        alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+        [alertView textFieldAtIndex:0].keyboardType = UIKeyboardTypeNumberPad;
+        [alertView show];
+    }
+}
+
+#pragma mark 计算详情变化
+- (IBAction)resultDetailChange:(UISegmentedControl *)sender {
+    if (sender.selectedSegmentIndex == 0) {//personal detail
+        
+    } else {//conpany detail
+        
+    }
+}
+
 #pragma mark text field resign first responder
 - (IBAction)doTap:(id)sender {
     [self.salaryValue resignFirstResponder];
-}
-
-#pragma mark 社保发生变化
-- (IBAction)socialInsuranceBaseValueChange:(id)sender {
-    NSLog(@"socialInsuranceBaseValueChange");
-}
-
-#pragma mark 公积金发生变化
-- (IBAction)providentFundValueChange:(id)sender {
-    NSLog(@"providentFundValueChange");
 }
 
 #pragma mark 计算税后工资
