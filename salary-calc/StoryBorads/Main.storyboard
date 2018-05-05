@@ -98,10 +98,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done"/>
                             </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8XA-r3-rLD">
+                                <rect key="frame" x="139" y="378" width="137" height="29"/>
+                                <segments>
+                                    <segment title="个人详情"/>
+                                    <segment title="公司详情"/>
+                                </segments>
+                                <color key="tintColor" red="0.012972190979999999" green="0.74898833040000001" blue="0.99893575909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.12941176470588237" green="0.75294117647058822" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="8XA-r3-rLD" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="5Xo-dF-jf7"/>
+                            <constraint firstItem="8XA-r3-rLD" firstAttribute="top" secondItem="C2Y-EV-yWI" secondAttribute="bottom" constant="20" id="7br-eA-ea8"/>
                             <constraint firstItem="e6T-P8-JXg" firstAttribute="top" secondItem="VDc-DN-IFt" secondAttribute="bottom" constant="30" id="A7W-Rd-fpE"/>
                             <constraint firstItem="9F3-oe-iMP" firstAttribute="top" secondItem="e6T-P8-JXg" secondAttribute="bottom" constant="20" id="DG0-S5-N1u"/>
                             <constraint firstItem="VDc-DN-IFt" firstAttribute="top" secondItem="Q4x-4Y-2Fk" secondAttribute="bottom" constant="20" id="Fxj-HS-7b4"/>

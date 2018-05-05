@@ -193,7 +193,7 @@ static NSString *kCenterText = @"税后工资:";
     self.navigationItem.rightBarButtonItem = right;
     self.salaryValue.delegate = self;
     self.salaryValue.layer.borderWidth = 0.5;
-    self.salaryValue.layer.borderColor = [UIColor orangeColor].CGColor;
+    self.salaryValue.layer.borderColor =[UIColor colorWithRed:0.59 green:0.89 blue:0.98 alpha:1.00].CGColor;
     pieCharView = [[PieChartView alloc] initWithFrame:CGRectZero];
     pieCharView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:pieCharView];
