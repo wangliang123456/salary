@@ -164,19 +164,37 @@ static int kHouseFundTag = 2;
         salary.childbirthInsurancePersonalValue = [[maternityInsuranceDict valueForKey:kLowBase] doubleValue] * [[maternityInsuranceDict valueForKey:kPersonalRate] doubleValue];
         salary.childbirthInsuranceCompanyValue = [[maternityInsuranceDict valueForKey:kLowBase] doubleValue] * [[maternityInsuranceDict valueForKey:kCompanyRate] doubleValue];
     }
+    
     //公积金
     NSString *houseFundData = [insuranceBase.houseFund dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *mhouseFundDict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:houseFundData options:kNilOptions error:&error];
-    if (salaryParam > [[mhouseFundDict valueForKey:kLowBase] doubleValue] && salaryParam < [[mhouseFundDict valueForKey:kHighBase] doubleValue]) {
-        salary.housingFundPersonalValue = salaryParam * [[mhouseFundDict valueForKey:kPersonalRate] doubleValue];
-        salary.housingFundCompanyValue = salaryParam * [[mhouseFundDict valueForKey:kCompanyRate] doubleValue];
-    } else if (salaryParam > [[mhouseFundDict valueForKey:kHighBase] doubleValue]) {
-        salary.housingFundPersonalValue = [[mhouseFundDict valueForKey:kHighBase] doubleValue] * [[mhouseFundDict valueForKey:kPersonalRate] doubleValue];
-        salary.housingFundCompanyValue = [[mhouseFundDict valueForKey:kHighBase] doubleValue] * [[mhouseFundDict valueForKey:kCompanyRate] doubleValue];
-    } else if (salaryParam < [[mhouseFundDict valueForKey:kLowBase] doubleValue]) {
+    if (houseFundBaseIsHighBase) {
+        if (salaryParam > [[mhouseFundDict valueForKey:kLowBase] doubleValue] && salaryParam < [[mhouseFundDict valueForKey:kHighBase] doubleValue]) {
+            salary.housingFundPersonalValue = salaryParam * [[mhouseFundDict valueForKey:kPersonalRate] doubleValue];
+            salary.housingFundCompanyValue = salaryParam * [[mhouseFundDict valueForKey:kCompanyRate] doubleValue];
+        } else if (salaryParam > [[mhouseFundDict valueForKey:kHighBase] doubleValue]) {
+            salary.housingFundPersonalValue = [[mhouseFundDict valueForKey:kHighBase] doubleValue] * [[mhouseFundDict valueForKey:kPersonalRate] doubleValue];
+            salary.housingFundCompanyValue = [[mhouseFundDict valueForKey:kHighBase] doubleValue] * [[mhouseFundDict valueForKey:kCompanyRate] doubleValue];
+        } else if (salaryParam < [[mhouseFundDict valueForKey:kLowBase] doubleValue]) {
+            salary.housingFundPersonalValue = [[mhouseFundDict valueForKey:kLowBase] doubleValue] * [[mhouseFundDict valueForKey:kPersonalRate] doubleValue];
+            salary.housingFundCompanyValue = [[mhouseFundDict valueForKey:kLowBase] doubleValue] * [[mhouseFundDict valueForKey:kCompanyRate] doubleValue];
+        }
+    } else {//最低基数
         salary.housingFundPersonalValue = [[mhouseFundDict valueForKey:kLowBase] doubleValue] * [[mhouseFundDict valueForKey:kPersonalRate] doubleValue];
         salary.housingFundCompanyValue = [[mhouseFundDict valueForKey:kLowBase] doubleValue] * [[mhouseFundDict valueForKey:kCompanyRate] doubleValue];
     }
+    if (selfDefineHouseFundBase > 0) {
+        if (salaryParam >= selfDefineHouseFundBase) {
+            salary.housingFundPersonalValue = selfDefineHouseFundBase * [[mhouseFundDict valueForKey:kPersonalRate] doubleValue];
+            salary.housingFundCompanyValue = selfDefineHouseFundBase * [[mhouseFundDict valueForKey:kCompanyRate] doubleValue];
+        } else if (salaryParam < selfDefineHouseFundBase) {
+            if (salaryParam > [[mhouseFundDict valueForKey:kLowBase] doubleValue]) {
+                salary.housingFundPersonalValue = salaryParam * [[mhouseFundDict valueForKey:kPersonalRate] doubleValue];
+                salary.housingFundCompanyValue = salaryParam * [[mhouseFundDict valueForKey:kCompanyRate] doubleValue];
+            }
+        }
+    }
+    
     salary.salaryWithTax = salary.salaryWithoutTax - salary.housingFundPersonalValue - salary.unemploymentInsurancePersonalValue - salary.medicalInsurancePersoalValue - salary.childbirthInsurancePersonalValue - salary.employmentInjuryInsurancePersonalValue - salary.endowmentInsurancePersonalValue;
     if (salary.salaryWithTax > 3500) {
         double tax = 0;
@@ -213,8 +231,15 @@ static int kHouseFundTag = 2;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"薪资计算";
+    [self initVariable];
     [self initView];
     [self loadBanerAD];
+}
+
+-(void) initVariable {
+    isPersonalDetail = YES;
+    houseFundBaseIsHighBase = YES;
+    insuranceBaseIsHighBase = YES;
 }
 
 -(void) loadBanerAD {
@@ -245,13 +270,6 @@ static int kHouseFundTag = 2;
     pieCharView.delegate = self;
     [pieCharView setExtraOffsetsWithLeft:20.f top:0.f right:20.f bottom:0.f];
     [pieCharView animateWithYAxisDuration:1.4 easingOption:ChartEasingOptionEaseOutBack];
-    parties = @[
-                @"Party A", @"Party B", @"Party C", @"Party D", @"Party E", @"Party F",
-                @"Party G", @"Party H", @"Party I", @"Party J", @"Party K", @"Party L",
-                @"Party M", @"Party N", @"Party O", @"Party P", @"Party Q", @"Party R",
-                @"Party S", @"Party T", @"Party U", @"Party V", @"Party W", @"Party X",
-                @"Party Y", @"Party Z"
-                ];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     NSArray *dataArray = @[[[PieChartDataEntry alloc] initWithValue:0 label:@""],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"]];
     [self setDataSet:dataArray];
