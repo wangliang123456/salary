@@ -13,6 +13,9 @@
 
 static NSString *kCenterText = @"税后工资:";
 
+static int kInsuranceTag = 1;
+static int kHouseFundTag = 2;
+
 
 @interface EWRootViewController ()
 {
@@ -47,6 +50,8 @@ static NSString *kCenterText = @"税后工资:";
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"请输入你的社保基数" message:@"" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"完成", nil];
         alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
         [alertView textFieldAtIndex:0].keyboardType = UIKeyboardTypeNumberPad;
+        alertView.tag = kInsuranceTag;
+        alertView.delegate = self;
         [alertView show];
     }
 }
@@ -60,6 +65,8 @@ static NSString *kCenterText = @"税后工资:";
     } else {//self define
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"请输入你的公积金基数" message:@"" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"完成", nil];
         alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+        alertView.tag = kHouseFundTag;
+        alertView.delegate = self;
         [alertView textFieldAtIndex:0].keyboardType = UIKeyboardTypeNumberPad;
         [alertView show];
     }
@@ -354,5 +361,12 @@ static NSString *kCenterText = @"税后工资:";
 #pragma mark text field delegate
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     [self calc:[textField.text doubleValue]];
+}
+
+#pragma mark alert view delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        [self calc:[self.salaryValue.text doubleValue]];
+    }
 }
 @end

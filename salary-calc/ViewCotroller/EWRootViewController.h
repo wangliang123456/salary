@@ -12,7 +12,7 @@
 @import GoogleMobileAds;
 @import Charts;
 
-@interface EWRootViewController : BaseViewController<UITextFieldDelegate,ChartViewDelegate>
+@interface EWRootViewController : BaseViewController<UITextFieldDelegate,ChartViewDelegate,UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *salaryValue;
 
