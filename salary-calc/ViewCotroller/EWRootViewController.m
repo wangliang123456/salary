@@ -11,7 +11,7 @@
 #import "InsuranceDao.h"
 #import "Salary.h"
 
-static NSString *kCenterText = @"税后";
+static NSString *kCenterText = @"税后工资:";
 
 
 @interface EWRootViewController ()
@@ -139,25 +139,28 @@ static NSString *kCenterText = @"税后";
         salary.housingFundCompanyValue = [[mhouseFundDict valueForKey:kLowBase] doubleValue] * [[mhouseFundDict valueForKey:kCompanyRate] doubleValue];
     }
     salary.salaryWithTax = salary.salaryWithoutTax - salary.housingFundPersonalValue - salary.unemploymentInsurancePersonalValue - salary.medicalInsurancePersoalValue - salary.childbirthInsurancePersonalValue - salary.employmentInjuryInsurancePersonalValue - salary.endowmentInsurancePersonalValue;
-    double tax = 0;
-    double baseTax = salary.salaryWithTax - 3500;
-    if (baseTax < 1500) {
-        tax = baseTax * 0.03;
-    } else if (baseTax <= 4500 && baseTax >= 1500) {
-        tax = baseTax * 0.1 - 105;
-    } else if (baseTax <= 9000 && baseTax > 4500) {
-        tax = baseTax * 0.2 - 555;
-    } else if (baseTax <= 35000 && baseTax > 9000) {
-        tax = baseTax * 0.25 - 1005;
-    } else if (baseTax <= 55000 && baseTax > 35000) {
-        tax = baseTax * 0.3 - 2755;
-    } else if (baseTax <= 80000 && baseTax > 55000) {
-        tax = baseTax * 0.35 - 5505;
-    } else {
-        tax = baseTax * 0.45 - 13505;
+    if (salary.salaryWithTax > 3500) {
+        double tax = 0;
+        double baseTax = salary.salaryWithTax - 3500;
+        if (baseTax < 1500) {
+            tax = baseTax * 0.03;
+        } else if (baseTax <= 4500 && baseTax >= 1500) {
+            tax = baseTax * 0.1 - 105;
+        } else if (baseTax <= 9000 && baseTax > 4500) {
+            tax = baseTax * 0.2 - 555;
+        } else if (baseTax <= 35000 && baseTax > 9000) {
+            tax = baseTax * 0.25 - 1005;
+        } else if (baseTax <= 55000 && baseTax > 35000) {
+            tax = baseTax * 0.3 - 2755;
+        } else if (baseTax <= 80000 && baseTax > 55000) {
+            tax = baseTax * 0.35 - 5505;
+        } else {
+            tax = baseTax * 0.45 - 13505;
+        }
+        salary.tax = tax;
+        salary.salaryWithTax = salary.salaryWithTax - tax;
     }
-    salary.tax = tax;
-    salary.salaryWithTax = salary.salaryWithTax - tax;
+    
     pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",salary.salaryWithTax];
     PieChartDataEntry *endowmentInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:salary.endowmentInsurancePersonalValue / salary.salaryWithoutTax label:@"养老保险"];
     PieChartDataEntry *medicalInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:salary.medicalInsurancePersoalValue / salary.salaryWithoutTax label:@"医疗保险"];
