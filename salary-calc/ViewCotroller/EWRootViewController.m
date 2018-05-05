@@ -16,14 +16,15 @@ static NSString *kCenterText = @"税后工资:";
 
 @interface EWRootViewController ()
 {
-    UIBarButtonItem* left;
-    UIBarButtonItem* right;
+    UIBarButtonItem *left;
+    UIBarButtonItem *right;
     PieChartView *pieCharView;
     NSArray *parties;
     BOOL insuranceBaseIsHighBase;
     BOOL houseFundBaseIsHighBase;
     int selfDefineHouseFundBase;
     int selfDefineInsuranceBase;
+    BOOL isPersonalDetail;
 }
 
 @property (weak, nonatomic) IBOutlet DFPBannerView *bannerView;
@@ -39,9 +40,9 @@ static NSString *kCenterText = @"税后工资:";
 #pragma mark 社保基数变化
 - (IBAction)insuranceBaseChange:(UISegmentedControl *)sender {
     if (sender.selectedSegmentIndex == 0) {//high base
-        
+        insuranceBaseIsHighBase = YES;
     } else if (sender.selectedSegmentIndex == 1) {//low base
-        
+        insuranceBaseIsHighBase = NO;
     } else {//self define
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"请输入你的社保基数" message:@"" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"完成", nil];
         alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
@@ -53,9 +54,9 @@ static NSString *kCenterText = @"税后工资:";
 #pragma mark 公积金基数变化
 - (IBAction)houseFundBaseChange:(UISegmentedControl *)sender {
     if (sender.selectedSegmentIndex == 0) {//high base
-        
+        houseFundBaseIsHighBase = YES;
     } else if (sender.selectedSegmentIndex == 1) {//low base
-        
+        houseFundBaseIsHighBase = NO;
     } else {//self define
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"请输入你的公积金基数" message:@"" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"完成", nil];
         alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
@@ -67,9 +68,9 @@ static NSString *kCenterText = @"税后工资:";
 #pragma mark 计算详情变化
 - (IBAction)resultDetailChange:(UISegmentedControl *)sender {
     if (sender.selectedSegmentIndex == 0) {//personal detail
-        
+        isPersonalDetail = YES;
     } else {//conpany detail
-        
+        isPersonalDetail = NO;
     }
 }
 
