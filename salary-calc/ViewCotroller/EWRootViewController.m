@@ -198,6 +198,77 @@ static int kHouseFundTag = 2;
         salary.childbirthInsuranceCompanyValue = [[maternityInsuranceDict valueForKey:kLowBase] doubleValue] * [[maternityInsuranceDict valueForKey:kCompanyRate] doubleValue];
         
     }
+    if (selfDefineInsuranceBase) {//自定义金额
+        //养老保险
+        if (salaryParam >= selfDefineInsuranceBase) {
+            salary.endowmentInsurancePersonalValue = selfDefineInsuranceBase * [[endowmentInsuranceDataDict valueForKey:kPersonalRate] doubleValue];
+            salary.endowmentInsuranceCompanyValue = selfDefineInsuranceBase * [[endowmentInsuranceDataDict valueForKey:kCompanyRate] doubleValue];
+        } else if (salaryParam < selfDefineInsuranceBase && salaryParam > [[endowmentInsuranceDataDict valueForKey:kLowBase] doubleValue]) {
+            salary.endowmentInsurancePersonalValue = salaryParam * [[endowmentInsuranceDataDict valueForKey:kPersonalRate] doubleValue];
+            salary.endowmentInsuranceCompanyValue = salaryParam * [[endowmentInsuranceDataDict valueForKey:kCompanyRate] doubleValue];
+        } else {
+            salary.endowmentInsurancePersonalValue = [[endowmentInsuranceDataDict valueForKey:kLowBase] doubleValue] * [[endowmentInsuranceDataDict valueForKey:kPersonalRate] doubleValue];
+            salary.endowmentInsuranceCompanyValue = [[endowmentInsuranceDataDict valueForKey:kLowBase] doubleValue] * [[endowmentInsuranceDataDict valueForKey:kCompanyRate] doubleValue];
+        }
+        
+        NSString *medicalInsuranceData = [insuranceBase.medicalInsurance dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *medicalInsuranceDict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:medicalInsuranceData options:kNilOptions error:&error];
+        NSString *exp = [medicalInsuranceDict valueForKey:kPersonalRate];
+        NSArray<NSString *> *array = [exp componentsSeparatedByString:@"+"];
+        //医疗保险
+        if (salaryParam >= selfDefineInsuranceBase) {
+            salary.medicalInsurancePersoalValue = selfDefineInsuranceBase * [array[0] doubleValue] + [array[1] integerValue];
+            salary.medicalInsuranceCompanyValue = selfDefineInsuranceBase * [[medicalInsuranceDict valueForKey:kCompanyRate] doubleValue];
+        } else if (salaryParam < selfDefineInsuranceBase && salaryParam > [[medicalInsuranceDict valueForKey:kLowBase] doubleValue]) {
+            salary.medicalInsurancePersoalValue = salaryParam * [array[0] doubleValue] + [array[1] integerValue];
+            salary.medicalInsuranceCompanyValue = salaryParam * [[medicalInsuranceDict valueForKey:kCompanyRate] doubleValue];
+        } else {
+            salary.medicalInsurancePersoalValue = [[medicalInsuranceDict valueForKey:kLowBase] doubleValue] * [array[0] doubleValue] + [array[1] integerValue];
+            salary.medicalInsuranceCompanyValue = [[medicalInsuranceDict valueForKey:kLowBase] doubleValue] * [[medicalInsuranceDict valueForKey:kCompanyRate] doubleValue];
+        }
+        
+        //失业保险
+        NSString *unemploymentInsuranceData = [insuranceBase.unemploymentInsurance dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *unemploymentInsuranceDict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:unemploymentInsuranceData options:kNilOptions error:&error];
+        if (salaryParam >= selfDefineInsuranceBase) {
+            salary.unemploymentInsurancePersonalValue = selfDefineInsuranceBase * [[unemploymentInsuranceDict valueForKey:kPersonalRate] doubleValue];
+            salary.unemploymentInsuranceCompanyValue = selfDefineInsuranceBase * [[unemploymentInsuranceDict valueForKey:kCompanyRate] doubleValue];
+        } else if (salaryParam < selfDefineInsuranceBase && salaryParam > [[unemploymentInsuranceDict valueForKey:kLowBase] doubleValue]) {
+            salary.unemploymentInsurancePersonalValue = salaryParam * [[unemploymentInsuranceDict valueForKey:kPersonalRate] doubleValue];
+            salary.unemploymentInsuranceCompanyValue = salaryParam * [[unemploymentInsuranceDict valueForKey:kCompanyRate] doubleValue];
+        } else {
+            salary.unemploymentInsurancePersonalValue = [[unemploymentInsuranceDict valueForKey:kLowBase] doubleValue] * [[unemploymentInsuranceDict valueForKey:kPersonalRate] doubleValue];
+            salary.unemploymentInsuranceCompanyValue = [[unemploymentInsuranceDict valueForKey:kLowBase] doubleValue] * [[unemploymentInsuranceDict valueForKey:kCompanyRate] doubleValue];
+        }
+        
+        //工伤保险
+        NSString *employmentInjuryInsuranceData = [insuranceBase.employmentInjuryInsurance dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *employmentInjuryInsuranceDict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:employmentInjuryInsuranceData options:kNilOptions error:&error];
+        if (salaryParam >= selfDefineInsuranceBase) {
+            salary.employmentInjuryInsurancePersonalValue = selfDefineInsuranceBase * [[employmentInjuryInsuranceDict valueForKey:kPersonalRate] doubleValue];
+            salary.employmentInjuryInsuranceCompanyValue = selfDefineInsuranceBase * [[employmentInjuryInsuranceDict valueForKey:kCompanyRate] doubleValue];
+        } else if (salaryParam < selfDefineInsuranceBase && salaryParam < [[employmentInjuryInsuranceDict valueForKey:kLowBase] doubleValue]) {
+            salary.employmentInjuryInsurancePersonalValue = salaryParam * [[employmentInjuryInsuranceDict valueForKey:kPersonalRate] doubleValue];
+            salary.employmentInjuryInsuranceCompanyValue = salaryParam * [[employmentInjuryInsuranceDict valueForKey:kCompanyRate] doubleValue];
+        } else {
+            salary.employmentInjuryInsurancePersonalValue = [[employmentInjuryInsuranceDict valueForKey:kLowBase] doubleValue] * [[employmentInjuryInsuranceDict valueForKey:kPersonalRate] doubleValue];
+            salary.employmentInjuryInsuranceCompanyValue = [[employmentInjuryInsuranceDict valueForKey:kLowBase] doubleValue] * [[employmentInjuryInsuranceDict valueForKey:kCompanyRate] doubleValue];
+        }
+        
+        //生育保险
+        NSString *maternityInsuranceData = [insuranceBase.maternityInsurance dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *maternityInsuranceDict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:maternityInsuranceData options:kNilOptions error:&error];
+        if (salaryParam >= selfDefineInsuranceBase) {
+            salary.childbirthInsurancePersonalValue = selfDefineInsuranceBase * [[maternityInsuranceDict valueForKey:kPersonalRate] doubleValue];
+            salary.childbirthInsuranceCompanyValue = selfDefineInsuranceBase * [[maternityInsuranceDict valueForKey:kCompanyRate] doubleValue];
+        } else if (salaryParam < selfDefineInsuranceBase && salaryParam < [[maternityInsuranceDict valueForKey:kLowBase] doubleValue]) {
+            salary.childbirthInsurancePersonalValue = salaryParam * [[maternityInsuranceDict valueForKey:kPersonalRate] doubleValue];
+            salary.childbirthInsuranceCompanyValue = salaryParam * [[maternityInsuranceDict valueForKey:kCompanyRate] doubleValue];
+        } else {
+            salary.childbirthInsurancePersonalValue = [[maternityInsuranceDict valueForKey:kLowBase] doubleValue] * [[maternityInsuranceDict valueForKey:kPersonalRate] doubleValue];
+            salary.childbirthInsuranceCompanyValue = [[maternityInsuranceDict valueForKey:kLowBase] doubleValue] * [[maternityInsuranceDict valueForKey:kCompanyRate] doubleValue];
+        }
+    }
     
     
     //公积金
