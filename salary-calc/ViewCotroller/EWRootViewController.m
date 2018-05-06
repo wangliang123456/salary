@@ -495,6 +495,8 @@ static int kHouseFundTag = 2;
     } else if (alertView.tag == kHouseFundTag) {
         selfDefineHouseFundBase = [[alertView textFieldAtIndex:0].text integerValue];
     }
-    [self calc:[self.salaryValue.text doubleValue]];
+    if (buttonIndex == 1) {
+        [self calc:[self.salaryValue.text doubleValue]];
+    }
 }
 @end
