@@ -360,7 +360,7 @@ static int kHouseFundTag = 2;
 
 #pragma mark 加载饼图
 -(void) loadPieChartView:(Salary *) salary {
-    if (!pieCharView) {
+    if (pieCharView) {
         [pieCharView removeFromSuperview];
     }
     pieCharView = [[PieChartView alloc] initWithFrame:CGRectZero];
