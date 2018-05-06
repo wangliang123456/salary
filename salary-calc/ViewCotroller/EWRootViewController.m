@@ -376,8 +376,8 @@ static int kHouseFundTag = 2;
     [pieCharView setExtraOffsetsWithLeft:20.f top:0.f right:20.f bottom:0.f];
     [pieCharView animateWithYAxisDuration:1.4 easingOption:ChartEasingOptionEaseOutBack];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    [self setDataSet:salary];
     [self setupPieChartView:pieCharView];
+    [self setDataSet:salary];
 }
 
 - (void)setDataSet:(Salary *) salary
