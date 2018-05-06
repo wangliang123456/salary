@@ -36,7 +36,6 @@ static int kHouseFundTag = 2;
 
 @implementation EWRootViewController
 {
-    Salary *salary;
     InsuranceBase *insuranceBase;
 }
 
@@ -88,8 +87,7 @@ static int kHouseFundTag = 2;
 
 #pragma mark 计算税后工资
 -(void) calc:(double) salaryParam {
-    salary = [[Salary alloc] init];
- 
+    Salary *salary = [[Salary alloc] init];
     salary.salaryWithoutTax = salaryParam;
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     int currentCityId = [[userDefault valueForKey:kSelectedCityId] intValue];
@@ -324,15 +322,7 @@ static int kHouseFundTag = 2;
         salary.tax = tax;
         salary.salaryWithTax = salary.salaryWithTax - tax;
     }
-    
-    pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",salary.salaryWithTax];
-    PieChartDataEntry *endowmentInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:salary.endowmentInsurancePersonalValue / salary.salaryWithoutTax label:@"养老保险"];
-    PieChartDataEntry *medicalInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:salary.medicalInsurancePersoalValue / salary.salaryWithoutTax label:@"医疗保险"];
-    PieChartDataEntry *taxEntry = [[PieChartDataEntry alloc] initWithValue:salary.tax / salary.salaryWithoutTax label:@"个人所得税"];
-    PieChartDataEntry *salaryWitTaxEntry = [[PieChartDataEntry alloc] initWithValue:salary.salaryWithTax / salary.salaryWithoutTax label:@"税后工资"];
-    PieChartDataEntry *houseFundEntry = [[PieChartDataEntry alloc] initWithValue:salary.housingFundPersonalValue / salary.salaryWithoutTax label:@"公积金"];
-    NSArray *dataArray = @[endowmentInsuranceEntry,medicalInsuranceEntry,taxEntry,salaryWitTaxEntry,houseFundEntry];
-    [self setDataSet:dataArray];
+    [self loadPieChartView:salary];
 }
 
 - (void)viewDidLoad {
@@ -365,6 +355,14 @@ static int kHouseFundTag = 2;
     self.salaryValue.delegate = self;
     self.salaryValue.layer.borderWidth = 0.5;
     self.salaryValue.layer.borderColor =[UIColor colorWithRed:0.59 green:0.89 blue:0.98 alpha:1.00].CGColor;
+    
+}
+
+#pragma mark 加载饼图
+-(void) loadPieChartView:(Salary *) salary {
+    if (!pieCharView) {
+        [pieCharView removeFromSuperview];
+    }
     pieCharView = [[PieChartView alloc] initWithFrame:CGRectZero];
     pieCharView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:pieCharView];
@@ -372,18 +370,18 @@ static int kHouseFundTag = 2;
     NSLayoutConstraint *pieChartWidth = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0];
     NSLayoutConstraint *pieChartLeading = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0];
     NSLayoutConstraint *pieChartBottom = [NSLayoutConstraint constraintWithItem:pieCharView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-130];
-        [self.view addConstraints:@[pieChartHeight,pieChartWidth,pieChartLeading,pieChartBottom]];
+    [self.view addConstraints:@[pieChartHeight,pieChartWidth,pieChartLeading,pieChartBottom]];
     pieCharView.legend.enabled = NO;
     pieCharView.delegate = self;
     [pieCharView setExtraOffsetsWithLeft:20.f top:0.f right:20.f bottom:0.f];
     [pieCharView animateWithYAxisDuration:1.4 easingOption:ChartEasingOptionEaseOutBack];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     NSArray *dataArray = @[[[PieChartDataEntry alloc] initWithValue:0 label:@""],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"]];
-    [self setDataSet:dataArray];
+    [self setDataSet:dataArray withSalay:salary];
     [self setupPieChartView:pieCharView];
 }
 
-- (void)setDataSet:(NSArray *) dataArray
+- (void)setDataSet:(NSArray *) dataArray withSalay:(Salary *) salary
 {
     
     PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:dataArray label:@"Election Results"];
@@ -415,6 +413,12 @@ static int kHouseFundTag = 2;
     pieCharView.data = data;
     [pieCharView highlightValues:nil];
     [pieCharView animateWithYAxisDuration:1.4 easingOption:ChartEasingOptionEaseOutBack];
+    pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",salary.salaryWithTax];
+    PieChartDataEntry *endowmentInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:salary.endowmentInsurancePersonalValue / salary.salaryWithoutTax label:@"养老保险"];
+    PieChartDataEntry *medicalInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:salary.medicalInsurancePersoalValue / salary.salaryWithoutTax label:@"医疗保险"];
+    PieChartDataEntry *taxEntry = [[PieChartDataEntry alloc] initWithValue:salary.tax / salary.salaryWithoutTax label:@"个人所得税"];
+    PieChartDataEntry *salaryWitTaxEntry = [[PieChartDataEntry alloc] initWithValue:salary.salaryWithTax / salary.salaryWithoutTax label:@"税后工资"];
+    PieChartDataEntry *houseFundEntry = [[PieChartDataEntry alloc] initWithValue:salary.housingFundPersonalValue / salary.salaryWithoutTax label:@"公积金"];
 }
 
 - (void)setupPieChartView:(PieChartView *)chartView
