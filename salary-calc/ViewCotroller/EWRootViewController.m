@@ -89,6 +89,7 @@ static int kHouseFundTag = 2;
 #pragma mark 计算税后工资
 -(void) calc:(double) salaryParam {
     salary = [[Salary alloc] init];
+ 
     salary.salaryWithoutTax = salaryParam;
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     int currentCityId = [[userDefault valueForKey:kSelectedCityId] intValue];
@@ -489,8 +490,11 @@ static int kHouseFundTag = 2;
 
 #pragma mark alert view delegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 1) {
-        [self calc:[self.salaryValue.text doubleValue]];
+    if (alertView.tag == kInsuranceTag) {
+        selfDefineInsuranceBase = [[alertView textFieldAtIndex:0].text integerValue];
+    } else if (alertView.tag == kHouseFundTag) {
+        selfDefineHouseFundBase = [[alertView textFieldAtIndex:0].text integerValue];
     }
+    [self calc:[self.salaryValue.text doubleValue]];
 }
 @end
