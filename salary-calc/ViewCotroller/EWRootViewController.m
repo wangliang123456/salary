@@ -376,13 +376,19 @@ static int kHouseFundTag = 2;
     [pieCharView setExtraOffsetsWithLeft:20.f top:0.f right:20.f bottom:0.f];
     [pieCharView animateWithYAxisDuration:1.4 easingOption:ChartEasingOptionEaseOutBack];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    NSArray *dataArray = @[[[PieChartDataEntry alloc] initWithValue:0 label:@""],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"],[[PieChartDataEntry alloc] initWithValue:0 label:@"dsadsadsadsa"]];
-    [self setDataSet:dataArray withSalay:salary];
+    [self setDataSet:salary];
     [self setupPieChartView:pieCharView];
 }
 
-- (void)setDataSet:(NSArray *) dataArray withSalay:(Salary *) salary
+- (void)setDataSet:(Salary *) salary
 {
+    pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",salary.salaryWithTax];
+    PieChartDataEntry *endowmentInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:salary.endowmentInsurancePersonalValue / salary.salaryWithoutTax label:@"养老保险"];
+    PieChartDataEntry *medicalInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:salary.medicalInsurancePersoalValue / salary.salaryWithoutTax label:@"医疗保险"];
+    PieChartDataEntry *taxEntry = [[PieChartDataEntry alloc] initWithValue:salary.tax / salary.salaryWithoutTax label:@"个人所得税"];
+    PieChartDataEntry *salaryWitTaxEntry = [[PieChartDataEntry alloc] initWithValue:salary.salaryWithTax / salary.salaryWithoutTax label:@"税后工资"];
+    PieChartDataEntry *houseFundEntry = [[PieChartDataEntry alloc] initWithValue:salary.housingFundPersonalValue / salary.salaryWithoutTax label:@"公积金"];
+    NSArray *dataArray = @[endowmentInsuranceEntry,medicalInsuranceEntry,taxEntry,salaryWitTaxEntry,houseFundEntry];
     
     PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:dataArray label:@"Election Results"];
     dataSet.sliceSpace = 2.0;
@@ -413,12 +419,8 @@ static int kHouseFundTag = 2;
     pieCharView.data = data;
     [pieCharView highlightValues:nil];
     [pieCharView animateWithYAxisDuration:1.4 easingOption:ChartEasingOptionEaseOutBack];
-    pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",salary.salaryWithTax];
-    PieChartDataEntry *endowmentInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:salary.endowmentInsurancePersonalValue / salary.salaryWithoutTax label:@"养老保险"];
-    PieChartDataEntry *medicalInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:salary.medicalInsurancePersoalValue / salary.salaryWithoutTax label:@"医疗保险"];
-    PieChartDataEntry *taxEntry = [[PieChartDataEntry alloc] initWithValue:salary.tax / salary.salaryWithoutTax label:@"个人所得税"];
-    PieChartDataEntry *salaryWitTaxEntry = [[PieChartDataEntry alloc] initWithValue:salary.salaryWithTax / salary.salaryWithoutTax label:@"税后工资"];
-    PieChartDataEntry *houseFundEntry = [[PieChartDataEntry alloc] initWithValue:salary.housingFundPersonalValue / salary.salaryWithoutTax label:@"公积金"];
+    
+    
 }
 
 - (void)setupPieChartView:(PieChartView *)chartView
