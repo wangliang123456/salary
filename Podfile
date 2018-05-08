@@ -1,6 +1,6 @@
 target 'salary-calc' do
   pod 'AFNetworking'
-  pod 'Charts', '~> 3.0.4'
+  pod 'Charts','~> 3.1.1'
   pod 'Firebase/Core','~>4.4.0'
   pod 'Firebase/AdMob','~>4.4.0'
   pod 'FMDB', '~> 2.7.2'
