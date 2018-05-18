@@ -331,6 +331,11 @@ static int kHouseFundTag = 2;
     [self initVariable];
     [self initView];
     [self loadBanerAD];
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    int currentCityId = [[userDefault valueForKey:kSelectedCityId] intValue];
+    if (currentCityId == 0) {
+        [self changeCity:nil];
+    }
 }
 
 -(void) initVariable {
