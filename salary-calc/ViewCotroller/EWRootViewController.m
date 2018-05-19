@@ -379,7 +379,7 @@ static int kHouseFundTag = 2;
     pieCharView.legend.enabled = NO;
     pieCharView.delegate = self;
     [pieCharView setExtraOffsetsWithLeft:20.f top:0.f right:20.f bottom:0.f];
-    [pieCharView animateWithYAxisDuration:1.4 easingOption:ChartEasingOptionEaseOutBack];
+    [pieCharView animateWithYAxisDuration:1.4 easingOption:ChartEasingOptionEaseInCirc];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self setupPieChartView:pieCharView];
     [self setDataSet:salary];
@@ -388,15 +388,15 @@ static int kHouseFundTag = 2;
 - (void)setDataSet:(Salary *) salary
 {
     pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",salary.salaryWithTax];
-    
     PieChartDataEntry *endowmentInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:salary.endowmentInsurancePersonalValue label:[NSString stringWithFormat:@"养老保险:%.f",salary.endowmentInsurancePersonalValue]];
     PieChartDataEntry *medicalInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:salary.medicalInsurancePersoalValue label:[NSString stringWithFormat:@"医疗保险:%.f",salary.medicalInsurancePersoalValue]];
+    PieChartDataEntry *lostJob = [[PieChartDataEntry alloc] initWithValue:salary.unemploymentInsurancePersonalValue  label:[NSString stringWithFormat:@"失业保险:%.f",salary.unemploymentInsurancePersonalValue]];
     PieChartDataEntry *taxEntry = [[PieChartDataEntry alloc] initWithValue:salary.tax label:[NSString stringWithFormat:@"个人所得税:%.f",salary.tax]];
     PieChartDataEntry *salaryWitTaxEntry = [[PieChartDataEntry alloc] initWithValue:salary.salaryWithTax label:[NSString stringWithFormat:@"税后工资:%.f",salary.salaryWithTax]];
     PieChartDataEntry *houseFundEntry = [[PieChartDataEntry alloc] initWithValue:salary.housingFundPersonalValue  label:[NSString stringWithFormat:@"公积金:%.f",salary.housingFundPersonalValue]];
-    NSArray *dataArray = @[endowmentInsuranceEntry,medicalInsuranceEntry,taxEntry,salaryWitTaxEntry,houseFundEntry];
     
-    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:dataArray label:@"dasdsasa"];
+    NSArray *dataArray = @[endowmentInsuranceEntry,medicalInsuranceEntry,taxEntry,salaryWitTaxEntry,houseFundEntry,lostJob];
+    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:dataArray label:@""];
     dataSet.sliceSpace = 2.0;
     // add a lot of colors
     NSMutableArray *colors = [[NSMutableArray alloc] init];
@@ -418,7 +418,7 @@ static int kHouseFundTag = 2;
     pFormatter.numberStyle = NSNumberFormatterPercentStyle;
     pFormatter.maximumFractionDigits = 1;
     pFormatter.multiplier = @1.f;
-//    pFormatter.percentSymbol = @" %";
+    pFormatter.percentSymbol = @" %";
     [data setValueFormatter:[[ChartDefaultValueFormatter alloc] initWithFormatter:pFormatter]];
     [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:11.f]];
     [data setValueTextColor:UIColor.blackColor];
@@ -451,7 +451,6 @@ static int kHouseFundTag = 2;
     l.xEntrySpace = 7.0;
     l.yEntrySpace = 0.0;
     l.yOffset = 0.0;
-    pieCharView.centerText = kCenterText;
 }
 
 #pragma mark - ChartViewDelegate
