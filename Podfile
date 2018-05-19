@@ -4,6 +4,8 @@ target 'salary-calc' do
   pod 'Firebase/Core','~>4.4.0'
   pod 'Firebase/AdMob','~>4.4.0'
   pod 'FMDB', '~> 2.7.2'
+  pod 'SpreadsheetView'
+  platform :ios, '9.3'
   post_install do |installer|
     installer.pods_project.targets.each do |target|
       target.build_configurations.each do |config|
