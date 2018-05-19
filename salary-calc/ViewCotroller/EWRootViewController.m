@@ -388,14 +388,15 @@ static int kHouseFundTag = 2;
 - (void)setDataSet:(Salary *) salary
 {
     pieCharView.centerText = [NSString stringWithFormat:@"税后:%.2f",salary.salaryWithTax];
-    PieChartDataEntry *endowmentInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:salary.endowmentInsurancePersonalValue / salary.salaryWithoutTax label:@"养老保险"];
-    PieChartDataEntry *medicalInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:salary.medicalInsurancePersoalValue / salary.salaryWithoutTax label:@"医疗保险"];
-    PieChartDataEntry *taxEntry = [[PieChartDataEntry alloc] initWithValue:salary.tax / salary.salaryWithoutTax label:@"个人所得税"];
-    PieChartDataEntry *salaryWitTaxEntry = [[PieChartDataEntry alloc] initWithValue:salary.salaryWithTax / salary.salaryWithoutTax label:@"税后工资"];
-    PieChartDataEntry *houseFundEntry = [[PieChartDataEntry alloc] initWithValue:salary.housingFundPersonalValue / salary.salaryWithoutTax label:@"公积金"];
+    
+    PieChartDataEntry *endowmentInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:salary.endowmentInsurancePersonalValue label:[NSString stringWithFormat:@"养老保险:%.f",salary.endowmentInsurancePersonalValue]];
+    PieChartDataEntry *medicalInsuranceEntry = [[PieChartDataEntry alloc] initWithValue:salary.medicalInsurancePersoalValue label:[NSString stringWithFormat:@"医疗保险:%.f",salary.medicalInsurancePersoalValue]];
+    PieChartDataEntry *taxEntry = [[PieChartDataEntry alloc] initWithValue:salary.tax label:[NSString stringWithFormat:@"个人所得税:%.f",salary.tax]];
+    PieChartDataEntry *salaryWitTaxEntry = [[PieChartDataEntry alloc] initWithValue:salary.salaryWithTax label:[NSString stringWithFormat:@"税后工资:%.f",salary.salaryWithTax]];
+    PieChartDataEntry *houseFundEntry = [[PieChartDataEntry alloc] initWithValue:salary.housingFundPersonalValue  label:[NSString stringWithFormat:@"公积金:%.f",salary.housingFundPersonalValue]];
     NSArray *dataArray = @[endowmentInsuranceEntry,medicalInsuranceEntry,taxEntry,salaryWitTaxEntry,houseFundEntry];
     
-    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:dataArray label:@"Election Results"];
+    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:dataArray label:@"dasdsasa"];
     dataSet.sliceSpace = 2.0;
     // add a lot of colors
     NSMutableArray *colors = [[NSMutableArray alloc] init];
@@ -417,15 +418,13 @@ static int kHouseFundTag = 2;
     pFormatter.numberStyle = NSNumberFormatterPercentStyle;
     pFormatter.maximumFractionDigits = 1;
     pFormatter.multiplier = @1.f;
-    pFormatter.percentSymbol = @" %";
+//    pFormatter.percentSymbol = @" %";
     [data setValueFormatter:[[ChartDefaultValueFormatter alloc] initWithFormatter:pFormatter]];
     [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:11.f]];
     [data setValueTextColor:UIColor.blackColor];
     pieCharView.data = data;
     [pieCharView highlightValues:nil];
     [pieCharView animateWithYAxisDuration:1.4 easingOption:ChartEasingOptionEaseOutBack];
-    
-    
 }
 
 - (void)setupPieChartView:(PieChartView *)chartView
