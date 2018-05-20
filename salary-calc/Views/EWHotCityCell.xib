@@ -20,6 +20,7 @@
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Son-un-N64">
                         <rect key="frame" x="32" y="21" width="31" height="30"/>
+                        <color key="tintColor" red="0.0" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal">
                             <attributedString key="attributedTitle">
                                 <fragment content="北京">
@@ -32,30 +33,37 @@
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nre-mu-0Je">
                         <rect key="frame" x="125" y="21" width="31" height="30"/>
+                        <color key="tintColor" red="0.0" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal" title="上海"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLz-Nz-Z2M">
                         <rect key="frame" x="218" y="21" width="31" height="30"/>
+                        <color key="tintColor" red="0.0" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal" title="广州"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdQ-wc-ICu">
                         <rect key="frame" x="311" y="21" width="31" height="30"/>
+                        <color key="tintColor" red="0.0" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal" title="深圳"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6t-Xt-Omf">
                         <rect key="frame" x="32" y="70" width="31" height="30"/>
+                        <color key="tintColor" red="0.0" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal" title="杭州"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jT-fW-iD9">
                         <rect key="frame" x="125" y="70" width="31" height="30"/>
+                        <color key="tintColor" red="0.0" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal" title="苏州"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuW-L8-cTX">
                         <rect key="frame" x="218" y="70" width="31" height="30"/>
+                        <color key="tintColor" red="0.0" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal" title="成都"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pr-Rx-s38">
                         <rect key="frame" x="311" y="70" width="31" height="30"/>
+                        <color key="tintColor" red="0.0" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal" title="武汉"/>
                     </button>
                 </subviews>
