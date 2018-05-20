@@ -412,6 +412,8 @@ static int kHouseFundTag = 2;
 -(void) initView {
     left = [[UIBarButtonItem alloc] initWithTitle:@"北京" style:UIBarButtonItemStylePlain target:self action:@selector(changeCity:)];
     right = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(changeSetting:)];
+    right.tintColor = self.houseSeg.tintColor;
+    left.tintColor = self.houseSeg.tintColor;
     self.navigationItem.leftBarButtonItem = left;
     self.navigationItem.rightBarButtonItem = right;
     self.salaryValue.delegate = self;

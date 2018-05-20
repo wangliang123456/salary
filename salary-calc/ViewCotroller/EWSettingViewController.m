@@ -42,6 +42,7 @@ static const CGFloat kHeaderViewHieght = 25;
 #pragma mark init view
 -(void) initView {
     right = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(doneSetting)];
+    right.tintColor = [UIColor colorWithRed:0 green:0.74902 blue:1 alpha:1];
     self.navigationItem.rightBarButtonItem = right;
     self.contentView.delegate = self;
     self.contentView.dataSource = self;

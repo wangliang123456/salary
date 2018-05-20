@@ -34,6 +34,7 @@ static const CGFloat kHotCityCellHeight = 130;
 
 -(void) initView {
     cancel = [[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancel:)];
+    cancel.tintColor = [UIColor colorWithRed:0 green:0.74902 blue:1 alpha:1];
     self.navigationItem.leftBarButtonItem = cancel;
 }
 
