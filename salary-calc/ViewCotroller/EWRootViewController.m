@@ -58,11 +58,12 @@ static int kHouseFundTag = 2;
 
 -(void) loadTableView:(Salary *) salary {
     [[self.view viewWithTag:111] removeFromSuperview];
-    [UIView animateWithDuration:1.0 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         UIScreen *screen = [UIScreen mainScreen];
         int width = (screen.bounds.size.width - 26) / 3;
         NSArray<NSNumber *> *array = @[@(width),@(width),@(width)];
         NALLabelsMatrixView *matrixView = [[NALLabelsMatrixView alloc] initWithFrame:CGRectZero columns:array];
+        matrixView.headerColour = self.houseSeg.tintColor;
         matrixView.tag = 111;
         matrixView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.view addSubview:matrixView];
