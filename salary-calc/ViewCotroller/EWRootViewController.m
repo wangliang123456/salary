@@ -379,7 +379,6 @@ static int kHouseFundTag = 2;
         salary.salaryWithTax = salary.salaryWithTax - tax;
     }
     [self loadTableView:salary];
-//    [self loadPieChartView:salary];
 }
 
 - (void)viewDidLoad {
