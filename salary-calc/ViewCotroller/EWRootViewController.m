@@ -57,8 +57,8 @@ static int kHouseFundTag = 2;
 
 
 -(void) loadTableView:(Salary *) salary {
+    [[self.view viewWithTag:111] removeFromSuperview];
     [UIView animateWithDuration:1.0 animations:^{
-        [[self.view viewWithTag:111] removeFromSuperview];
         UIScreen *screen = [UIScreen mainScreen];
         int width = (screen.bounds.size.width - 26) / 3;
         NSArray<NSNumber *> *array = @[@(width),@(width),@(width)];
