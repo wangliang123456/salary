@@ -25,31 +25,9 @@
 		C19E77AE8C98A39ABDF909F8 /* Pods_salary_calc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57528E0EFF5A8CF314453031 /* Pods_salary_calc.framework */; };
 		EF16DC242095CF6D00CBA361 /* InsuranceDao.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16DC232095CF6D00CBA361 /* InsuranceDao.m */; };
 		EF16DC272095FA4400CBA361 /* InsuranceBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16DC262095FA4400CBA361 /* InsuranceBase.m */; };
+		EF5C49F620B05D9200B5C825 /* NALLabelsMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C49F520B05D9200B5C825 /* NALLabelsMatrix.swift */; };
 		EF632AB7209757EF0041FA30 /* Salary.m in Sources */ = {isa = PBXBuildFile; fileRef = EF632AB6209757EF0041FA30 /* Salary.m */; };
 		EF6A25F020B02080008C21A6 /* testswkf.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A25EF20B02080008C21A6 /* testswkf.swift */; };
-		EF6A260920B02B95008C21A6 /* SpreadsheetView+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A25F220B02B93008C21A6 /* SpreadsheetView+Touches.swift */; };
-		EF6A260A20B02B95008C21A6 /* Gridlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A25F320B02B93008C21A6 /* Gridlines.swift */; };
-		EF6A260B20B02B95008C21A6 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A25F420B02B93008C21A6 /* ScrollView.swift */; };
-		EF6A260C20B02B95008C21A6 /* SpreadsheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A25F520B02B93008C21A6 /* SpreadsheetView.swift */; };
-		EF6A260D20B02B95008C21A6 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A25F620B02B93008C21A6 /* Cell.swift */; };
-		EF6A260E20B02B95008C21A6 /* SpreadsheetViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A25F720B02B93008C21A6 /* SpreadsheetViewDataSource.swift */; };
-		EF6A260F20B02B95008C21A6 /* SpreadsheetView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A25F820B02B94008C21A6 /* SpreadsheetView+Layout.swift */; };
-		EF6A261020B02B95008C21A6 /* Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A25F920B02B94008C21A6 /* Borders.swift */; };
-		EF6A261120B02B95008C21A6 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A25FA20B02B94008C21A6 /* Location.swift */; };
-		EF6A261220B02B95008C21A6 /* SpreadsheetView+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A25FB20B02B94008C21A6 /* SpreadsheetView+UIScrollView.swift */; };
-		EF6A261320B02B95008C21A6 /* SpreadsheetView+UIScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A25FC20B02B94008C21A6 /* SpreadsheetView+UIScrollViewDelegate.swift */; };
-		EF6A261420B02B95008C21A6 /* SpreadsheetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A25FD20B02B94008C21A6 /* SpreadsheetViewDelegate.swift */; };
-		EF6A261520B02B95008C21A6 /* SpreadsheetView+UISnapshotting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A25FE20B02B94008C21A6 /* SpreadsheetView+UISnapshotting.swift */; };
-		EF6A261620B02B95008C21A6 /* LayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A25FF20B02B94008C21A6 /* LayoutEngine.swift */; };
-		EF6A261720B02B95008C21A6 /* IndexPath+Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A260020B02B94008C21A6 /* IndexPath+Column.swift */; };
-		EF6A261820B02B95008C21A6 /* Array+BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A260120B02B94008C21A6 /* Array+BinarySearch.swift */; };
-		EF6A261920B02B95008C21A6 /* CircularScrolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A260220B02B94008C21A6 /* CircularScrolling.swift */; };
-		EF6A261A20B02B95008C21A6 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A260320B02B94008C21A6 /* Address.swift */; };
-		EF6A261B20B02B95008C21A6 /* ReuseQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A260420B02B95008C21A6 /* ReuseQueue.swift */; };
-		EF6A261C20B02B95008C21A6 /* ScrollPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A260520B02B95008C21A6 /* ScrollPosition.swift */; };
-		EF6A261D20B02B95008C21A6 /* SpreadsheetView+CirclularScrolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A260620B02B95008C21A6 /* SpreadsheetView+CirclularScrolling.swift */; };
-		EF6A261E20B02B95008C21A6 /* SpreadsheetView+UIViewHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A260720B02B95008C21A6 /* SpreadsheetView+UIViewHierarchy.swift */; };
-		EF6A261F20B02B95008C21A6 /* CellRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A260820B02B95008C21A6 /* CellRange.swift */; };
 		EF8FEE49208C6A670016338D /* CityDao.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FEE48208C6A670016338D /* CityDao.m */; };
 		EF9458D420993B3100582B47 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF9458D320993B3100582B47 /* StoreKit.framework */; };
 		EFFCE3131ED2B3B100A35DF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFCE3111ED2B3B100A35DF9 /* LaunchScreen.storyboard */; };
@@ -124,33 +102,11 @@
 		EF16DC232095CF6D00CBA361 /* InsuranceDao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsuranceDao.m; sourceTree = "<group>"; };
 		EF16DC252095FA4400CBA361 /* InsuranceBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsuranceBase.h; sourceTree = "<group>"; };
 		EF16DC262095FA4400CBA361 /* InsuranceBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsuranceBase.m; sourceTree = "<group>"; };
+		EF5C49F520B05D9200B5C825 /* NALLabelsMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NALLabelsMatrix.swift; sourceTree = "<group>"; };
 		EF632AB5209757EF0041FA30 /* Salary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Salary.h; sourceTree = "<group>"; };
 		EF632AB6209757EF0041FA30 /* Salary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Salary.m; sourceTree = "<group>"; };
 		EF6A25EE20B02080008C21A6 /* salary-calc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "salary-calc-Bridging-Header.h"; sourceTree = "<group>"; };
 		EF6A25EF20B02080008C21A6 /* testswkf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testswkf.swift; sourceTree = "<group>"; };
-		EF6A25F220B02B93008C21A6 /* SpreadsheetView+Touches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SpreadsheetView+Touches.swift"; path = "Pods/SpreadsheetView/Framework/Sources/SpreadsheetView+Touches.swift"; sourceTree = SOURCE_ROOT; };
-		EF6A25F320B02B93008C21A6 /* Gridlines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gridlines.swift; path = Pods/SpreadsheetView/Framework/Sources/Gridlines.swift; sourceTree = SOURCE_ROOT; };
-		EF6A25F420B02B93008C21A6 /* ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollView.swift; path = Pods/SpreadsheetView/Framework/Sources/ScrollView.swift; sourceTree = SOURCE_ROOT; };
-		EF6A25F520B02B93008C21A6 /* SpreadsheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpreadsheetView.swift; path = Pods/SpreadsheetView/Framework/Sources/SpreadsheetView.swift; sourceTree = SOURCE_ROOT; };
-		EF6A25F620B02B93008C21A6 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cell.swift; path = Pods/SpreadsheetView/Framework/Sources/Cell.swift; sourceTree = SOURCE_ROOT; };
-		EF6A25F720B02B93008C21A6 /* SpreadsheetViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpreadsheetViewDataSource.swift; path = Pods/SpreadsheetView/Framework/Sources/SpreadsheetViewDataSource.swift; sourceTree = SOURCE_ROOT; };
-		EF6A25F820B02B94008C21A6 /* SpreadsheetView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SpreadsheetView+Layout.swift"; path = "Pods/SpreadsheetView/Framework/Sources/SpreadsheetView+Layout.swift"; sourceTree = SOURCE_ROOT; };
-		EF6A25F920B02B94008C21A6 /* Borders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Borders.swift; path = Pods/SpreadsheetView/Framework/Sources/Borders.swift; sourceTree = SOURCE_ROOT; };
-		EF6A25FA20B02B94008C21A6 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Pods/SpreadsheetView/Framework/Sources/Location.swift; sourceTree = SOURCE_ROOT; };
-		EF6A25FB20B02B94008C21A6 /* SpreadsheetView+UIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SpreadsheetView+UIScrollView.swift"; path = "Pods/SpreadsheetView/Framework/Sources/SpreadsheetView+UIScrollView.swift"; sourceTree = SOURCE_ROOT; };
-		EF6A25FC20B02B94008C21A6 /* SpreadsheetView+UIScrollViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SpreadsheetView+UIScrollViewDelegate.swift"; path = "Pods/SpreadsheetView/Framework/Sources/SpreadsheetView+UIScrollViewDelegate.swift"; sourceTree = SOURCE_ROOT; };
-		EF6A25FD20B02B94008C21A6 /* SpreadsheetViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpreadsheetViewDelegate.swift; path = Pods/SpreadsheetView/Framework/Sources/SpreadsheetViewDelegate.swift; sourceTree = SOURCE_ROOT; };
-		EF6A25FE20B02B94008C21A6 /* SpreadsheetView+UISnapshotting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SpreadsheetView+UISnapshotting.swift"; path = "Pods/SpreadsheetView/Framework/Sources/SpreadsheetView+UISnapshotting.swift"; sourceTree = SOURCE_ROOT; };
-		EF6A25FF20B02B94008C21A6 /* LayoutEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutEngine.swift; path = Pods/SpreadsheetView/Framework/Sources/LayoutEngine.swift; sourceTree = SOURCE_ROOT; };
-		EF6A260020B02B94008C21A6 /* IndexPath+Column.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "IndexPath+Column.swift"; path = "Pods/SpreadsheetView/Framework/Sources/IndexPath+Column.swift"; sourceTree = SOURCE_ROOT; };
-		EF6A260120B02B94008C21A6 /* Array+BinarySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+BinarySearch.swift"; path = "Pods/SpreadsheetView/Framework/Sources/Array+BinarySearch.swift"; sourceTree = SOURCE_ROOT; };
-		EF6A260220B02B94008C21A6 /* CircularScrolling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularScrolling.swift; path = Pods/SpreadsheetView/Framework/Sources/CircularScrolling.swift; sourceTree = SOURCE_ROOT; };
-		EF6A260320B02B94008C21A6 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Address.swift; path = Pods/SpreadsheetView/Framework/Sources/Address.swift; sourceTree = SOURCE_ROOT; };
-		EF6A260420B02B95008C21A6 /* ReuseQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReuseQueue.swift; path = Pods/SpreadsheetView/Framework/Sources/ReuseQueue.swift; sourceTree = SOURCE_ROOT; };
-		EF6A260520B02B95008C21A6 /* ScrollPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollPosition.swift; path = Pods/SpreadsheetView/Framework/Sources/ScrollPosition.swift; sourceTree = SOURCE_ROOT; };
-		EF6A260620B02B95008C21A6 /* SpreadsheetView+CirclularScrolling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SpreadsheetView+CirclularScrolling.swift"; path = "Pods/SpreadsheetView/Framework/Sources/SpreadsheetView+CirclularScrolling.swift"; sourceTree = SOURCE_ROOT; };
-		EF6A260720B02B95008C21A6 /* SpreadsheetView+UIViewHierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SpreadsheetView+UIViewHierarchy.swift"; path = "Pods/SpreadsheetView/Framework/Sources/SpreadsheetView+UIViewHierarchy.swift"; sourceTree = SOURCE_ROOT; };
-		EF6A260820B02B95008C21A6 /* CellRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRange.swift; path = Pods/SpreadsheetView/Framework/Sources/CellRange.swift; sourceTree = SOURCE_ROOT; };
 		EF8FEE47208C6A670016338D /* CityDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityDao.h; sourceTree = "<group>"; };
 		EF8FEE48208C6A670016338D /* CityDao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityDao.m; sourceTree = "<group>"; };
 		EF9458D320993B3100582B47 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -343,29 +299,7 @@
 		EF6A25F120B02B61008C21A6 /* swift */ = {
 			isa = PBXGroup;
 			children = (
-				EF6A260320B02B94008C21A6 /* Address.swift */,
-				EF6A260120B02B94008C21A6 /* Array+BinarySearch.swift */,
-				EF6A25F920B02B94008C21A6 /* Borders.swift */,
-				EF6A25F620B02B93008C21A6 /* Cell.swift */,
-				EF6A260820B02B95008C21A6 /* CellRange.swift */,
-				EF6A260220B02B94008C21A6 /* CircularScrolling.swift */,
-				EF6A25F320B02B93008C21A6 /* Gridlines.swift */,
-				EF6A260020B02B94008C21A6 /* IndexPath+Column.swift */,
-				EF6A25FF20B02B94008C21A6 /* LayoutEngine.swift */,
-				EF6A25FA20B02B94008C21A6 /* Location.swift */,
-				EF6A260420B02B95008C21A6 /* ReuseQueue.swift */,
-				EF6A260520B02B95008C21A6 /* ScrollPosition.swift */,
-				EF6A25F420B02B93008C21A6 /* ScrollView.swift */,
-				EF6A25F520B02B93008C21A6 /* SpreadsheetView.swift */,
-				EF6A260620B02B95008C21A6 /* SpreadsheetView+CirclularScrolling.swift */,
-				EF6A25F820B02B94008C21A6 /* SpreadsheetView+Layout.swift */,
-				EF6A25F220B02B93008C21A6 /* SpreadsheetView+Touches.swift */,
-				EF6A25FB20B02B94008C21A6 /* SpreadsheetView+UIScrollView.swift */,
-				EF6A25FC20B02B94008C21A6 /* SpreadsheetView+UIScrollViewDelegate.swift */,
-				EF6A25FE20B02B94008C21A6 /* SpreadsheetView+UISnapshotting.swift */,
-				EF6A260720B02B95008C21A6 /* SpreadsheetView+UIViewHierarchy.swift */,
-				EF6A25F720B02B93008C21A6 /* SpreadsheetViewDataSource.swift */,
-				EF6A25FD20B02B94008C21A6 /* SpreadsheetViewDelegate.swift */,
+				EF5C49F520B05D9200B5C825 /* NALLabelsMatrix.swift */,
 			);
 			path = swift;
 			sourceTree = "<group>";
@@ -456,7 +390,7 @@
 		0730A4DF1CF3EFD500949058 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Eric Wang";
 				TargetAttributes = {
 					0730A4E61CF3EFD500949058 = {
@@ -558,7 +492,6 @@
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/SpreadsheetView/SpreadsheetView.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -567,7 +500,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SpreadsheetView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,43 +533,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				0730A5261CF3F84400949058 /* EWRootViewController.m in Sources */,
-				EF6A261F20B02B95008C21A6 /* CellRange.swift in Sources */,
-				EF6A260920B02B95008C21A6 /* SpreadsheetView+Touches.swift in Sources */,
-				EF6A261220B02B95008C21A6 /* SpreadsheetView+UIScrollView.swift in Sources */,
 				EF16DC242095CF6D00CBA361 /* InsuranceDao.m in Sources */,
 				0725FAD41CF5D68B007A6088 /* BaseViewController.m in Sources */,
-				EF6A261620B02B95008C21A6 /* LayoutEngine.swift in Sources */,
+				EF5C49F620B05D9200B5C825 /* NALLabelsMatrix.swift in Sources */,
 				0725FAD81CF5DAF5007A6088 /* EWHotCityCell.m in Sources */,
 				EF6A25F020B02080008C21A6 /* testswkf.swift in Sources */,
-				EF6A260A20B02B95008C21A6 /* Gridlines.swift in Sources */,
-				EF6A261A20B02B95008C21A6 /* Address.swift in Sources */,
-				EF6A261820B02B95008C21A6 /* Array+BinarySearch.swift in Sources */,
-				EF6A261D20B02B95008C21A6 /* SpreadsheetView+CirclularScrolling.swift in Sources */,
-				EF6A260C20B02B95008C21A6 /* SpreadsheetView.swift in Sources */,
 				0730A52C1CF401DF00949058 /* EWSettingViewController.m in Sources */,
-				EF6A261320B02B95008C21A6 /* SpreadsheetView+UIScrollViewDelegate.swift in Sources */,
-				EF6A260F20B02B95008C21A6 /* SpreadsheetView+Layout.swift in Sources */,
-				EF6A261120B02B95008C21A6 /* Location.swift in Sources */,
 				078449F01CF4580200A2460C /* City.m in Sources */,
 				EF8FEE49208C6A670016338D /* CityDao.m in Sources */,
 				0730A5291CF401CF00949058 /* EWLocationViewController.m in Sources */,
 				0730A5231CF3F75900949058 /* EWNaviViewController.m in Sources */,
-				EF6A261520B02B95008C21A6 /* SpreadsheetView+UISnapshotting.swift in Sources */,
-				EF6A261920B02B95008C21A6 /* CircularScrolling.swift in Sources */,
 				EF632AB7209757EF0041FA30 /* Salary.m in Sources */,
 				0730A4EF1CF3EFD500949058 /* AppDelegate.m in Sources */,
 				0730A4EC1CF3EFD500949058 /* main.m in Sources */,
-				EF6A261020B02B95008C21A6 /* Borders.swift in Sources */,
-				EF6A261420B02B95008C21A6 /* SpreadsheetViewDelegate.swift in Sources */,
-				EF6A260E20B02B95008C21A6 /* SpreadsheetViewDataSource.swift in Sources */,
-				EF6A261C20B02B95008C21A6 /* ScrollPosition.swift in Sources */,
-				EF6A261E20B02B95008C21A6 /* SpreadsheetView+UIViewHierarchy.swift in Sources */,
-				EF6A261B20B02B95008C21A6 /* ReuseQueue.swift in Sources */,
 				078449EC1CF457E100A2460C /* CityManager.m in Sources */,
-				EF6A260D20B02B95008C21A6 /* Cell.swift in Sources */,
 				EF16DC272095FA4400CBA361 /* InsuranceBase.m in Sources */,
-				EF6A260B20B02B95008C21A6 /* ScrollView.swift in Sources */,
-				EF6A261720B02B95008C21A6 /* IndexPath+Column.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,18 +592,29 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -714,6 +635,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -727,18 +650,29 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -752,6 +686,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -761,11 +698,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB4771875733DDE963F9E91E /* Pods-salary-calc.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6FQCK6BVF7;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/salary-calc/libs",
@@ -788,11 +725,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A94CDB078068F27413FB547A /* Pods-salary-calc.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6FQCK6BVF7;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/salary-calc/libs",

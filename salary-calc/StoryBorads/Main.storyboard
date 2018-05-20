@@ -125,6 +125,7 @@
                     <navigationItem key="navigationItem" id="zVD-DS-EoW"/>
                     <connections>
                         <outlet property="bannerView" destination="oIV-ef-AKO" id="O0V-LO-Zaa"/>
+                        <outlet property="houseSeg" destination="C2Y-EV-yWI" id="Vad-3l-NeB"/>
                         <outlet property="salaryValue" destination="VDc-DN-IFt" id="sfN-2L-6sf"/>
                         <segue destination="7eg-JF-gag" kind="presentation" identifier="Location" id="xLq-9k-T4N"/>
                         <segue destination="CvU-kQ-7MQ" kind="presentation" identifier="Setting" id="lVH-0o-eGH"/>

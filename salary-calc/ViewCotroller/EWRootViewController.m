@@ -55,8 +55,61 @@ static int kHouseFundTag = 2;
     }
 }
 
+
+-(void) loadTableView:(Salary *) salary {
+    [UIView animateWithDuration:1.0 animations:^{
+        [[self.view viewWithTag:111] removeFromSuperview];
+        UIScreen *screen = [UIScreen mainScreen];
+        int width = (screen.bounds.size.width - 26) / 3;
+        NSArray<NSNumber *> *array = @[@(width),@(width),@(width)];
+        NALLabelsMatrixView *matrixView = [[NALLabelsMatrixView alloc] initWithFrame:CGRectZero columns:array];
+        matrixView.tag = 111;
+        matrixView.translatesAutoresizingMaskIntoConstraints = NO;
+        [self.view addSubview:matrixView];
+        NSLayoutConstraint *matrixViewHeight = [NSLayoutConstraint constraintWithItem:matrixView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0];
+        NSLayoutConstraint *matrixViewWidth = [NSLayoutConstraint constraintWithItem:matrixView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1.0 constant:-26];
+        NSLayoutConstraint *matrixViewCenter = [NSLayoutConstraint constraintWithItem:matrixView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
+        NSLayoutConstraint *matrixViewBottom = [NSLayoutConstraint constraintWithItem:matrixView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.houseSeg attribute:NSLayoutAttributeBottom multiplier:1.0 constant:20];
+        [self.view addConstraints:@[matrixViewHeight,matrixViewWidth,matrixViewCenter,matrixViewBottom]];
+        NSArray* header = @[@"工资明细",@"个人详情(RMB)",@"公司详情(RMB)"];
+        [matrixView addRecordWithRecord:header];
+        //公积金
+        NSArray *houseFund = @[@"公积金",[NSString stringWithFormat:@"%.2f",salary.housingFundPersonalValue],[NSString stringWithFormat:@"%.2f",salary.housingFundCompanyValue]];
+        [matrixView addRecordWithRecord:houseFund];
+        
+        //养老
+        NSArray *endowmentInsurance = @[@"养老保险",[NSString stringWithFormat:@"%.2f",salary.endowmentInsurancePersonalValue],[NSString stringWithFormat:@"%.2f",salary.endowmentInsuranceCompanyValue]];
+        [matrixView addRecordWithRecord:endowmentInsurance];
+        
+        //失业
+        NSArray *unemploymentInsurance = @[@"失业保险",[NSString stringWithFormat:@"%.2f",salary.unemploymentInsurancePersonalValue],[NSString stringWithFormat:@"%.2f",salary.unemploymentInsuranceCompanyValue]];
+        [matrixView addRecordWithRecord:unemploymentInsurance];
+        
+        //医疗
+        NSArray *medicalInsurance = @[@"医疗保险",[NSString stringWithFormat:@"%.2f",salary.medicalInsurancePersoalValue],[NSString stringWithFormat:@"%.2f",salary.medicalInsuranceCompanyValue]];
+        [matrixView addRecordWithRecord:medicalInsurance];
+        
+        //生育
+        NSArray *childbirthInsurance = @[@"生育保险",[NSString stringWithFormat:@"%.2f",salary.childbirthInsurancePersonalValue],[NSString stringWithFormat:@"%.2f",salary.childbirthInsuranceCompanyValue]];
+        [matrixView addRecordWithRecord:childbirthInsurance];
+        
+        //工伤
+        NSArray *employmentInjuryInsurance = @[@"工伤保险",[NSString stringWithFormat:@"%.2f",salary.employmentInjuryInsurancePersonalValue],[NSString stringWithFormat:@"%.2f",salary.employmentInjuryInsuranceCompanyValue]];
+        [matrixView addRecordWithRecord:employmentInjuryInsurance];
+        
+        //个税
+        NSArray *tax = @[@"个人所得税",[NSString stringWithFormat:@"%.2f",salary.tax],@"0"];
+        [matrixView addRecordWithRecord:tax];
+        
+        //总计
+        NSArray *total = @[@"税后工资",[NSString stringWithFormat:@"%.2f",salary.salaryWithTax],@"0"];
+        [matrixView addRecordWithRecord:total];
+        matrixViewHeight.constant = 230;
+    }];
+}
+
 #pragma mark 公积金基数变化
-- (IBAction)houseFundBaseChange:(UISegmentedControl *)sender {
+-(void)houseFundBaseChange:(UISegmentedControl *)sender {
     if (sender.selectedSegmentIndex == 0) {//high base
         houseFundBaseIsHighBase = YES;
     } else if (sender.selectedSegmentIndex == 1) {//low base
@@ -70,9 +123,11 @@ static int kHouseFundTag = 2;
         [alertView show];
     }
 }
+    
+
 
 #pragma mark 计算详情变化
-- (IBAction)resultDetailChange:(UISegmentedControl *)sender {
+-(void)resultDetailChange:(UISegmentedControl *)sender {
     if (sender.selectedSegmentIndex == 0) {//personal detail
         isPersonalDetail = YES;
     } else {//conpany detail
@@ -322,7 +377,8 @@ static int kHouseFundTag = 2;
         salary.tax = tax;
         salary.salaryWithTax = salary.salaryWithTax - tax;
     }
-    [self loadPieChartView:salary];
+    [self loadTableView:salary];
+//    [self loadPieChartView:salary];
 }
 
 - (void)viewDidLoad {
