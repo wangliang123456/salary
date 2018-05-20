@@ -27,6 +27,8 @@
         [btn addTarget:self action:@selector(hotCityDidSelected:) forControlEvents:UIControlEventTouchUpInside];
         City *city = (City *)[self.dataSource objectAtIndex:index];
         btn.titleLabel.text = city.cityName;
+        [btn.layer setValue:city.ID forKey:kSelectedCityId];
+        [btn.layer setValue:city.cityName forKey:kSelectedCityKey];
         index++;
     }
 }
@@ -36,7 +38,14 @@
 }
 
 -(void) hotCityDidSelected:(id) sender {
-    NSLog(@"hotCityDidSelected");
+    if ([sender isKindOfClass:[UIButton class]]) {
+        UIButton *btn = (UIButton *) sender;
+        NSString *cityName = [btn.layer valueForKey:kSelectedCityKey];
+        NSString *cityId = [btn.layer valueForKey:kSelectedCityId];
+        NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:cityName forKey:kSelectedCityKey];
+        [userDefaults setObject:cityId forKey:kSelectedCityId];
+    }
 }
 
 - (void) hotCitySelected:(id)sender {
