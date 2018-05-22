@@ -56,6 +56,14 @@ static InsuranceDao *instance;
     NSString *tianjin = [NSString stringWithFormat:@"insert into Insurance_data(endowment_insurance,medical_insurance,unemployment_insurance,maternity_insurance,employment_injury_insurance,house_fund,city_id) values('%@','%@','%@','%@','%@','%@',%d)",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0.08,\"company_rate\":0.19}",@"{\"high_base\":16821,\"low_base\":3364,\"company_rate\":0.1,\"personal_rate\":\"0.02\"}",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0.005,\"company_rate\":0.005}",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0,\"company_rate\":0.5}",@"{\"high_base\":22440,\"low_base\":3364,\"personal_rate\":0,\"company_rate\":0.002}",@"{\"high_base\":22605,\"low_base\":2050,\"personal_rate\":0.11,\"company_rate\":0.11}",30];
     [db executeUpdate:tianjin];
     
+    NSString *guangzhou = [NSString stringWithFormat:@"insert into Insurance_data(endowment_insurance,medical_insurance,unemployment_insurance,maternity_insurance,employment_injury_insurance,house_fund,city_id) values('%@','%@','%@','%@','%@','%@',%d)",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0.08,\"company_rate\":0.12}",@"{\"high_base\":16821,\"low_base\":3364,\"company_rate\":0.08,\"personal_rate\":\"0.02\"}",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0.005,\"company_rate\":0.015}",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0,\"company_rate\":0.085}",@"{\"high_base\":22440,\"low_base\":3364,\"personal_rate\":0,\"company_rate\":0.005}",@"{\"high_base\":37125,\"low_base\":1895,\"personal_rate\":0.05,\"company_rate\":0.05}",3];
+    [db executeUpdate:guangzhou];
+    
+    NSString *hangzhou = [NSString stringWithFormat:@"insert into Insurance_data(endowment_insurance,medical_insurance,unemployment_insurance,maternity_insurance,employment_injury_insurance,house_fund,city_id) values('%@','%@','%@','%@','%@','%@',%d)",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0.08,\"company_rate\":0.12}",@"{\"high_base\":16821,\"low_base\":3364,\"company_rate\":0.08,\"personal_rate\":\"0.02\"}",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0.005,\"company_rate\":0.015}",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0,\"company_rate\":0.085}",@"{\"high_base\":22440,\"low_base\":3364,\"personal_rate\":0,\"company_rate\":0.005}",@"{\"high_base\":37125,\"low_base\":1895,\"personal_rate\":0.05,\"company_rate\":0.05}",7];
+    [db executeUpdate:hangzhou];
+    
+    
+    
 }
 
 -(InsuranceBase *) buildBase:(FMResultSet *) rs {
