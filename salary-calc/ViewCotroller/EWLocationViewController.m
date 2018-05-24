@@ -21,6 +21,7 @@ static const CGFloat kHotCityCellHeight = 130;
     NSArray* allKeys;
     UIBarButtonItem* cancel;
     NSArray* hotCities;
+    UIBarButtonItem *config;
 }
 
 - (void)viewDidLoad {
@@ -36,6 +37,15 @@ static const CGFloat kHotCityCellHeight = 130;
     cancel = [[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancel:)];
     cancel.tintColor = [UIColor colorWithRed:0 green:0.74902 blue:1 alpha:1];
     self.navigationItem.leftBarButtonItem = cancel;
+    
+    config = [[UIBarButtonItem alloc]initWithTitle:@"自定义基数" style:UIBarButtonItemStylePlain target:self action:@selector(config:)];
+    config.tintColor = [UIColor colorWithRed:0 green:0.74902 blue:1 alpha:1];
+    self.navigationItem.rightBarButtonItem = config;
+}
+
+
+-(void) config:(id) sender {
+    [self.navigationController performSegueWithIdentifier:@"insuranceConfig" sender:nil];
 }
 
 -(void) cancel:(id) sender {
