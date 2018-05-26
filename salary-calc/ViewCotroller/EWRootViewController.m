@@ -74,8 +74,14 @@ static int kHouseFundTag = 2;
         [self.view addConstraints:@[matrixViewHeight,matrixViewWidth,matrixViewCenter,matrixViewBottom]];
         NSArray* header = @[@"工资明细",@"个人详情(RMB)",@"公司详情(RMB)"];
         [matrixView addRecordWithRecord:header];
+        
+        NSData *data = [insuranceBase.endowmentInsurance dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *error;
+        NSDictionary *dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data  options:kNilOptions error:&error];
+        
+        ;
         //公积金
-        NSArray *houseFund = @[@"公积金",[NSString stringWithFormat:@"%.2f",salary.housingFundPersonalValue],[NSString stringWithFormat:@"%.2f",salary.housingFundCompanyValue]];
+        NSArray *houseFund = @[@"公积金",[NSString stringWithFormat:@"%.2f(%@)",salary.housingFundPersonalValue,[dict valueForKey:kPersonalRate]],[NSString stringWithFormat:@"%.2f(%@)",salary.housingFundCompanyValue,[dict valueForKey:kCompanyRate]]];
         [matrixView addRecordWithRecord:houseFund];
         
         //养老
@@ -149,7 +155,7 @@ static int kHouseFundTag = 2;
     int currentCityId = [[userDefault valueForKey:kSelectedCityId] intValue];
     insuranceBase = [[InsuranceDao sharedInstance] queryBaseByCityId:currentCityId];
     //养老
-    NSString *endowmentInsuranceData = [insuranceBase.endowmentInsurance dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *endowmentInsuranceData = [insuranceBase.endowmentInsurance dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error;
     NSDictionary *endowmentInsuranceDataDict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:endowmentInsuranceData options:kNilOptions error:&error];
     if (insuranceBaseIsHighBase) {
