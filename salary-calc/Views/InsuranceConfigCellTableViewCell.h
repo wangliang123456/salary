@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface InsuranceConfigCellTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UITextField *indexLabel;
+
+@property (weak, nonatomic) IBOutlet UITextField *baseValue;
 
 @end

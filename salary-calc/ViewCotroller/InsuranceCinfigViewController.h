@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InsuranceConfigCellTableViewCell.h"
+#import "BaseViewController.h"
 
-@interface InsuranceCinfigViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface InsuranceCinfigViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *contentView;
 
 @end

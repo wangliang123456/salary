@@ -19,32 +19,40 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="104.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrL-VW-OtB">
-                        <rect key="frame" x="13" y="42" width="30" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHo-XX-uGj">
+                        <rect key="frame" x="13" y="42" width="40" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="LtX-n6-KN3"/>
-                            <constraint firstAttribute="height" constant="20" id="Nae-hk-Zoh"/>
+                            <constraint firstAttribute="width" constant="40" id="4HZ-5W-yZU"/>
+                            <constraint firstAttribute="height" constant="20" id="eYj-zf-rb6"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOp-Jw-cAH">
-                        <rect key="frame" x="207" y="37" width="97" height="30"/>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gun-fd-owM">
+                        <rect key="frame" x="257" y="42" width="50" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="F0Y-pn-nhB"/>
+                            <constraint firstAttribute="height" constant="20" id="Pn7-vL-cdc"/>
+                        </constraints>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="MrL-VW-OtB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="G7a-Qa-pu8"/>
-                    <constraint firstItem="MrL-VW-OtB" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="X2e-SD-dwu"/>
-                    <constraint firstItem="MOp-Jw-cAH" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="oDZ-QZ-CWg"/>
-                    <constraint firstAttribute="trailing" secondItem="MOp-Jw-cAH" secondAttribute="trailing" constant="13" id="uzK-MT-MiT"/>
+                    <constraint firstItem="pHo-XX-uGj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Aof-kR-76R"/>
+                    <constraint firstItem="pHo-XX-uGj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="IMj-r7-c02"/>
+                    <constraint firstItem="gun-fd-owM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="SvQ-q4-ltO"/>
+                    <constraint firstAttribute="trailing" secondItem="gun-fd-owM" secondAttribute="trailing" constant="13" id="WZf-AU-kX1"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
-            <point key="canvasLocation" x="56" y="63.5"/>
+            <connections>
+                <outlet property="baseValue" destination="gun-fd-owM" id="sRt-lz-YTb"/>
+                <outlet property="indexLabel" destination="gun-fd-owM" id="p46-ih-ZVO"/>
+            </connections>
+            <point key="canvasLocation" x="-69" y="61.5"/>
         </tableViewCell>
     </objects>
 </document>
