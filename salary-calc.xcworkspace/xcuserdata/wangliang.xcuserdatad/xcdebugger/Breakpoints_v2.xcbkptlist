@@ -20,12 +20,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "salary-calc/ViewCotroller/EWRootViewController.m"
-            timestampString = "549015423.538695"
+            timestampString = "549016151.179883"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "448"
-            endingLineNumber = "448"
+            startingLineNumber = "449"
+            endingLineNumber = "449"
             landmarkName = "-initView"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "salary-calc/ViewCotroller/EWRootViewController.m"
+            timestampString = "549016151.1807441"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "-loadTableView:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

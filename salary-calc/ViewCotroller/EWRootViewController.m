@@ -125,7 +125,7 @@ static int kHouseFundTag = 2;
         data = [insuranceBase.employmentInjuryInsurance dataUsingEncoding:NSUTF8StringEncoding];
         dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data  options:kNilOptions error:&error];
         NSString *employmentInjuryInsurancePRate = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate]doubleValue] * 100];
-        NSString *employmentInjuryInsuranceCRate = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate]doubleValue] * 100];
+        NSString *employmentInjuryInsuranceCRate = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kCompanyRate]doubleValue] * 100];
         
         //工伤
         NSArray *employmentInjuryInsurance = @[@"工伤保险",[NSString stringWithFormat:@"%.1f(%@%%)",salary.employmentInjuryInsurancePersonalValue,employmentInjuryInsurancePRate],[NSString stringWithFormat:@"%.1f(%@%%)",salary.employmentInjuryInsuranceCompanyValue,employmentInjuryInsuranceCRate]];
@@ -412,6 +412,7 @@ static int kHouseFundTag = 2;
         salary.salaryWithTax = salary.salaryWithTax - tax;
     }
     [self loadTableView:salary];
+//    [self loadPieChartView:salary];
 }
 
 - (void)viewDidLoad {
