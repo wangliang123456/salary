@@ -82,7 +82,7 @@ static int kHouseFundTag = 2;
         
         NSString *houseFundPRate = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate]doubleValue] * 100];
         NSString *houseFundCRate = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate]doubleValue] * 100];
-        NSArray *houseFund = @[@"公积金",[NSString stringWithFormat:@"%.2f(%@%%)",salary.housingFundPersonalValue,houseFundPRate],[NSString stringWithFormat:@"%.2f(%@%%)",salary.housingFundCompanyValue,houseFundCRate]];
+        NSArray *houseFund = @[@"公积金",[NSString stringWithFormat:@"%.1f(%@%%)",salary.housingFundPersonalValue,houseFundPRate],[NSString stringWithFormat:@"%.1f(%@%%)",salary.housingFundCompanyValue,houseFundCRate]];
         [matrixView addRecordWithRecord:houseFund];
         
         
