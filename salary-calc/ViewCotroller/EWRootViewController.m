@@ -72,44 +72,71 @@ static int kHouseFundTag = 2;
         NSLayoutConstraint *matrixViewCenter = [NSLayoutConstraint constraintWithItem:matrixView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
         NSLayoutConstraint *matrixViewBottom = [NSLayoutConstraint constraintWithItem:matrixView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.houseSeg attribute:NSLayoutAttributeBottom multiplier:1.0 constant:20];
         [self.view addConstraints:@[matrixViewHeight,matrixViewWidth,matrixViewCenter,matrixViewBottom]];
-        NSArray* header = @[@"工资明细",@"个人详情(RMB)",@"公司详情(RMB)"];
+        NSArray* header = @[@"工资明细",@"个人详情(比例)",@"公司详情(比例)"];
         [matrixView addRecordWithRecord:header];
         
-        NSData *data = [insuranceBase.endowmentInsurance dataUsingEncoding:NSUTF8StringEncoding];
+        NSData *data = [insuranceBase.houseFund dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error;
         NSDictionary *dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data  options:kNilOptions error:&error];
-        
-        ;
         //公积金
-        NSArray *houseFund = @[@"公积金",[NSString stringWithFormat:@"%.2f(%@)",salary.housingFundPersonalValue,[dict valueForKey:kPersonalRate]],[NSString stringWithFormat:@"%.2f(%@)",salary.housingFundCompanyValue,[dict valueForKey:kCompanyRate]]];
+        
+        NSString *houseFundPRate = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate]doubleValue] * 100];
+        NSString *houseFundCRate = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate]doubleValue] * 100];
+        NSArray *houseFund = @[@"公积金",[NSString stringWithFormat:@"%.2f(%@%%)",salary.housingFundPersonalValue,houseFundPRate],[NSString stringWithFormat:@"%.2f(%@%%)",salary.housingFundCompanyValue,houseFundCRate]];
         [matrixView addRecordWithRecord:houseFund];
         
+        
+        data = [insuranceBase.endowmentInsurance dataUsingEncoding:NSUTF8StringEncoding];
+        dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data  options:kNilOptions error:&error];
+        NSString *endowmentInsurancePRate = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate]doubleValue] * 100];
+        NSString *endowmentInsuranceCRate = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate]doubleValue] * 100];
         //养老
-        NSArray *endowmentInsurance = @[@"养老保险",[NSString stringWithFormat:@"%.2f",salary.endowmentInsurancePersonalValue],[NSString stringWithFormat:@"%.2f",salary.endowmentInsuranceCompanyValue]];
+        NSArray *endowmentInsurance = @[@"养老保险",[NSString stringWithFormat:@"%.1f(%@%%)",salary.endowmentInsurancePersonalValue,endowmentInsurancePRate],[NSString stringWithFormat:@"%.1f(%@%%)",salary.endowmentInsuranceCompanyValue,endowmentInsuranceCRate]];
         [matrixView addRecordWithRecord:endowmentInsurance];
         
+        data = [insuranceBase.unemploymentInsurance dataUsingEncoding:NSUTF8StringEncoding];
+        dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data  options:kNilOptions error:&error];
+        NSString *unemploymentInsurancePRate = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate]doubleValue] * 100];
+        NSString *unemploymentInsuranceCRate = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate]doubleValue] * 100];
+        
         //失业
-        NSArray *unemploymentInsurance = @[@"失业保险",[NSString stringWithFormat:@"%.2f",salary.unemploymentInsurancePersonalValue],[NSString stringWithFormat:@"%.2f",salary.unemploymentInsuranceCompanyValue]];
+        NSArray *unemploymentInsurance = @[@"失业保险",[NSString stringWithFormat:@"%.1f(%@%%)",salary.unemploymentInsurancePersonalValue,unemploymentInsurancePRate],[NSString stringWithFormat:@"%.1f(%@%%)",salary.unemploymentInsuranceCompanyValue,unemploymentInsuranceCRate]];
         [matrixView addRecordWithRecord:unemploymentInsurance];
         
+        data = [insuranceBase.medicalInsurance dataUsingEncoding:NSUTF8StringEncoding];
+        dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data  options:kNilOptions error:&error];
+        NSArray<NSString *> *exp = [[dict valueForKey:kPersonalRate] componentsSeparatedByString:@"+"];
+        NSString *medicalInsurancePRate = [NSString stringWithFormat:@"%.f", [exp[0] doubleValue] * 100];
+        NSString *medicalInsuranceCRate = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate]doubleValue] * 100];
         //医疗
-        NSArray *medicalInsurance = @[@"医疗保险",[NSString stringWithFormat:@"%.2f",salary.medicalInsurancePersoalValue],[NSString stringWithFormat:@"%.2f",salary.medicalInsuranceCompanyValue]];
+        NSArray *medicalInsurance = @[@"医疗保险",[NSString stringWithFormat:@"%.1f(%@%%+%@)",salary.medicalInsurancePersoalValue,medicalInsurancePRate,exp[1]],[NSString stringWithFormat:@"%.1f(%@%%)",salary.medicalInsuranceCompanyValue,medicalInsuranceCRate]];
         [matrixView addRecordWithRecord:medicalInsurance];
         
+        data = [insuranceBase.maternityInsurance dataUsingEncoding:NSUTF8StringEncoding];
+        dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data  options:kNilOptions error:&error];
+        NSString *maternityInsurancePRate = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate]doubleValue] * 100];
+        NSString *maternityInsuranceCRate = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate]doubleValue] * 100];
+        
         //生育
-        NSArray *childbirthInsurance = @[@"生育保险",[NSString stringWithFormat:@"%.2f",salary.childbirthInsurancePersonalValue],[NSString stringWithFormat:@"%.2f",salary.childbirthInsuranceCompanyValue]];
+        NSArray *childbirthInsurance = @[@"生育保险",[NSString stringWithFormat:@"%.1f(%@%%)",salary.childbirthInsurancePersonalValue,maternityInsurancePRate],[NSString stringWithFormat:@"%.1f(%@%%)",salary.childbirthInsuranceCompanyValue,maternityInsuranceCRate]];
         [matrixView addRecordWithRecord:childbirthInsurance];
         
+        
+        data = [insuranceBase.employmentInjuryInsurance dataUsingEncoding:NSUTF8StringEncoding];
+        dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data  options:kNilOptions error:&error];
+        NSString *employmentInjuryInsurancePRate = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate]doubleValue] * 100];
+        NSString *employmentInjuryInsuranceCRate = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate]doubleValue] * 100];
+        
         //工伤
-        NSArray *employmentInjuryInsurance = @[@"工伤保险",[NSString stringWithFormat:@"%.2f",salary.employmentInjuryInsurancePersonalValue],[NSString stringWithFormat:@"%.2f",salary.employmentInjuryInsuranceCompanyValue]];
+        NSArray *employmentInjuryInsurance = @[@"工伤保险",[NSString stringWithFormat:@"%.1f(%@%%)",salary.employmentInjuryInsurancePersonalValue,employmentInjuryInsurancePRate],[NSString stringWithFormat:@"%.1f(%@%%)",salary.employmentInjuryInsuranceCompanyValue,employmentInjuryInsuranceCRate]];
         [matrixView addRecordWithRecord:employmentInjuryInsurance];
         
         //个税
-        NSArray *tax = @[@"个人所得税",[NSString stringWithFormat:@"%.2f",salary.tax],@"0"];
+        NSArray *tax = @[@"个人所得税",[NSString stringWithFormat:@"%.1f",salary.tax],@"0"];
         [matrixView addRecordWithRecord:tax];
         
         //总计
-        NSArray *total = @[@"税后工资",[NSString stringWithFormat:@"%.2f",salary.salaryWithTax],@"0"];
+        NSArray *total = @[@"税后工资",[NSString stringWithFormat:@"%.1f",salary.salaryWithTax],@"0"];
         [matrixView addRecordWithRecord:total];
         matrixViewHeight.constant = 230;
     }];
