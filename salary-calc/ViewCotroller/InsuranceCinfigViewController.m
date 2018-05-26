@@ -65,10 +65,101 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"baseCell";
     InsuranceConfigCellTableViewCell *configCell = (InsuranceConfigCellTableViewCell *) [tableView dequeueReusableCellWithIdentifier:identifier];
+    NSString *title = @"";
     if (indexPath.section == 0) {
         NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
         configCell.indexLabel.text = @"当前城市";
         configCell.baseValue.text = [userDefault valueForKey:kSelectedCityKey];
+    } else if (indexPath.section == 1) {
+        switch (indexPath.row) {
+            case 0:
+                title = @"养老保险最高基数";
+                break;
+            case 1:
+                title = @"养老保险最低基数";
+                break;
+            case 2:
+                title = @"养老保险最高比例";
+                break;
+            case 3:
+                title = @"养老保险最低比例";
+                break;
+            default:
+                break;
+        }
+        configCell.indexLabel.text = title;
+    } else if (indexPath.section == 2) {
+        switch (indexPath.row) {
+            case 0:
+                title = @"医疗保险最高基数";
+                break;
+            case 1:
+                title = @"医疗保险最低基数";
+                break;
+            case 2:
+                title = @"医疗保险最高比例";
+                break;
+            case 3:
+                title = @"医疗保险最低比例";
+                break;
+            default:
+                break;
+        }
+        configCell.indexLabel.text = title;
+    } else if (indexPath.section == 3) {
+        switch (indexPath.row) {
+            case 0:
+                title = @"失业保险最高基数";
+                break;
+            case 1:
+                title = @"失业保险最低基数";
+                break;
+            case 2:
+                title = @"失业保险最高比例";
+                break;
+            case 3:
+                title = @"失业保险最低比例";
+                break;
+            default:
+                break;
+        }
+        configCell.indexLabel.text = title;
+    } else if (indexPath.section == 4) {
+        switch (indexPath.row) {
+            case 0:
+                title = @"工伤保险最高基数";
+                break;
+            case 1:
+                title = @"工伤保险最低基数";
+                break;
+            case 2:
+                title = @"工伤保险最高比例";
+                break;
+            case 3:
+                title = @"工伤保险最低比例";
+                break;
+            default:
+                break;
+        }
+        configCell.indexLabel.text = title;
+    } else if (indexPath.section == 5) {
+        switch (indexPath.row) {
+            case 0:
+                title = @"生育保险最高基数";
+                break;
+            case 1:
+                title = @"生育保险最低基数";
+                break;
+            case 2:
+                title = @"生育保险最高比例";
+                break;
+            case 3:
+                title = @"生育保险最低比例";
+                break;
+            default:
+                break;
+        }
+        configCell.indexLabel.text = title;
     }
     return configCell;
 }
