@@ -7,18 +7,46 @@
 //
 
 #import "InsuranceCinfigViewController.h"
+#import "InsuranceBase.h"
+#import "InsuranceDao.h"
 
 @interface InsuranceCinfigViewController ()
 
 @end
 
 @implementation InsuranceCinfigViewController
+{
+    InsuranceBase *insuranceBase;
+    int currentCityId;
+    UIBarButtonItem *left;
+    UIBarButtonItem *right;
+}
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.contentView.dataSource = self;
     [self.contentView registerNib:[UINib nibWithNibName:@"InsuranceConfigCellTableViewCell" bundle:nil] forCellReuseIdentifier:@"baseCell"];
+    left = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+    left.tintColor = [UIColor colorWithRed:0 green:0.74902 blue:1 alpha:1];
+    
+    right = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(save)];
+    right.tintColor = [UIColor colorWithRed:0 green:0.74902 blue:1 alpha:1];
+    self.navigationItem.leftBarButtonItem = left;
+    self.navigationItem.rightBarButtonItem = right;
+    self.title = @"基数";
+    [self loadViewData];
+    
+}
+
+-(void)back {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void) loadViewData {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    currentCityId = [[userDefault valueForKey:kSelectedCityId] intValue];
+    insuranceBase = [[InsuranceDao sharedInstance] queryBaseByCityId:currentCityId];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,90 +99,125 @@
         configCell.indexLabel.text = @"当前城市";
         configCell.baseValue.text = [userDefault valueForKey:kSelectedCityKey];
     } else if (indexPath.section == 1) {
+        NSData *data = [insuranceBase.endowmentInsurance dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *error;
+        NSDictionary *dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         switch (indexPath.row) {
             case 0:
                 title = @"养老保险最高基数";
+                configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
                 break;
             case 1:
                 title = @"养老保险最低基数";
+                configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
                 break;
             case 2:
-                title = @"养老保险最高比例";
+                title = @"养老保险个人比例";
+                configCell.baseValue.text = [[dict valueForKey:kPersonalRate] stringValue];
                 break;
             case 3:
-                title = @"养老保险最低比例";
+                title = @"养老保险公司比例";
+                configCell.baseValue.text = [[dict valueForKey:kCompanyRate] stringValue];
                 break;
             default:
                 break;
         }
         configCell.indexLabel.text = title;
     } else if (indexPath.section == 2) {
+        NSData *data = [insuranceBase.medicalInsurance dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *error;
+        NSDictionary *dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         switch (indexPath.row) {
             case 0:
                 title = @"医疗保险最高基数";
+                configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
                 break;
             case 1:
                 title = @"医疗保险最低基数";
+                configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
                 break;
             case 2:
-                title = @"医疗保险最高比例";
+                title = @"医疗保险个人比例";
+                configCell.baseValue.text = [dict valueForKey:kPersonalRate];
                 break;
             case 3:
-                title = @"医疗保险最低比例";
+                title = @"医疗保险公司比例";
+                configCell.baseValue.text = [[dict valueForKey:kCompanyRate] stringValue];
                 break;
             default:
                 break;
         }
         configCell.indexLabel.text = title;
     } else if (indexPath.section == 3) {
+        NSData *data = [insuranceBase.unemploymentInsurance dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *error;
+        NSDictionary *dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         switch (indexPath.row) {
             case 0:
                 title = @"失业保险最高基数";
+                configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
                 break;
             case 1:
                 title = @"失业保险最低基数";
+                configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
                 break;
             case 2:
-                title = @"失业保险最高比例";
+                title = @"失业保险个人比例";
+                configCell.baseValue.text = [[dict valueForKey:kPersonalRate] stringValue];
                 break;
             case 3:
-                title = @"失业保险最低比例";
+                title = @"失业保险公司比例";
+                configCell.baseValue.text = [[dict valueForKey:kCompanyRate] stringValue];
                 break;
             default:
                 break;
         }
         configCell.indexLabel.text = title;
     } else if (indexPath.section == 4) {
+        NSData *data = [insuranceBase.employmentInjuryInsurance dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *error;
+        NSDictionary *dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         switch (indexPath.row) {
             case 0:
                 title = @"工伤保险最高基数";
+                configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
                 break;
             case 1:
                 title = @"工伤保险最低基数";
+                configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
                 break;
             case 2:
-                title = @"工伤保险最高比例";
+                title = @"工伤保险个人比例";
+                configCell.baseValue.text = [[dict valueForKey:kPersonalRate] stringValue];
                 break;
             case 3:
-                title = @"工伤保险最低比例";
+                title = @"工伤保险公司比例";
+                configCell.baseValue.text = [[dict valueForKey:kCompanyRate] stringValue];
                 break;
             default:
                 break;
         }
         configCell.indexLabel.text = title;
     } else if (indexPath.section == 5) {
+        NSData *data = [insuranceBase.maternityInsurance dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *error;
+        NSDictionary *dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         switch (indexPath.row) {
             case 0:
                 title = @"生育保险最高基数";
+                configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
                 break;
             case 1:
                 title = @"生育保险最低基数";
+                configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
                 break;
             case 2:
-                title = @"生育保险最高比例";
+                title = @"生育保险个人比例";
+                configCell.baseValue.text = [[dict valueForKey:kPersonalRate] stringValue];
                 break;
             case 3:
-                title = @"生育保险最低比例";
+                title = @"生育保险公司比例";
+                configCell.baseValue.text = [[dict valueForKey:kCompanyRate] stringValue];
                 break;
             default:
                 break;

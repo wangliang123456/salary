@@ -29,9 +29,8 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gun-fd-owM">
-                        <rect key="frame" x="257" y="42" width="50" height="20"/>
+                        <rect key="frame" x="282" y="42" width="25" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="50" id="F0Y-pn-nhB"/>
                             <constraint firstAttribute="height" constant="20" id="Pn7-vL-cdc"/>
                         </constraints>
                         <nil key="textColor"/>
