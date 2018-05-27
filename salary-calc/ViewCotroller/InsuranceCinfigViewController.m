@@ -39,7 +39,6 @@
     self.navigationItem.rightBarButtonItem = right;
     self.title = @"基数";
     [self loadViewData];
-    
 }
 
 -(void)back {
