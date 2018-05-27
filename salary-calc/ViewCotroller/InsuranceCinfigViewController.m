@@ -101,6 +101,7 @@
         NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
         configCell.indexLabel.text = @"当前城市";
         configCell.baseValue.text = [userDefault valueForKey:kSelectedCityKey];
+        configCell.unitLabel.hidden = YES;
     } else if (indexPath.section == 1) {
         NSData *data = [insuranceBase.endowmentInsurance dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error;
@@ -109,18 +110,22 @@
             case 0:
                 title = @"养老保险最高基数";
                 configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
+                configCell.unitLabel.text = @"元";
                 break;
             case 1:
                 title = @"养老保险最低基数";
                 configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
+                configCell.unitLabel.text = @"元";
                 break;
             case 2:
                 title = @"养老保险个人比例";
                 configCell.baseValue.text = [[dict valueForKey:kPersonalRate] stringValue];
+                configCell.unitLabel.text = @"%";
                 break;
             case 3:
                 title = @"养老保险公司比例";
                 configCell.baseValue.text = [[dict valueForKey:kCompanyRate] stringValue];
+                configCell.unitLabel.text = @"%";
                 break;
             default:
                 break;
@@ -134,22 +139,27 @@
             case 0:
                 title = @"医疗保险最高基数";
                 configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
+                configCell.unitLabel.text = @"元";
                 break;
             case 1:
                 title = @"医疗保险最低基数";
                 configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
+                configCell.unitLabel.text = @"元";
                 break;
             case 2:
                 title = @"医疗保险个人比例";
                 configCell.baseValue.text = [[dict valueForKey:kPersonalRate] componentsSeparatedByString:@"+"][0];
+                configCell.unitLabel.text = @"%";
                 break;
             case 3:
                 title = @"医疗保险补充费用";
                 configCell.baseValue.text = [[dict valueForKey:kPersonalRate] componentsSeparatedByString:@"+"][1];
+                configCell.unitLabel.text = @"元";
                 break;
             case 4:
                 title = @"医疗保险公司比例";
                 configCell.baseValue.text = [[dict valueForKey:kCompanyRate] stringValue];
+                configCell.unitLabel.text = @"%";
                 break;
             default:
                 break;
@@ -163,18 +173,22 @@
             case 0:
                 title = @"失业保险最高基数";
                 configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
+                configCell.unitLabel.text = @"元";
                 break;
             case 1:
                 title = @"失业保险最低基数";
                 configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
+                configCell.unitLabel.text = @"元";
                 break;
             case 2:
                 title = @"失业保险个人比例";
                 configCell.baseValue.text = [[dict valueForKey:kPersonalRate] stringValue];
+                configCell.unitLabel.text = @"%";
                 break;
             case 3:
                 title = @"失业保险公司比例";
                 configCell.baseValue.text = [[dict valueForKey:kCompanyRate] stringValue];
+                configCell.unitLabel.text = @"%";
                 break;
             default:
                 break;
@@ -188,18 +202,22 @@
             case 0:
                 title = @"工伤保险最高基数";
                 configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
+                configCell.unitLabel.text = @"元";
                 break;
             case 1:
                 title = @"工伤保险最低基数";
                 configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
+                configCell.unitLabel.text = @"元";
                 break;
             case 2:
                 title = @"工伤保险个人比例";
                 configCell.baseValue.text = [[dict valueForKey:kPersonalRate] stringValue];
+                configCell.unitLabel.text = @"%";
                 break;
             case 3:
                 title = @"工伤保险公司比例";
                 configCell.baseValue.text = [[dict valueForKey:kCompanyRate] stringValue];
+                configCell.unitLabel.text = @"%";
                 break;
             default:
                 break;
@@ -213,18 +231,22 @@
             case 0:
                 title = @"生育保险最高基数";
                 configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
+                configCell.unitLabel.text = @"元";
                 break;
             case 1:
                 title = @"生育保险最低基数";
                 configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
+                configCell.unitLabel.text = @"元";
                 break;
             case 2:
                 title = @"生育保险个人比例";
                 configCell.baseValue.text = [[dict valueForKey:kPersonalRate] stringValue];
+                configCell.unitLabel.text = @"%";
                 break;
             case 3:
                 title = @"生育保险公司比例";
                 configCell.baseValue.text = [[dict valueForKey:kCompanyRate] stringValue];
+                configCell.unitLabel.text = @"%";
                 break;
             default:
                 break;

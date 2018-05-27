@@ -10,7 +10,7 @@
 
 @interface InsuranceConfigCellTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *indexLabel;
-
 @property (weak, nonatomic) IBOutlet UITextField *baseValue;
+@property (weak, nonatomic) IBOutlet UILabel *unitLabel;
 
 @end

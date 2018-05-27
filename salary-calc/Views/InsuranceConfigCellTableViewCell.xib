@@ -29,7 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gun-fd-owM">
-                        <rect key="frame" x="282" y="42" width="25" height="20"/>
+                        <rect key="frame" x="248" y="42" width="25" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="Pn7-vL-cdc"/>
                         </constraints>
@@ -37,18 +37,27 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="unit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfs-bP-i6G">
+                        <rect key="frame" x="278" y="41" width="29" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="pHo-XX-uGj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Aof-kR-76R"/>
                     <constraint firstItem="pHo-XX-uGj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="IMj-r7-c02"/>
                     <constraint firstItem="gun-fd-owM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="SvQ-q4-ltO"/>
-                    <constraint firstAttribute="trailing" secondItem="gun-fd-owM" secondAttribute="trailing" constant="13" id="WZf-AU-kX1"/>
+                    <constraint firstItem="xfs-bP-i6G" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gcZ-De-N6Q"/>
+                    <constraint firstItem="xfs-bP-i6G" firstAttribute="leading" secondItem="gun-fd-owM" secondAttribute="trailing" constant="5" id="gvl-4m-OVl"/>
+                    <constraint firstAttribute="trailing" secondItem="xfs-bP-i6G" secondAttribute="trailing" constant="13" id="uXb-gu-Vez"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="baseValue" destination="gun-fd-owM" id="sRt-lz-YTb"/>
                 <outlet property="indexLabel" destination="pHo-XX-uGj" id="5l2-q7-1CH"/>
+                <outlet property="unitLabel" destination="xfs-bP-i6G" id="7HG-RR-hUT"/>
             </connections>
             <point key="canvasLocation" x="-69" y="61.5"/>
         </tableViewCell>
