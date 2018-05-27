@@ -62,6 +62,9 @@
     if (section == 0) {
         return 1;
     } else {
+        if (section == 2) {
+            return 5;
+        }
         return 4;
     }
 }
@@ -138,9 +141,13 @@
                 break;
             case 2:
                 title = @"医疗保险个人比例";
-                configCell.baseValue.text = [dict valueForKey:kPersonalRate];
+                configCell.baseValue.text = [[dict valueForKey:kPersonalRate] componentsSeparatedByString:@"+"][0];
                 break;
             case 3:
+                title = @"医疗保险补充费用";
+                configCell.baseValue.text = [[dict valueForKey:kPersonalRate] componentsSeparatedByString:@"+"][1];
+                break;
+            case 4:
                 title = @"医疗保险公司比例";
                 configCell.baseValue.text = [[dict valueForKey:kCompanyRate] stringValue];
                 break;
