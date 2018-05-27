@@ -31,7 +31,6 @@
 		EF5C49F620B05D9200B5C825 /* NALLabelsMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C49F520B05D9200B5C825 /* NALLabelsMatrix.swift */; };
 		EF632AB7209757EF0041FA30 /* Salary.m in Sources */ = {isa = PBXBuildFile; fileRef = EF632AB6209757EF0041FA30 /* Salary.m */; };
 		EF8FEE49208C6A670016338D /* CityDao.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FEE48208C6A670016338D /* CityDao.m */; };
-		EF9458D420993B3100582B47 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF9458D320993B3100582B47 /* StoreKit.framework */; };
 		EFFCE3131ED2B3B100A35DF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFCE3111ED2B3B100A35DF9 /* LaunchScreen.storyboard */; };
 		EFFCE3141ED2B3B100A35DF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFCE3121ED2B3B100A35DF9 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -115,7 +114,6 @@
 		EF6A25EE20B02080008C21A6 /* salary-calc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "salary-calc-Bridging-Header.h"; sourceTree = "<group>"; };
 		EF8FEE47208C6A670016338D /* CityDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityDao.h; sourceTree = "<group>"; };
 		EF8FEE48208C6A670016338D /* CityDao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityDao.m; sourceTree = "<group>"; };
-		EF9458D320993B3100582B47 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EFFCE3111ED2B3B100A35DF9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFFCE3121ED2B3B100A35DF9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FB4771875733DDE963F9E91E /* Pods-salary-calc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-salary-calc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-salary-calc/Pods-salary-calc.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C19E77AE8C98A39ABDF909F8 /* Pods_salary_calc.framework in Frameworks */,
-				EF9458D420993B3100582B47 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +288,6 @@
 		91C935268E1312F9BF3F1BEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EF9458D320993B3100582B47 /* StoreKit.framework */,
 				57528E0EFF5A8CF314453031 /* Pods_salary_calc.framework */,
 			);
 			name = Frameworks;
@@ -405,11 +401,12 @@
 				TargetAttributes = {
 					0730A4E61CF3EFD500949058 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6FQCK6BVF7;
 						LastSwiftMigration = 0930;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Maps.iOS = {
 								enabled = 0;
@@ -713,9 +710,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6FQCK6BVF7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/salary-calc/libs",
@@ -724,7 +722,7 @@
 				INFOPLIST_FILE = "salary-calc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wangliang.test;
+				PRODUCT_BUNDLE_IDENTIFIER = "liang.wang.calc-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "salary-calc/ViewCotroller/salary-calc-Bridging-Header.h";
@@ -742,9 +740,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6FQCK6BVF7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/salary-calc/libs",
@@ -753,7 +752,7 @@
 				INFOPLIST_FILE = "salary-calc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wangliang.test;
+				PRODUCT_BUNDLE_IDENTIFIER = "liang.wang.calc-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "salary-calc/ViewCotroller/salary-calc-Bridging-Header.h";

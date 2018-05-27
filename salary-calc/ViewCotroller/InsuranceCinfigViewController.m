@@ -122,22 +122,25 @@
                 break;
             case 2:
                 title = @"养老保险个人比例";
-                configCell.baseValue.text = [[dict valueForKey:kPersonalRate] stringValue];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             case 3:
                 title = @"养老保险公司比例";
-                configCell.baseValue.text = [[dict valueForKey:kCompanyRate] stringValue];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             default:
                 break;
         }
         configCell.indexLabel.text = title;
+        configCell.unitLabel.hidden = NO;
     } else if (indexPath.section == 2) {
         NSData *data = [insuranceBase.medicalInsurance dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error;
         NSDictionary *dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        NSString *rate = [[dict valueForKey:kPersonalRate] componentsSeparatedByString:@"+"][0];
+        configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[rate doubleValue] * 100];
         switch (indexPath.row) {
             case 0:
                 title = @"医疗保险最高基数";
@@ -151,7 +154,7 @@
                 break;
             case 2:
                 title = @"医疗保险个人比例";
-                configCell.baseValue.text = [[dict valueForKey:kPersonalRate] componentsSeparatedByString:@"+"][0];
+                configCell.indexLabel.text = rate;
                 configCell.unitLabel.text = @"%";
                 break;
             case 3:
@@ -161,13 +164,14 @@
                 break;
             case 4:
                 title = @"医疗保险公司比例";
-                configCell.baseValue.text = [[dict valueForKey:kCompanyRate] stringValue];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             default:
                 break;
         }
         configCell.indexLabel.text = title;
+        configCell.unitLabel.hidden = NO;
     } else if (indexPath.section == 3) {
         NSData *data = [insuranceBase.unemploymentInsurance dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error;
@@ -185,18 +189,19 @@
                 break;
             case 2:
                 title = @"失业保险个人比例";
-                configCell.baseValue.text = [[dict valueForKey:kPersonalRate] stringValue];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             case 3:
                 title = @"失业保险公司比例";
-                configCell.baseValue.text = [[dict valueForKey:kCompanyRate] stringValue];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             default:
                 break;
         }
         configCell.indexLabel.text = title;
+        configCell.unitLabel.hidden = NO;
     } else if (indexPath.section == 4) {
         NSData *data = [insuranceBase.employmentInjuryInsurance dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error;
@@ -214,18 +219,19 @@
                 break;
             case 2:
                 title = @"工伤保险个人比例";
-                configCell.baseValue.text = [[dict valueForKey:kPersonalRate] stringValue];
+               configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             case 3:
                 title = @"工伤保险公司比例";
-                configCell.baseValue.text = [[dict valueForKey:kCompanyRate] stringValue];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             default:
                 break;
         }
         configCell.indexLabel.text = title;
+        configCell.unitLabel.hidden = NO;
     } else if (indexPath.section == 5) {
         NSData *data = [insuranceBase.maternityInsurance dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error;
@@ -243,18 +249,19 @@
                 break;
             case 2:
                 title = @"生育保险个人比例";
-                configCell.baseValue.text = [[dict valueForKey:kPersonalRate] stringValue];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             case 3:
                 title = @"生育保险公司比例";
-                configCell.baseValue.text = [[dict valueForKey:kCompanyRate] stringValue];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             default:
                 break;
         }
         configCell.indexLabel.text = title;
+        configCell.unitLabel.hidden = NO;
     }
     configCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return configCell;

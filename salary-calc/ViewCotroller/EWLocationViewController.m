@@ -38,9 +38,13 @@ static const CGFloat kHotCityCellHeight = 130;
     cancel.tintColor = [UIColor colorWithRed:0 green:0.74902 blue:1 alpha:1];
     self.navigationItem.leftBarButtonItem = cancel;
     
-    config = [[UIBarButtonItem alloc]initWithTitle:@"自定义基数" style:UIBarButtonItemStylePlain target:self action:@selector(config:)];
-    config.tintColor = [UIColor colorWithRed:0 green:0.74902 blue:1 alpha:1];
-    self.navigationItem.rightBarButtonItem = config;
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    int currentCityId = [[userDefault valueForKey:kSelectedCityId] intValue];
+    if (currentCityId != 0) {
+        config = [[UIBarButtonItem alloc]initWithTitle:@"自定义基数" style:UIBarButtonItemStylePlain target:self action:@selector(config:)];
+        config.tintColor = [UIColor colorWithRed:0 green:0.74902 blue:1 alpha:1];
+        self.navigationItem.rightBarButtonItem = config;
+    }
 }
 
 
