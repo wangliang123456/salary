@@ -22,6 +22,9 @@
     UIBarButtonItem *right;
 }
 
+-(void) save {
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -253,6 +256,7 @@
         }
         configCell.indexLabel.text = title;
     }
+    configCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return configCell;
 }
 
