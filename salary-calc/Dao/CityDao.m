@@ -89,10 +89,8 @@ static const NSString *kIsHot = @"is_hot";
     [db executeUpdate:@"insert into City(city_name, city_initial, is_hot, formula) values(\"沈阳\",\"S\", 0, \"dadsadsada\")"];
     [db executeUpdate:@"insert into City(city_name, city_initial, is_hot, formula) values(\"太原\",\"T\", 0, \"dadsadsada\")"];
     [db executeUpdate:@"insert into City(city_name, city_initial, is_hot, formula) values(\"天津\",\"T\", 0, \"dadsadsada\")"];
-    [db executeUpdate:@"insert into City(city_name, city_initial, is_hot, formula) values(\"西宁\",\"X\", 0, \"dadsadsada\")"];
     [db executeUpdate:@"insert into  City(city_name, city_initial, is_hot, formula) values(\"西安\",\"X\", 0, \"dadsadsada\")"];
     [db executeUpdate:@"insert into City(city_name, city_initial, is_hot, formula) values(\"厦门\",\"X\", 0, \"dadsadsada\")"];
-    [db executeUpdate:@"insert into City(city_name, city_initial, is_hot, formula) values(\"银川\",\"Y\", 0, \"dadsadsada\")"];
     [db executeUpdate:@"insert into City(city_name, city_initial, is_hot, formula) values(\"郑州\",\"Z\", 0, \"dadsadsada\")"];
 }
 
