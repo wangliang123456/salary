@@ -134,22 +134,22 @@
         NSDictionary *dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         switch (indexPath.row) {
             case 0:
-                title = @"养老保险最高基数";
+                title = @"最高基数";
                 configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
                 configCell.unitLabel.text = @"元";
                 break;
             case 1:
-                title = @"养老保险最低基数";
+                title = @"最低基数";
                 configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
                 configCell.unitLabel.text = @"元";
                 break;
             case 2:
-                title = @"养老保险个人比例";
+                title = @"个人比例";
                 configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             case 3:
-                title = @"养老保险公司比例";
+                title = @"公司比例";
                 configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
@@ -166,27 +166,27 @@
         configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[rate doubleValue] * 100];
         switch (indexPath.row) {
             case 0:
-                title = @"医疗保险最高基数";
+                title = @"最高基数";
                 configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
                 configCell.unitLabel.text = @"元";
                 break;
             case 1:
-                title = @"医疗保险最低基数";
+                title = @"最低基数";
                 configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
                 configCell.unitLabel.text = @"元";
                 break;
             case 2:
-                title = @"医疗保险个人比例";
+                title = @"个人比例";
                 configCell.indexLabel.text = rate;
                 configCell.unitLabel.text = @"%";
                 break;
             case 3:
-                title = @"医疗保险补充费用";
+                title = @"补充费用";
                 configCell.baseValue.text = [[dict valueForKey:kPersonalRate] componentsSeparatedByString:@"+"][1];
                 configCell.unitLabel.text = @"元";
                 break;
             case 4:
-                title = @"医疗保险公司比例";
+                title = @"公司比例";
                 configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
@@ -201,22 +201,22 @@
         NSDictionary *dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         switch (indexPath.row) {
             case 0:
-                title = @"失业保险最高基数";
+                title = @"最高基数";
                 configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
                 configCell.unitLabel.text = @"元";
                 break;
             case 1:
-                title = @"失业保险最低基数";
+                title = @"最低基数";
                 configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
                 configCell.unitLabel.text = @"元";
                 break;
             case 2:
-                title = @"失业保险个人比例";
+                title = @"个人比例";
                 configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             case 3:
-                title = @"失业保险公司比例";
+                title = @"公司比例";
                 configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
@@ -231,22 +231,22 @@
         NSDictionary *dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         switch (indexPath.row) {
             case 0:
-                title = @"工伤保险最高基数";
+                title = @"最高基数";
                 configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
                 configCell.unitLabel.text = @"元";
                 break;
             case 1:
-                title = @"工伤保险最低基数";
+                title = @"最低基数";
                 configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
                 configCell.unitLabel.text = @"元";
                 break;
             case 2:
-                title = @"工伤保险个人比例";
+                title = @"个人比例";
                configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             case 3:
-                title = @"工伤保险公司比例";
+                title = @"公司比例";
                 configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
@@ -261,22 +261,22 @@
         NSDictionary *dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         switch (indexPath.row) {
             case 0:
-                title = @"生育保险最高基数";
+                title = @"最高基数";
                 configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
                 configCell.unitLabel.text = @"元";
                 break;
             case 1:
-                title = @"生育保险最低基数";
+                title = @"最低基数";
                 configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
                 configCell.unitLabel.text = @"元";
                 break;
             case 2:
-                title = @"生育保险个人比例";
+                title = @"个人比例";
                 configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             case 3:
-                title = @"生育保险公司比例";
+                title = @"公司比例";
                 configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
@@ -291,22 +291,22 @@
         NSDictionary *dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         switch (indexPath.row) {
             case 0:
-                title = @"公积金最高基数";
+                title = @"最高基数";
                 configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
                 configCell.unitLabel.text = @"元";
                 break;
             case 1:
-                title = @"公积金最低基数";
+                title = @"最低基数";
                 configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
                 configCell.unitLabel.text = @"元";
                 break;
             case 2:
-                title = @"公积金个人比例";
+                title = @"个人比例";
                 configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             case 3:
-                title = @"公积金公司比例";
+                title = @"公司比例";
                 configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
