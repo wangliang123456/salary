@@ -58,7 +58,7 @@
 }
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
-    return 6;
+    return 7;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -254,6 +254,36 @@
                 break;
             case 3:
                 title = @"生育保险公司比例";
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
+                configCell.unitLabel.text = @"%";
+                break;
+            default:
+                break;
+        }
+        configCell.indexLabel.text = title;
+        configCell.unitLabel.hidden = NO;
+    } else if (indexPath.section == 6) {
+        NSData *data = [insuranceBase.houseFund dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *error;
+        NSDictionary *dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        switch (indexPath.row) {
+            case 0:
+                title = @"公积金最高基数";
+                configCell.baseValue.text = [[dict valueForKey:kHighBase] stringValue];
+                configCell.unitLabel.text = @"元";
+                break;
+            case 1:
+                title = @"公积金最低基数";
+                configCell.baseValue.text = [[dict valueForKey:kLowBase] stringValue];
+                configCell.unitLabel.text = @"元";
+                break;
+            case 2:
+                title = @"公积金个人比例";
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
+                configCell.unitLabel.text = @"%";
+                break;
+            case 3:
+                title = @"公积金公司比例";
                 configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
