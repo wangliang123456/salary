@@ -31,6 +31,7 @@
 		EF5C49F620B05D9200B5C825 /* NALLabelsMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C49F520B05D9200B5C825 /* NALLabelsMatrix.swift */; };
 		EF632AB7209757EF0041FA30 /* Salary.m in Sources */ = {isa = PBXBuildFile; fileRef = EF632AB6209757EF0041FA30 /* Salary.m */; };
 		EF8FEE49208C6A670016338D /* CityDao.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FEE48208C6A670016338D /* CityDao.m */; };
+		EFBA695920C2DD2000D8570A /* InsuranceConfigViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = EF2D0BE920B45A2600863E2F /* InsuranceConfigViewController.h */; };
 		EFFCE3131ED2B3B100A35DF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFCE3111ED2B3B100A35DF9 /* LaunchScreen.storyboard */; };
 		EFFCE3141ED2B3B100A35DF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFCE3121ED2B3B100A35DF9 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -540,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFBA695920C2DD2000D8570A /* InsuranceConfigViewController.h in Sources */,
 				0730A5261CF3F84400949058 /* EWRootViewController.m in Sources */,
 				EF16DC242095CF6D00CBA361 /* InsuranceDao.m in Sources */,
 				0725FAD41CF5D68B007A6088 /* BaseViewController.m in Sources */,

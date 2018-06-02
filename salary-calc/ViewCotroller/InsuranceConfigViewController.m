@@ -10,11 +10,11 @@
 #import "InsuranceBase.h"
 #import "InsuranceDao.h"
 
-@interface InsuranceCinfigViewController ()
+@interface InsuranceConfigViewController ()
 
 @end
 
-@implementation InsuranceCinfigViewController
+@implementation InsuranceConfigViewController
 {
     InsuranceBase *insuranceBase;
     int currentCityId;

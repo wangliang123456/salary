@@ -174,39 +174,6 @@
             </objects>
             <point key="canvasLocation" x="2148" y="-657"/>
         </scene>
-        <!--Insurance Cinfig View Controller-->
-        <scene sceneID="R8r-Ip-xTR">
-            <objects>
-                <viewController storyboardIdentifier="InsuranceCinfigViewController" id="oI2-qa-6ot" customClass="InsuranceCinfigViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hjC-by-Svv"/>
-                        <viewControllerLayoutGuide type="bottom" id="30h-jy-OOk"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8pu-08-AtC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EyU-Qm-nJ2">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="EyU-Qm-nJ2" firstAttribute="width" secondItem="8pu-08-AtC" secondAttribute="width" id="5N3-Yi-PGP"/>
-                            <constraint firstItem="EyU-Qm-nJ2" firstAttribute="height" secondItem="8pu-08-AtC" secondAttribute="height" id="9S2-Ca-tlf"/>
-                            <constraint firstItem="EyU-Qm-nJ2" firstAttribute="centerY" secondItem="8pu-08-AtC" secondAttribute="centerY" id="QL9-XI-NMs"/>
-                            <constraint firstItem="EyU-Qm-nJ2" firstAttribute="centerX" secondItem="8pu-08-AtC" secondAttribute="centerX" id="mu0-wh-m5T"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="contentView" destination="EyU-Qm-nJ2" id="q7r-eE-Hau"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BGC-mS-zuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2845" y="176"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="SkO-lP-9Zc">
             <objects>
@@ -217,12 +184,45 @@
                     </navigationBar>
                     <connections>
                         <segue destination="KPE-33-ctx" kind="relationship" relationship="rootViewController" id="90g-lx-yWo"/>
-                        <segue destination="oI2-qa-6ot" kind="show" identifier="insuranceConfig" id="hpc-hf-SJ8"/>
+                        <segue destination="W1R-cM-Nk9" kind="show" identifier="insuranceConfig" id="FDd-ta-wSm"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inb-6A-RuW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1386" y="5"/>
+        </scene>
+        <!--Insurance Config View Controller-->
+        <scene sceneID="d6i-eN-MtC">
+            <objects>
+                <viewController id="W1R-cM-Nk9" customClass="InsuranceConfigViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ebl-dq-dYw"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cwu-MM-Bp7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OQj-jp-9ey">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ft1-ic-ovc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ft1-ic-ovc" firstAttribute="centerX" secondItem="OQj-jp-9ey" secondAttribute="centerX" id="BK0-e4-YQ3"/>
+                            <constraint firstItem="ft1-ic-ovc" firstAttribute="centerY" secondItem="OQj-jp-9ey" secondAttribute="centerY" id="Byn-Jo-aLB"/>
+                            <constraint firstItem="ft1-ic-ovc" firstAttribute="height" secondItem="OQj-jp-9ey" secondAttribute="height" id="WMT-ht-z8R"/>
+                            <constraint firstItem="ft1-ic-ovc" firstAttribute="width" secondItem="OQj-jp-9ey" secondAttribute="width" id="g1y-qD-rBq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="ft1-ic-ovc" id="9Wk-XS-3MH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s83-Wi-d4F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2578" y="434"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="411-U6-u7t">

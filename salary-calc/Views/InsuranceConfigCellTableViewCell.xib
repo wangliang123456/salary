@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHo-XX-uGj">
-                        <rect key="frame" x="13" y="42" width="35.5" height="20"/>
+                        <rect key="frame" x="20" y="42" width="35.5" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="eYj-zf-rb6"/>
                         </constraints>
@@ -46,7 +46,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="pHo-XX-uGj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Aof-kR-76R"/>
-                    <constraint firstItem="pHo-XX-uGj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="IMj-r7-c02"/>
+                    <constraint firstItem="pHo-XX-uGj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="IMj-r7-c02"/>
                     <constraint firstItem="gun-fd-owM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="SvQ-q4-ltO"/>
                     <constraint firstItem="xfs-bP-i6G" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gcZ-De-N6Q"/>
                     <constraint firstItem="xfs-bP-i6G" firstAttribute="leading" secondItem="gun-fd-owM" secondAttribute="trailing" constant="3" id="gvl-4m-OVl"/>
