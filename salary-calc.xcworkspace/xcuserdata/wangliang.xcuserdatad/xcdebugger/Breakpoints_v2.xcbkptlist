@@ -52,7 +52,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "salary-calc/ViewCotroller/EWLocationViewController.m"
-            timestampString = "549623762.179176"
+            timestampString = "549638022.662833"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -64,16 +64,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "salary-calc/Views/EWHotCityCell.m"
-            timestampString = "549623762.179244"
+            filePath = "salary-calc/ViewCotroller/InsuranceCinfigViewController.m"
+            timestampString = "549638022.662909"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-renderView"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-loadViewData"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
