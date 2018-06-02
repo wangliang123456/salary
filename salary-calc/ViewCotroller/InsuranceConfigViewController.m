@@ -6,7 +6,7 @@
 //  Copyright © 2018年 Eric Wang. All rights reserved.
 //
 
-#import "InsuranceCinfigViewController.h"
+#import "InsuranceConfigViewController.h"
 #import "InsuranceBase.h"
 #import "InsuranceDao.h"
 
