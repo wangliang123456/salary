@@ -16,4 +16,6 @@
 
 -(InsuranceBase *) queryBaseByCityId:(int) cityId;
 
+-(InsuranceBase *) queryBaseByCityName:(NSString *) cityName;
+
 @end
