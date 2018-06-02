@@ -14,7 +14,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [self renderView];
 }
 
 -(void) renderView {
@@ -27,7 +26,10 @@
     for (UIButton *btn in self.btns) {
         [btn addTarget:self action:@selector(hotCityDidSelected:) forControlEvents:UIControlEventTouchUpInside];
         City *city = (City *)[self.dataSource objectAtIndex:index];
-        btn.titleLabel.text = city.cityName;
+        NSNumber *style = [NSNumber numberWithInt:NSUnderlineStyleSingle];
+        NSDictionary *dict = @{NSUnderlineStyleAttributeName:style};
+        NSAttributedString *att = [[NSAttributedString alloc] initWithString:city.cityName attributes:dict];
+        btn.titleLabel.attributedText = att;
         [btn.layer setValue:city.ID forKey:kSelectedCityId];
         [btn.layer setValue:city.cityName forKey:kSelectedCityKey];
         index++;

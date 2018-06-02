@@ -13,8 +13,6 @@
 
 @required
 -(void) hotCityDidSelected:(id) sender;
--(void) reloadData;
-
 @end
 
 @interface EWHotCityCell : UITableViewCell
@@ -24,5 +22,6 @@
 @property (weak, nonatomic) id<HotCityDelegate> delegate;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *btns;
 
+-(void) renderView;
 
 @end

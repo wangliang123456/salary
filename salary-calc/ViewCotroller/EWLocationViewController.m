@@ -117,7 +117,7 @@ static const CGFloat kHotCityCellHeight = 130;
         hotCell.selectionStyle = UITableViewCellSelectionStyleNone;
         hotCell.delegate = self;
         hotCell.dataSource = hotCities;
-        [self reloadData];
+        [hotCell renderView];
         return hotCell;
     } else {
         NSString* text = @"";
@@ -192,12 +192,5 @@ static const CGFloat kHotCityCellHeight = 130;
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:btn.titleLabel.text forKey:kSelectedCityKey];
     [self dismissViewControllerAnimated:true completion:nil];
-}
--(void) reloadData {
-    UITableViewCell *cell = [self.contentView indexPathForCell:[NSIndexPath indexPathForRow:0 inSection:0]];
-    if ([cell isKindOfClass:[EWHotCityCell class]]) {
-        EWHotCityCell *hotCell = (EWHotCityCell *)cell;
-        [hotCell.delegate reloadData];
-    }
 }
 @end
