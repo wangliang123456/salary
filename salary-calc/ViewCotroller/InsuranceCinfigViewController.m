@@ -39,6 +39,25 @@
     self.navigationItem.rightBarButtonItem = right;
     self.title = @"基数";
     [self loadViewData];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    CGRect keyboardBounds = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    self.contentView.contentInset = UIEdgeInsetsMake(self.contentView.contentInset.top, 0, keyboardBounds.size.height, 0);
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    self.contentView.contentInset = UIEdgeInsetsMake(self.contentView.contentInset.top, 0, 0, 0);
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
 -(void)back {
