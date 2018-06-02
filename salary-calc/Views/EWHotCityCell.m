@@ -8,6 +8,7 @@
 
 #import "EWHotCityCell.h"
 #import "City.h"
+#import "EWLocationViewController.h"
 
 @implementation EWHotCityCell
 
@@ -45,6 +46,11 @@
         NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
         [userDefaults setObject:cityName forKey:kSelectedCityKey];
         [userDefaults setObject:cityId forKey:kSelectedCityId];
+    }
+    UIResponder *responder = self.nextResponder.nextResponder.nextResponder;
+    if ([responder isKindOfClass:[EWLocationViewController class]]) {
+        EWLocationViewController *coontroller = (EWLocationViewController *)responder;
+        [coontroller.navigationController dismissViewControllerAnimated:YES completion:nil];
     }
 }
 
