@@ -122,12 +122,12 @@
                 break;
             case 2:
                 title = @"养老保险个人比例";
-                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             case 3:
                 title = @"养老保险公司比例";
-                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             default:
@@ -140,7 +140,7 @@
         NSError *error;
         NSDictionary *dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         NSString *rate = [[dict valueForKey:kPersonalRate] componentsSeparatedByString:@"+"][0];
-        configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[rate doubleValue] * 100];
+        configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[rate doubleValue] * 100];
         switch (indexPath.row) {
             case 0:
                 title = @"医疗保险最高基数";
@@ -164,7 +164,7 @@
                 break;
             case 4:
                 title = @"医疗保险公司比例";
-                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             default:
@@ -189,12 +189,12 @@
                 break;
             case 2:
                 title = @"失业保险个人比例";
-                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             case 3:
                 title = @"失业保险公司比例";
-                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             default:
@@ -219,12 +219,12 @@
                 break;
             case 2:
                 title = @"工伤保险个人比例";
-               configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
+               configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             case 3:
                 title = @"工伤保险公司比例";
-                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             default:
@@ -249,12 +249,12 @@
                 break;
             case 2:
                 title = @"生育保险个人比例";
-                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             case 3:
                 title = @"生育保险公司比例";
-                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             default:
@@ -279,12 +279,12 @@
                 break;
             case 2:
                 title = @"公积金个人比例";
-                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kPersonalRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             case 3:
                 title = @"公积金公司比例";
-                configCell.baseValue.text = [NSString stringWithFormat:@"%.f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
+                configCell.baseValue.text = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kCompanyRate] doubleValue] * 100];
                 configCell.unitLabel.text = @"%";
                 break;
             default:
