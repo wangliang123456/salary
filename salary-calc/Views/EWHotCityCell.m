@@ -29,7 +29,8 @@
         NSNumber *style = [NSNumber numberWithInt:NSUnderlineStyleSingle];
         NSDictionary *dict = @{NSUnderlineStyleAttributeName:style};
         NSAttributedString *att = [[NSAttributedString alloc] initWithString:city.cityName attributes:dict];
-        btn.titleLabel.attributedText = att;
+        [btn setAttributedTitle:att forState:UIControlStateNormal];
+        [btn setAttributedTitle:att forState:UIControlStateHighlighted];
         [btn.layer setValue:city.ID forKey:kSelectedCityId];
         [btn.layer setValue:city.cityName forKey:kSelectedCityKey];
         index++;
