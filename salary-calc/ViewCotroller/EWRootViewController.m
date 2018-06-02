@@ -179,8 +179,8 @@ static int kHouseFundTag = 2;
     Salary *salary = [[Salary alloc] init];
     salary.salaryWithoutTax = salaryParam;
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    int currentCityId = [[userDefault valueForKey:kSelectedCityId] intValue];
-    insuranceBase = [[InsuranceDao sharedInstance] queryBaseByCityId:currentCityId];
+    NSString *currentCityName = [[userDefault valueForKey:kSelectedCityId] stringValue];
+    insuranceBase = [[InsuranceDao sharedInstance] queryBaseByCityName:currentCityName];
     //养老
     NSData *endowmentInsuranceData = [insuranceBase.endowmentInsurance dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error;

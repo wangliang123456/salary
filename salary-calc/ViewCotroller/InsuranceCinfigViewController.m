@@ -48,7 +48,8 @@
 -(void) loadViewData {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     currentCityId = [[userDefault valueForKey:kSelectedCityId] intValue];
-    insuranceBase = [[InsuranceDao sharedInstance] queryBaseByCityId:currentCityId];
+    NSString *cityName =[[userDefault valueForKey:kSelectedCityId] stringValue];
+    insuranceBase = [[InsuranceDao sharedInstance] queryBaseByCityName:cityName];
 }
 
 - (void)didReceiveMemoryWarning {
