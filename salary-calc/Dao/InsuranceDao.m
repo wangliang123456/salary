@@ -200,7 +200,7 @@ static InsuranceDao *instance;
 -(InsuranceBase *) queryBaseByCityName:(NSString *) cityName {
     __block InsuranceBase *insuranceBase = nil;
     [instance->databaseQueue inDatabase:^(FMDatabase * _Nonnull db) {
-        NSString *query = [@"select * from Insurance_data where city_name = " stringByAppendingFormat:@"%@",cityName];
+        NSString *query = [@"select * from Insurance_data where city_name = '" stringByAppendingFormat:@"%@'",cityName];
         FMResultSet *rs = [db executeQuery:query];
         while ([rs next]) {
             insuranceBase = [instance buildBase:rs];
