@@ -96,6 +96,10 @@
     return 80;
 }
 
+-(CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 10;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"baseCell";
     InsuranceConfigCellTableViewCell *configCell = (InsuranceConfigCellTableViewCell *) [tableView dequeueReusableCellWithIdentifier:identifier];
