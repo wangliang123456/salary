@@ -128,6 +128,7 @@
         configCell.indexLabel.text = @"当前城市";
         configCell.baseValue.text = [userDefault valueForKey:kSelectedCityKey];
         configCell.unitLabel.hidden = YES;
+        [configCell.baseValue setEnabled:NO];
     } else if (indexPath.section == 1) {
         NSData *data = [insuranceBase.endowmentInsurance dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error;
@@ -333,10 +334,11 @@
     return configCell;
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField {
+#pragma mark text field delegate
+-(BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     NSString *index = [textField.layer valueForKey:@"index"];
-    int section = [index componentsSeparatedByString:@"-"][0];
-    int row = [index componentsSeparatedByString:@"-"][1];
+    int section = [[index componentsSeparatedByString:@"-"][0] intValue];
+    int row = [[index componentsSeparatedByString:@"-"][1] intValue];
     if (section == 1) {//养老
         switch (row) {
             case 0://最高基数
@@ -445,6 +447,7 @@
                 break;
         }
     }
+    return YES;
 }
 
 @end
