@@ -183,6 +183,9 @@ static int kHouseFundTag = 2;
 
 #pragma mark 计算税后工资
 -(void) calc:(double) salaryParam {
+    if (salaryParam == 0) {
+        return;
+    }
     Salary *salary = [[Salary alloc] init];
     salary.salaryWithoutTax = salaryParam;
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];

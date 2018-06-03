@@ -50,11 +50,14 @@
         [userDefaults setObject:cityName forKey:kSelectedCityKey];
         [userDefaults setObject:cityId forKey:kSelectedCityId];
     }
+    NSNotification *noti = [[NSNotification alloc] initWithName:@"CityHasChange" object:nil userInfo:nil];
+    [[NSNotificationCenter defaultCenter] postNotification:noti];
     UIResponder *responder = self.nextResponder.nextResponder.nextResponder;
     if ([responder isKindOfClass:[EWLocationViewController class]]) {
         EWLocationViewController *coontroller = (EWLocationViewController *)responder;
         [coontroller.navigationController dismissViewControllerAnimated:YES completion:nil];
     }
+    
 }
 
 - (void) hotCitySelected:(id)sender {
