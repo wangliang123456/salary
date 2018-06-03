@@ -100,11 +100,11 @@
     } else if (section == 2) {
         title = @"医疗保险";
     } else if (section == 3) {
-        title = @"失业保险";
-    } else if (section == 4) {
-        title = @"工伤保险";
-    } else if (section == 5) {
         title = @"生育保险";
+    } else if (section == 4) {
+        title = @"失业保险";
+    } else if (section == 5) {
+        title = @"工伤保险";
     } else if (section == 6) {
         title = @"公积金";
     }
@@ -158,6 +158,8 @@
         }
         configCell.indexLabel.text = title;
         configCell.unitLabel.hidden = NO;
+        [configCell.baseValue.layer setValue:[NSString stringWithFormat:@"%d-%d",indexPath.section,indexPath.row] forKey:@"index"];
+        configCell.baseValue.delegate = self;
     } else if (indexPath.section == 2) {
         NSData *data = [insuranceBase.medicalInsurance dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error;
@@ -195,6 +197,8 @@
         }
         configCell.indexLabel.text = title;
         configCell.unitLabel.hidden = NO;
+        [configCell.baseValue.layer setValue:[NSString stringWithFormat:@"%d-%d",indexPath.section,indexPath.row] forKey:@"index"];
+        configCell.baseValue.delegate = self;
     } else if (indexPath.section == 3) {
         NSData *data = [insuranceBase.unemploymentInsurance dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error;
@@ -225,6 +229,8 @@
         }
         configCell.indexLabel.text = title;
         configCell.unitLabel.hidden = NO;
+        [configCell.baseValue.layer setValue:[NSString stringWithFormat:@"%d-%d",indexPath.section,indexPath.row] forKey:@"index"];
+        configCell.baseValue.delegate = self;
     } else if (indexPath.section == 4) {
         NSData *data = [insuranceBase.employmentInjuryInsurance dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error;
@@ -255,6 +261,8 @@
         }
         configCell.indexLabel.text = title;
         configCell.unitLabel.hidden = NO;
+        [configCell.baseValue.layer setValue:[NSString stringWithFormat:@"%d-%d",indexPath.section,indexPath.row] forKey:@"index"];
+        configCell.baseValue.delegate = self;
     } else if (indexPath.section == 5) {
         NSData *data = [insuranceBase.maternityInsurance dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error;
@@ -285,10 +293,13 @@
         }
         configCell.indexLabel.text = title;
         configCell.unitLabel.hidden = NO;
+        [configCell.baseValue.layer setValue:[NSString stringWithFormat:@"%d-%d",indexPath.section,indexPath.row] forKey:@"index"];
+        configCell.baseValue.delegate = self;
     } else if (indexPath.section == 6) {
         NSData *data = [insuranceBase.houseFund dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error;
         NSDictionary *dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        
         switch (indexPath.row) {
             case 0:
                 title = @"最高基数";
@@ -315,9 +326,125 @@
         }
         configCell.indexLabel.text = title;
         configCell.unitLabel.hidden = NO;
+        [configCell.baseValue.layer setValue:[NSString stringWithFormat:@"%d-%d",indexPath.section,indexPath.row] forKey:@"index"];
+        configCell.baseValue.delegate = self;
     }
     configCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return configCell;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    NSString *index = [textField.layer valueForKey:@"index"];
+    int section = [index componentsSeparatedByString:@"-"][0];
+    int row = [index componentsSeparatedByString:@"-"][1];
+    if (section == 1) {//养老
+        switch (row) {
+            case 0://最高基数
+                
+                break;
+            case 1://最低基数
+                
+                break;
+            case 2://个人比例
+                
+                break;
+            case 3://公司比例
+                
+                break;
+                
+            default:
+                break;
+        }
+    } else if (section == 2) {//医疗
+        switch (row) {
+            case 0://最高基数
+                
+                break;
+            case 1://最低基数
+                
+                break;
+            case 2://个人比例
+                
+                break;
+            case 3://补充费用
+                
+                break;
+                
+            case 4://公司比例
+                
+                break;
+            default:
+                break;
+        }
+    } else if (section == 3) {//生育
+        switch (row) {
+            case 0://最高基数
+                
+                break;
+            case 1://最低基数
+                
+                break;
+            case 2://个人比例
+                
+                break;
+            case 3://公司比例
+                
+                break;
+            default:
+                break;
+        }
+    } else if (section == 4) {//失业保险
+        switch (row) {
+            case 0://最高基数
+                
+                break;
+            case 1://最低基数
+                
+                break;
+            case 2://个人比例
+                
+                break;
+            case 3://公司比例
+                
+                break;
+            default:
+                break;
+        }
+    } else if (section == 5) {//工伤
+        switch (row) {
+            case 0://最高基数
+                
+                break;
+            case 1://最低基数
+                
+                break;
+            case 2://个人比例
+                
+                break;
+            case 3://公司比例
+                
+                break;
+            default:
+                break;
+        }
+    } else if (section == 6) {//公积金
+        switch (row) {
+            case 0://最高基数
+                
+                break;
+            case 1://最低基数
+                
+                break;
+            case 2://个人比例
+                
+                break;
+            case 3://公司比例
+                
+                break;
+            default:
+                break;
+        }
+    }
 }
 
 @end
