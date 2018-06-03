@@ -37,14 +37,6 @@ static const CGFloat kHotCityCellHeight = 130;
     cancel = [[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancel:)];
     cancel.tintColor = [UIColor colorWithRed:0 green:0.74902 blue:1 alpha:1];
     self.navigationItem.leftBarButtonItem = cancel;
-    
-//    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-//    int currentCityId = [[userDefault valueForKey:kSelectedCityId] intValue];
-//    if (currentCityId != 0) {
-//        config = [[UIBarButtonItem alloc]initWithTitle:@"自定义基数" style:UIBarButtonItemStylePlain target:self action:@selector(config:)];
-//        config.tintColor = [UIColor colorWithRed:0 green:0.74902 blue:1 alpha:1];
-//        self.navigationItem.rightBarButtonItem = config;
-//    }
 }
 
 
@@ -184,6 +176,8 @@ static const CGFloat kHotCityCellHeight = 130;
     [userDefaults setObject:city.cityName forKey:kSelectedCityKey];
     [userDefaults setObject:city.ID forKey:kSelectedCityId];
     [self dismissViewControllerAnimated:true completion:nil];
+    NSNotification *noti = [[NSNotification alloc] initWithName:@"CityHasChange" object:nil userInfo:nil];
+    [[NSNotificationCenter defaultCenter] postNotification:noti];
 }
 
 #pragma mark table view delegate end
@@ -192,5 +186,7 @@ static const CGFloat kHotCityCellHeight = 130;
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:btn.titleLabel.text forKey:kSelectedCityKey];
     [self dismissViewControllerAnimated:true completion:nil];
+    NSNotification *noti = [[NSNotification alloc] initWithName:@"CityHasChange" object:nil userInfo:nil];
+    [[NSNotificationCenter defaultCenter] postNotification:noti];
 }
 @end

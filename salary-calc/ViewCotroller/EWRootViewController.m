@@ -55,6 +55,13 @@ static int kHouseFundTag = 2;
     }
 }
 
+-(void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"CityHasChange" object:nil];
+}
+
+-(void) recalc {
+    [self calc:[self.salaryValue.text doubleValue]];
+}
 
 -(void) loadTableView:(Salary *) salary {
     [[self.view viewWithTag:111] removeFromSuperview];
@@ -179,7 +186,7 @@ static int kHouseFundTag = 2;
     Salary *salary = [[Salary alloc] init];
     salary.salaryWithoutTax = salaryParam;
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    NSString *currentCityName = [[userDefault valueForKey:kSelectedCityId] stringValue];
+    NSString *currentCityName = [[userDefault valueForKey:kSelectedCityKey] stringValue];
     insuranceBase = [[InsuranceDao sharedInstance] queryBaseByCityName:currentCityName];
     //养老
     NSData *endowmentInsuranceData = [insuranceBase.endowmentInsurance dataUsingEncoding:NSUTF8StringEncoding];
@@ -426,6 +433,7 @@ static int kHouseFundTag = 2;
     if (currentCityId == 0) {
         [self changeCity:nil];
     }
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recalc) name:@"CityHasChange" object:nil];
 }
 
 -(void) initVariable {
