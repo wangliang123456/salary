@@ -190,6 +190,8 @@ static int kHouseFundTag = 2;
 #pragma mark 计算税后工资
 -(void) calc:(double) salaryParam {
     if (salaryParam == 0) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"出错啦" message:@"亲，别闹工资为0不能计算." delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
+        [alertView show];
         return;
     }
     Salary *salary = [[Salary alloc] init];
