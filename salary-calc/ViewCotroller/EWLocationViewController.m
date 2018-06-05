@@ -26,9 +26,10 @@ static const CGFloat kHotCityCellHeight = 130;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"切换城市";
+    self.title = @"选择城市";
     self.contentView.delegate = self;
     self.contentView.dataSource = self;
+    self.contentView.sectionIndexColor = [UIColor colorWithRed:0 green:0.74902 blue:1 alpha:1];
     [self initView];
     [self loadCities];
 }
