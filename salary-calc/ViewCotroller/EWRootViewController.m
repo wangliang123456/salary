@@ -53,6 +53,9 @@ static int kHouseFundTag = 2;
         alertView.delegate = self;
         [alertView show];
     }
+    if (sender.selectedSegmentIndex == 0 || sender.selectedSegmentIndex == 1) {
+        [self calc:[self.salaryValue.text doubleValue]];
+    }
 }
 
 -(void) dealloc {
@@ -162,6 +165,9 @@ static int kHouseFundTag = 2;
         alertView.delegate = self;
         [alertView textFieldAtIndex:0].keyboardType = UIKeyboardTypeNumberPad;
         [alertView show];
+    }
+    if (sender.selectedSegmentIndex == 0 || sender.selectedSegmentIndex == 1) {
+        [self calc:[self.salaryValue.text doubleValue]];
     }
 }
     
