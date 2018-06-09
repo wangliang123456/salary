@@ -18,6 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [NSThread sleepForTimeInterval:0.5];
     dispatch_queue_t concurrentQueue =
     dispatch_queue_create("initBaseDataQueue",
                           DISPATCH_QUEUE_CONCURRENT);
