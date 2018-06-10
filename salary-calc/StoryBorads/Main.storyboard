@@ -52,13 +52,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="社保基数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6T-P8-JXg">
-                                <rect key="frame" x="170" y="190" width="74" height="21"/>
+                                <rect key="frame" x="170" y="180" width="74" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.74901960784313726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9F3-oe-iMP">
-                                <rect key="frame" x="84.666666666666686" y="231" width="245" height="29"/>
+                                <rect key="frame" x="84.666666666666686" y="221" width="245" height="29"/>
                                 <segments>
                                     <segment title="最高额度"/>
                                     <segment title="最低额度"/>
@@ -70,13 +70,13 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公积金基数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5R-pS-InB">
-                                <rect key="frame" x="161" y="289" width="92" height="21"/>
+                                <rect key="frame" x="161" y="269" width="92" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.74901960784313726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="C2Y-EV-yWI">
-                                <rect key="frame" x="84.666666666666686" y="330" width="245" height="29"/>
+                                <rect key="frame" x="84.666666666666686" y="310" width="245" height="29"/>
                                 <segments>
                                     <segment title="最高额度"/>
                                     <segment title="最低额度"/>
@@ -103,12 +103,12 @@
                         <color key="tintColor" red="0.12941176470588237" green="0.75294117647058822" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="e6T-P8-JXg" firstAttribute="top" secondItem="VDc-DN-IFt" secondAttribute="bottom" constant="30" id="A7W-Rd-fpE"/>
+                            <constraint firstItem="e6T-P8-JXg" firstAttribute="top" secondItem="VDc-DN-IFt" secondAttribute="bottom" constant="20" id="A7W-Rd-fpE"/>
                             <constraint firstItem="9F3-oe-iMP" firstAttribute="top" secondItem="e6T-P8-JXg" secondAttribute="bottom" constant="20" id="DG0-S5-N1u"/>
                             <constraint firstItem="VDc-DN-IFt" firstAttribute="top" secondItem="Q4x-4Y-2Fk" secondAttribute="bottom" constant="20" id="Fxj-HS-7b4"/>
                             <constraint firstItem="Q4x-4Y-2Fk" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="IxK-TT-a6S"/>
                             <constraint firstItem="02f-7d-2LH" firstAttribute="top" secondItem="oIV-ef-AKO" secondAttribute="bottom" id="Kja-LU-1bD"/>
-                            <constraint firstItem="E5R-pS-InB" firstAttribute="top" secondItem="9F3-oe-iMP" secondAttribute="bottom" constant="30" id="L0x-f5-ZYH"/>
+                            <constraint firstItem="E5R-pS-InB" firstAttribute="top" secondItem="9F3-oe-iMP" secondAttribute="bottom" constant="20" id="L0x-f5-ZYH"/>
                             <constraint firstItem="Q4x-4Y-2Fk" firstAttribute="top" secondItem="i7M-0j-4Gg" secondAttribute="bottom" constant="20" id="N0G-Wx-PR4"/>
                             <constraint firstItem="VDc-DN-IFt" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="S0U-1G-mXs"/>
                             <constraint firstItem="E5R-pS-InB" firstAttribute="centerX" secondItem="fHi-y2-hDk" secondAttribute="centerX" id="SMB-9t-OY7"/>

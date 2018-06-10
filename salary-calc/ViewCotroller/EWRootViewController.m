@@ -77,10 +77,10 @@ static int kHouseFundTag = 2;
         matrixView.tag = 111;
         matrixView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.view addSubview:matrixView];
-        NSLayoutConstraint *matrixViewHeight = [NSLayoutConstraint constraintWithItem:matrixView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0];
+        NSLayoutConstraint *matrixViewHeight = [NSLayoutConstraint constraintWithItem:matrixView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0 constant:100];
         NSLayoutConstraint *matrixViewWidth = [NSLayoutConstraint constraintWithItem:matrixView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1.0 constant:-26];
         NSLayoutConstraint *matrixViewCenter = [NSLayoutConstraint constraintWithItem:matrixView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
-        NSLayoutConstraint *matrixViewBottom = [NSLayoutConstraint constraintWithItem:matrixView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.houseSeg attribute:NSLayoutAttributeBottom multiplier:1.0 constant:20];
+        NSLayoutConstraint *matrixViewBottom = [NSLayoutConstraint constraintWithItem:matrixView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.houseSeg attribute:NSLayoutAttributeBottom multiplier:1.0 constant:15];
         [self.view addConstraints:@[matrixViewHeight,matrixViewWidth,matrixViewCenter,matrixViewBottom]];
         NSArray* header = @[@"工资明细",@"个人详情(比例)",@"公司详情(比例)"];
         [matrixView addRecordWithRecord:header];
@@ -148,7 +148,7 @@ static int kHouseFundTag = 2;
         //总计
         NSArray *total = @[@"税后工资",[NSString stringWithFormat:@"%.1f",salary.salaryWithTax],@"0"];
         [matrixView addRecordWithRecord:total];
-        matrixViewHeight.constant = 230;
+//        matrixViewHeight.constant = 100;
     }];
 }
 
