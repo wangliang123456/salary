@@ -10,6 +10,9 @@
 #import "CityDao.h"
 #import "InsuranceDao.h"
 
+@import GoogleMobileAds;
+@import Firebase;
+
 @interface AppDelegate ()
 
 @end
@@ -26,6 +29,8 @@
         [CityDao sharedInstance];
         [InsuranceDao sharedInstance];
     });
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-6212992129754905~9672509276"];
+    [FIRApp configure];
     return true;
 }
 

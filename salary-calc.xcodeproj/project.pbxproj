@@ -28,6 +28,7 @@
 		EF2D0BEB20B45A2600863E2F /* InsuranceConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2D0BEA20B45A2600863E2F /* InsuranceConfigViewController.m */; };
 		EF3813D820B63FCE009AE0F6 /* InsuranceConfigCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3813D620B63FCE009AE0F6 /* InsuranceConfigCellTableViewCell.m */; };
 		EF3813D920B63FCE009AE0F6 /* InsuranceConfigCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3813D720B63FCE009AE0F6 /* InsuranceConfigCellTableViewCell.xib */; };
+		EF53682420CD6F89000783F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF53682320CD6F89000783F6 /* GoogleService-Info.plist */; };
 		EF5C49F620B05D9200B5C825 /* NALLabelsMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C49F520B05D9200B5C825 /* NALLabelsMatrix.swift */; };
 		EF632AB7209757EF0041FA30 /* Salary.m in Sources */ = {isa = PBXBuildFile; fileRef = EF632AB6209757EF0041FA30 /* Salary.m */; };
 		EF8FEE49208C6A670016338D /* CityDao.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FEE48208C6A670016338D /* CityDao.m */; };
@@ -109,6 +110,7 @@
 		EF3813D520B63FCE009AE0F6 /* InsuranceConfigCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsuranceConfigCellTableViewCell.h; sourceTree = "<group>"; };
 		EF3813D620B63FCE009AE0F6 /* InsuranceConfigCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsuranceConfigCellTableViewCell.m; sourceTree = "<group>"; };
 		EF3813D720B63FCE009AE0F6 /* InsuranceConfigCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InsuranceConfigCellTableViewCell.xib; sourceTree = "<group>"; };
+		EF53682320CD6F89000783F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF5C49F520B05D9200B5C825 /* NALLabelsMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NALLabelsMatrix.swift; sourceTree = "<group>"; };
 		EF632AB5209757EF0041FA30 /* Salary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Salary.h; sourceTree = "<group>"; };
 		EF632AB6209757EF0041FA30 /* Salary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Salary.m; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		0730A4E91CF3EFD500949058 /* salary-calc */ = {
 			isa = PBXGroup;
 			children = (
+				EF53682320CD6F89000783F6 /* GoogleService-Info.plist */,
 				EF6A25F120B02B61008C21A6 /* swift */,
 				EF8FEE46208C6A430016338D /* Dao */,
 				EFFCE3101ED2B39100A35DF9 /* StoryBorads */,
@@ -455,6 +458,7 @@
 				0730A4F71CF3EFD500949058 /* Assets.xcassets in Resources */,
 				EF3813D920B63FCE009AE0F6 /* InsuranceConfigCellTableViewCell.xib in Resources */,
 				0730A52F1CF41C7A00949058 /* city.plist in Resources */,
+				EF53682420CD6F89000783F6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>85572402840-bfvgsgj3m9o9g9b9vjp4l2arbvv5mlpp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.85572402840-bfvgsgj3m9o9g9b9vjp4l2arbvv5mlpp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAo-o_jDx32_WfosX_Zt8PLjX3nNDevMXg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>85572402840</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>liang.wang.calc-</string>
+	<key>PROJECT_ID</key>
+	<string>wangliangxp12</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:85572402840:ios:c6334406830c589c</string>
+	<key>DATABASE_URL</key>
+	<string>https://wangliangxp12.firebaseio.com</string>
+</dict>
+</plist>
