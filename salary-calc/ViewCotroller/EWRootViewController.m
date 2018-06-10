@@ -148,7 +148,7 @@ static int kHouseFundTag = 2;
         //总计
         NSArray *total = @[@"税后工资",[NSString stringWithFormat:@"%.1f",salary.salaryWithTax],@"0"];
         [matrixView addRecordWithRecord:total];
-//        matrixViewHeight.constant = 100;
+        
     }];
 }
 
@@ -428,7 +428,6 @@ static int kHouseFundTag = 2;
         salary.salaryWithTax = salary.salaryWithTax - tax;
     }
     [self loadTableView:salary];
-//    [self loadPieChartView:salary];
 }
 
 - (void)viewDidLoad {
@@ -436,7 +435,14 @@ static int kHouseFundTag = 2;
     self.title = @"薪资计算";
     [self initVariable];
     [self initView];
-    [self loadBanerAD];
+    UIScreen *screen = [UIScreen mainScreen];
+    if (screen.bounds.size.height == 568) {
+        for (NSLayoutConstraint *con in self.spaces) {
+            con.constant = 10;
+        }
+    } else {
+        [self loadBanerAD];
+    }
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     int currentCityId = [[userDefault valueForKey:kSelectedCityId] intValue];
     if (currentCityId == 0) {
@@ -469,6 +475,12 @@ static int kHouseFundTag = 2;
     self.salaryValue.delegate = self;
     self.salaryValue.layer.borderWidth = 0.5;
     self.salaryValue.layer.borderColor =[UIColor colorWithRed:0.59 green:0.89 blue:0.98 alpha:1.00].CGColor;
+    UIScreen *screen = [UIScreen mainScreen];
+//    if (screen.bounds.size.height == 568) {
+//        for (NSLayoutConstraint *con in self.spaces) {
+//            con.constant = 10;
+//        }
+//    }
     
 }
 

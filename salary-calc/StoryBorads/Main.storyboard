@@ -127,6 +127,12 @@
                         <outlet property="bannerView" destination="oIV-ef-AKO" id="O0V-LO-Zaa"/>
                         <outlet property="houseSeg" destination="C2Y-EV-yWI" id="Vad-3l-NeB"/>
                         <outlet property="salaryValue" destination="VDc-DN-IFt" id="sfN-2L-6sf"/>
+                        <outletCollection property="spaces" destination="uxn-sY-CDR" id="oMi-Tq-7RM"/>
+                        <outletCollection property="spaces" destination="L0x-f5-ZYH" id="mhS-Y1-9xh"/>
+                        <outletCollection property="spaces" destination="DG0-S5-N1u" id="4So-mJ-FKr"/>
+                        <outletCollection property="spaces" destination="A7W-Rd-fpE" id="hqd-ub-1wc"/>
+                        <outletCollection property="spaces" destination="Fxj-HS-7b4" id="po3-eA-uib"/>
+                        <outletCollection property="spaces" destination="N0G-Wx-PR4" id="dtp-Ra-AoT"/>
                         <segue destination="7eg-JF-gag" kind="presentation" identifier="Location" id="xLq-9k-T4N"/>
                         <segue destination="CvU-kQ-7MQ" kind="presentation" identifier="Setting" id="lVH-0o-eGH"/>
                     </connections>
