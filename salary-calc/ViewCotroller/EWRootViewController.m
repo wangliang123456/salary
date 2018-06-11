@@ -478,8 +478,8 @@ static int kHouseFundTag = 2;
     self.navigationItem.leftBarButtonItem = left;
     self.navigationItem.rightBarButtonItem = right;
     self.salaryValue.delegate = self;
-    self.salaryValue.layer.borderWidth = 0.5;
-    self.salaryValue.layer.borderColor =[UIColor colorWithRed:0.59 green:0.89 blue:0.98 alpha:1.00].CGColor;
+    self.salaryValue.layer.borderWidth = 1.0;
+    self.salaryValue.layer.borderColor = self.houseSeg.tintColor.CGColor;
 }
 
 #pragma mark 加载饼图
