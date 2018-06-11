@@ -622,14 +622,20 @@ static int kHouseFundTag = 2;
     if (alertView.tag == kInsuranceTag) {
         selfDefineInsuranceBase = [[alertView textFieldAtIndex:0].text integerValue];
         if (buttonIndex == 0) {//社保取消按钮点击
-            self.insuranceSeg.selectedSegmentIndex = insuranceIndex;
-            [self.insuranceSeg setSelectedSegmentIndex:insuranceIndex];
+            if (insuranceBaseIsHighBase) {
+                self.insuranceSeg.selectedSegmentIndex = 0;
+            } else {
+                self.insuranceSeg.selectedSegmentIndex = 1;
+            }
         }
     } else if (alertView.tag == kHouseFundTag) {
         selfDefineHouseFundBase = [[alertView textFieldAtIndex:0].text integerValue];
         if (buttonIndex == 0) {//取消按钮点击
-            self.houseSeg.selectedSegmentIndex = houseFundIndex;
-            [self.houseSeg setSelectedSegmentIndex:houseFundIndex];
+            if (houseFundBaseIsHighBase) {
+                 self.houseSeg.selectedSegmentIndex = 0;
+            } else {
+                self.houseSeg.selectedSegmentIndex = 1;
+            }
         }
     }
     if (buttonIndex == 1) {
