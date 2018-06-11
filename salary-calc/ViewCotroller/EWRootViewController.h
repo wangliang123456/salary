@@ -19,6 +19,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *salaryValue;
 @property (strong, nonatomic) IBOutletCollection(NSLayoutConstraint) NSArray *spaces;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *insuranceSeg;
 
 
 @end

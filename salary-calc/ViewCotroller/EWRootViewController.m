@@ -28,6 +28,8 @@ static int kHouseFundTag = 2;
     int selfDefineHouseFundBase;
     int selfDefineInsuranceBase;
     BOOL isPersonalDetail;
+    NSInteger insuranceIndex;
+    NSInteger houseFundIndex;
 }
 
 @property (weak, nonatomic) IBOutlet DFPBannerView *bannerView;
@@ -41,6 +43,7 @@ static int kHouseFundTag = 2;
 
 #pragma mark 社保基数变化
 - (IBAction)insuranceBaseChange:(UISegmentedControl *)sender {
+    insuranceIndex = sender.selectedSegmentIndex;
     if (sender.selectedSegmentIndex == 0) {//high base
         insuranceBaseIsHighBase = YES;
     } else if (sender.selectedSegmentIndex == 1) {//low base
@@ -154,6 +157,7 @@ static int kHouseFundTag = 2;
 
 #pragma mark 公积金基数变化
 -(void)houseFundBaseChange:(UISegmentedControl *)sender {
+    houseFundIndex = sender.selectedSegmentIndex;
     if (sender.selectedSegmentIndex == 0) {//high base
         houseFundBaseIsHighBase = YES;
     } else if (sender.selectedSegmentIndex == 1) {//low base
@@ -463,6 +467,8 @@ static int kHouseFundTag = 2;
     GADRequest* request  = [GADRequest request];
     request.testDevices = @[@"584cf4beda1742fc9ab57b49fae2065553da4ff2"];
     [self.bannerView loadRequest:request];
+    houseFundIndex = 0;
+    insuranceIndex = 0;
 }
 
 -(void) initView {
@@ -475,13 +481,6 @@ static int kHouseFundTag = 2;
     self.salaryValue.delegate = self;
     self.salaryValue.layer.borderWidth = 0.5;
     self.salaryValue.layer.borderColor =[UIColor colorWithRed:0.59 green:0.89 blue:0.98 alpha:1.00].CGColor;
-    UIScreen *screen = [UIScreen mainScreen];
-//    if (screen.bounds.size.height == 568) {
-//        for (NSLayoutConstraint *con in self.spaces) {
-//            con.constant = 10;
-//        }
-//    }
-    
 }
 
 #pragma mark 加载饼图
@@ -622,8 +621,16 @@ static int kHouseFundTag = 2;
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (alertView.tag == kInsuranceTag) {
         selfDefineInsuranceBase = [[alertView textFieldAtIndex:0].text integerValue];
+        if (buttonIndex == 0) {//社保取消按钮点击
+            self.insuranceSeg.selectedSegmentIndex = insuranceIndex;
+            [self.insuranceSeg setSelectedSegmentIndex:insuranceIndex];
+        }
     } else if (alertView.tag == kHouseFundTag) {
         selfDefineHouseFundBase = [[alertView textFieldAtIndex:0].text integerValue];
+        if (buttonIndex == 0) {//取消按钮点击
+            self.houseSeg.selectedSegmentIndex = houseFundIndex;
+            [self.houseSeg setSelectedSegmentIndex:houseFundIndex];
+        }
     }
     if (buttonIndex == 1) {
         [self calc:[self.salaryValue.text doubleValue]];

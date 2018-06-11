@@ -126,6 +126,7 @@
                     <connections>
                         <outlet property="bannerView" destination="oIV-ef-AKO" id="O0V-LO-Zaa"/>
                         <outlet property="houseSeg" destination="C2Y-EV-yWI" id="Vad-3l-NeB"/>
+                        <outlet property="insuranceSeg" destination="9F3-oe-iMP" id="gRs-XM-cBg"/>
                         <outlet property="salaryValue" destination="VDc-DN-IFt" id="sfN-2L-6sf"/>
                         <outletCollection property="spaces" destination="uxn-sY-CDR" id="oMi-Tq-7RM"/>
                         <outletCollection property="spaces" destination="L0x-f5-ZYH" id="mhS-Y1-9xh"/>

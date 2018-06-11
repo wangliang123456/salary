@@ -36,7 +36,7 @@ static const CGFloat kHeaderViewHieght = 25;
     [super viewDidLoad];
     self.title = @"设置";
     [self initView];
-    [self loadBannerAD];
+    [self loadBannerAD]; 
 }
 
 #pragma mark init view
