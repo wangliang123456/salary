@@ -27,7 +27,6 @@ static const CGFloat kHeaderViewHieght = 25;
     self.bannerView.adUnitID = @"ca-app-pub-6212992129754905/8546169709";
     self.bannerView.rootViewController = self;
     GADRequest* request  = [GADRequest request];
-    request.testDevices = @[@"584cf4beda1742fc9ab57b49fae2065553da4ff2"];
     [self.bannerView loadRequest:request];
 }
 
