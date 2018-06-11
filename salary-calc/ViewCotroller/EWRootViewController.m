@@ -46,8 +46,10 @@ static int kHouseFundTag = 2;
     insuranceIndex = sender.selectedSegmentIndex;
     if (sender.selectedSegmentIndex == 0) {//high base
         insuranceBaseIsHighBase = YES;
+        selfDefineInsuranceBase = 0;
     } else if (sender.selectedSegmentIndex == 1) {//low base
         insuranceBaseIsHighBase = NO;
+        selfDefineInsuranceBase = 0;
     } else {//self define
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"请输入你的社保基数" message:@"" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"完成", nil];
         alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
@@ -160,8 +162,10 @@ static int kHouseFundTag = 2;
     houseFundIndex = sender.selectedSegmentIndex;
     if (sender.selectedSegmentIndex == 0) {//high base
         houseFundBaseIsHighBase = YES;
+        selfDefineHouseFundBase = 0;
     } else if (sender.selectedSegmentIndex == 1) {//low base
         houseFundBaseIsHighBase = NO;
+        selfDefineHouseFundBase = 0;
     } else {//self define
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"请输入你的公积金基数" message:@"" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"完成", nil];
         alertView.alertViewStyle = UIAlertViewStylePlainTextInput;

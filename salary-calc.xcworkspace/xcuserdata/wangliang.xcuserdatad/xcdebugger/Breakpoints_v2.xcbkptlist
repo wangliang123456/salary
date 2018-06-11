@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "salary-calc/ViewCotroller/EWRootViewController.m"
-            timestampString = "550426663.525795"
+            timestampString = "550427078.733958"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "-loadTableView:"
             landmarkType = "7">
          </BreakpointContent>
@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "salary-calc/ViewCotroller/EWRootViewController.m"
-            timestampString = "550426663.526292"
+            timestampString = "550427078.734332"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "621"
-            endingLineNumber = "621"
+            startingLineNumber = "625"
+            endingLineNumber = "625"
             landmarkName = "-alertView:clickedButtonAtIndex:"
             landmarkType = "7">
          </BreakpointContent>
