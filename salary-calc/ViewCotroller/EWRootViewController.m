@@ -111,7 +111,7 @@ static int kHouseFundTag = 2;
         
         data = [insuranceBase.unemploymentInsurance dataUsingEncoding:NSUTF8StringEncoding];
         dict = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data  options:kNilOptions error:&error];
-        NSString *unemploymentInsurancePRate = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kPersonalRate]doubleValue] * 100];
+        NSString *unemploymentInsurancePRate = [NSString stringWithFormat:@"%.2f",[[dict valueForKey:kPersonalRate]doubleValue] * 100];
         NSString *unemploymentInsuranceCRate = [NSString stringWithFormat:@"%.1f",[[dict valueForKey:kCompanyRate]doubleValue] * 100];
         
         //失业
