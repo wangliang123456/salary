@@ -70,7 +70,7 @@ static InsuranceDao *instance;
     [db executeUpdate:dalian];
     
     //福州
-    NSString *fuzhou = [NSString stringWithFormat:@"insert into Insurance_data(endowment_insurance,medical_insurance,maternity_insurance,unemployment_insurance,employment_injury_insurance,house_fund,city_name) values('%@','%@','%@','%@','%@','%@','%@')",@"{\"high_base\":16907.50,\"low_base\":3381.50,\"personal_rate\":0.08,\"company_rate\":0.18}",@"{\"high_base\":16907.50,\"low_base\":3381.50,\"company_rate\":0.08,\"personal_rate\":\"0.02+0\"}",@"{\"high_base\":14709.75,\"low_base\":2914.95,\"personal_rate\":0,\"company_rate\":0.007}",@"{\"high_base\":16907.50,\"low_base\":3381.50,\"personal_rate\":0.005,\"company_rate\":0.015}",@"{\"high_base\":16907.50,\"low_base\":3381.50,\"personal_rate\":0,\"company_rate\":0.003}",@"{\"high_base\":15621,\"low_base\":1350,\"personal_rate\":0.05,\"company_rate\":0.05}",@"福州"];
+    NSString *fuzhou = [NSString stringWithFormat:@"insert into Insurance_data(endowment_insurance,medical_insurance,maternity_insurance,unemployment_insurance,employment_injury_insurance,house_fund,city_name) values('%@','%@','%@','%@','%@','%@','%@')",@"{\"high_base\":16907.50,\"low_base\":3381.50,\"personal_rate\":0.08,\"company_rate\":0.18}",@"{\"high_base\":16907.50,\"low_base\":3381.50,\"company_rate\":0.08,\"personal_rate\":\"0.02+0\"}",@"{\"high_base\":14709.75,\"low_base\":2914.95,\"personal_rate\":0,\"company_rate\":0.007}",@"{\"high_base\":16907.50,\"low_base\":3381.50,\"personal_rate\":0.005,\"company_rate\":0.015}",@"{\"high_base\":16907.50,\"low_base\":3381.50,\"personal_rate\":0,\"company_rate\":0.003}",@"{\"high_base\":18783,\"low_base\":1650,\"personal_rate\":0.05,\"company_rate\":0.05}",@"福州"];
     [db executeUpdate:fuzhou];
     
     //广州
@@ -126,7 +126,7 @@ static InsuranceDao *instance;
     [db executeUpdate:nanning];
     
     //南京
-    NSString *nanjing = [NSString stringWithFormat:@"insert into Insurance_data(endowment_insurance,medical_insurance,maternity_insurance,unemployment_insurance,employment_injury_insurance,house_fund,city_name) values('%@','%@','%@','%@','%@','%@','%@')",@"{\"high_base\":18171,\"low_base\":2772,\"personal_rate\":0.08,\"company_rate\":0.19}",@"{\"high_base\":18171,\"low_base\":2772,\"company_rate\":0.09,\"personal_rate\":\"0.02+0\"}",@"{\"high_base\":18171,\"low_base\":2772,\"personal_rate\":0,\"company_rate\":0.008}",@"{\"high_base\":18171,\"low_base\":2772,\"personal_rate\":0.005,\"company_rate\":0.005}",@"{\"high_base\":18171,\"low_base\":2772,\"personal_rate\":0,\"company_rate\":0.004}",@"{\"high_base\":22500,\"low_base\":1890,\"personal_rate\":0.08,\"company_rate\":0.08}",@"南京"];
+    NSString *nanjing = [NSString stringWithFormat:@"insert into Insurance_data(endowment_insurance,medical_insurance,maternity_insurance,unemployment_insurance,employment_injury_insurance,house_fund,city_name) values('%@','%@','%@','%@','%@','%@','%@')",@"{\"high_base\":18171,\"low_base\":2772,\"personal_rate\":0.08,\"company_rate\":0.19}",@"{\"high_base\":18171,\"low_base\":2772,\"company_rate\":0.09,\"personal_rate\":\"0.02+0\"}",@"{\"high_base\":18171,\"low_base\":2772,\"personal_rate\":0,\"company_rate\":0.008}",@"{\"high_base\":18171,\"low_base\":2772,\"personal_rate\":0.005,\"company_rate\":0.005}",@"{\"high_base\":18171,\"low_base\":2772,\"personal_rate\":0,\"company_rate\":0.004}",@"{\"high_base\":25300,\"low_base\":1890,\"personal_rate\":0.08,\"company_rate\":0.08}",@"南京"];
     [db executeUpdate:nanjing];
     
     //青岛
@@ -150,7 +150,7 @@ static InsuranceDao *instance;
     [db executeUpdate:shenyang];
     
     //天津
-    NSString *tianjin = [NSString stringWithFormat:@"insert into Insurance_data(endowment_insurance,medical_insurance,maternity_insurance,unemployment_insurance,employment_injury_insurance,house_fund,city_name) values('%@','%@','%@','%@','%@','%@','%@')",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0.08,\"company_rate\":0.19}",@"{\"high_base\":16821,\"low_base\":3364,\"company_rate\":0.1,\"personal_rate\":\"0.02+0\"}",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0,\"company_rate\":0.005}",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0.005,\"company_rate\":0.005}",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0,\"company_rate\":0.004}",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0.11,\"company_rate\":0.11}",@"天津"];
+    NSString *tianjin = [NSString stringWithFormat:@"insert into Insurance_data(endowment_insurance,medical_insurance,maternity_insurance,unemployment_insurance,employment_injury_insurance,house_fund,city_name) values('%@','%@','%@','%@','%@','%@','%@')",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0.08,\"company_rate\":0.19}",@"{\"high_base\":16821,\"low_base\":3364,\"company_rate\":0.1,\"personal_rate\":\"0.02+0\"}",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0,\"company_rate\":0.005}",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0.005,\"company_rate\":0.005}",@"{\"high_base\":16821,\"low_base\":3364,\"personal_rate\":0,\"company_rate\":0.004}",@"{\"high_base\":24240,\"low_base\":2050,\"personal_rate\":0.11,\"company_rate\":0.11}",@"天津"];
     [db executeUpdate:tianjin];
     
     //太原
