@@ -466,7 +466,7 @@ static int kHouseFundTag = 2;
 }
 
 -(void) loadBanerAD {
-    self.bannerView.adUnitID = @"ca-app-pub-3940256099942544/2934735716";
+    self.bannerView.adUnitID = @"ca-app-pub-6212992129754905/8546169709";
     self.bannerView.rootViewController = self;
     GADRequest* request  = [GADRequest request];
     [self.bannerView loadRequest:request];
