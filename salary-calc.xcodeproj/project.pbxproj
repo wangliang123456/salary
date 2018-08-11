@@ -30,6 +30,9 @@
 		EF3813D920B63FCE009AE0F6 /* InsuranceConfigCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3813D720B63FCE009AE0F6 /* InsuranceConfigCellTableViewCell.xib */; };
 		EF53682420CD6F89000783F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF53682320CD6F89000783F6 /* GoogleService-Info.plist */; };
 		EF5C49F620B05D9200B5C825 /* NALLabelsMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C49F520B05D9200B5C825 /* NALLabelsMatrix.swift */; };
+		EF5F5D73211E9C74009BAF68 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5F5D72211E9C73009BAF68 /* libGDTMobSDK.a */; };
+		EF5F5D75211E9D2B009BAF68 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5F5D74211E9D2B009BAF68 /* libz.tbd */; };
+		EF5F5D77211E9D36009BAF68 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5F5D76211E9D36009BAF68 /* libxml2.tbd */; };
 		EF632AB7209757EF0041FA30 /* Salary.m in Sources */ = {isa = PBXBuildFile; fileRef = EF632AB6209757EF0041FA30 /* Salary.m */; };
 		EF8FEE49208C6A670016338D /* CityDao.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8FEE48208C6A670016338D /* CityDao.m */; };
 		EFBA695920C2DD2000D8570A /* InsuranceConfigViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = EF2D0BE920B45A2600863E2F /* InsuranceConfigViewController.h */; };
@@ -112,6 +115,17 @@
 		EF3813D720B63FCE009AE0F6 /* InsuranceConfigCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InsuranceConfigCellTableViewCell.xib; sourceTree = "<group>"; };
 		EF53682320CD6F89000783F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF5C49F520B05D9200B5C825 /* NALLabelsMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NALLabelsMatrix.swift; sourceTree = "<group>"; };
+		EF5F5D6A211E9C70009BAF68 /* GDTNativeExpressAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAd.h; sourceTree = "<group>"; };
+		EF5F5D6B211E9C70009BAF68 /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
+		EF5F5D6C211E9C71009BAF68 /* GDTSDKConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKConfig.h; sourceTree = "<group>"; };
+		EF5F5D6D211E9C71009BAF68 /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
+		EF5F5D6E211E9C71009BAF68 /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
+		EF5F5D6F211E9C71009BAF68 /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
+		EF5F5D70211E9C71009BAF68 /* GDTSDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKDefines.h; sourceTree = "<group>"; };
+		EF5F5D71211E9C71009BAF68 /* GDTNativeExpressAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAdView.h; sourceTree = "<group>"; };
+		EF5F5D72211E9C73009BAF68 /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
+		EF5F5D74211E9D2B009BAF68 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		EF5F5D76211E9D36009BAF68 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		EF632AB5209757EF0041FA30 /* Salary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Salary.h; sourceTree = "<group>"; };
 		EF632AB6209757EF0041FA30 /* Salary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Salary.m; sourceTree = "<group>"; };
 		EF6A25EE20B02080008C21A6 /* salary-calc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "salary-calc-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -127,7 +141,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5F5D77211E9D36009BAF68 /* libxml2.tbd in Frameworks */,
+				EF5F5D75211E9D2B009BAF68 /* libz.tbd in Frameworks */,
 				C19E77AE8C98A39ABDF909F8 /* Pods_salary_calc.framework in Frameworks */,
+				EF5F5D73211E9C74009BAF68 /* libGDTMobSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +190,7 @@
 		0730A4E91CF3EFD500949058 /* salary-calc */ = {
 			isa = PBXGroup;
 			children = (
+				EF5F5D68211E9C3C009BAF68 /* libs */,
 				EF53682320CD6F89000783F6 /* GoogleService-Info.plist */,
 				EF6A25F120B02B61008C21A6 /* swift */,
 				EF8FEE46208C6A430016338D /* Dao */,
@@ -292,6 +310,8 @@
 		91C935268E1312F9BF3F1BEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF5F5D76211E9D36009BAF68 /* libxml2.tbd */,
+				EF5F5D74211E9D2B009BAF68 /* libz.tbd */,
 				57528E0EFF5A8CF314453031 /* Pods_salary_calc.framework */,
 			);
 			name = Frameworks;
@@ -304,6 +324,30 @@
 				A94CDB078068F27413FB547A /* Pods-salary-calc.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF5F5D68211E9C3C009BAF68 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				EF5F5D69211E9C61009BAF68 /* GDT */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		EF5F5D69211E9C61009BAF68 /* GDT */ = {
+			isa = PBXGroup;
+			children = (
+				EF5F5D6F211E9C71009BAF68 /* GDTMobBannerView.h */,
+				EF5F5D6E211E9C71009BAF68 /* GDTMobInterstitial.h */,
+				EF5F5D6D211E9C71009BAF68 /* GDTNativeAd.h */,
+				EF5F5D6A211E9C70009BAF68 /* GDTNativeExpressAd.h */,
+				EF5F5D71211E9C71009BAF68 /* GDTNativeExpressAdView.h */,
+				EF5F5D6C211E9C71009BAF68 /* GDTSDKConfig.h */,
+				EF5F5D70211E9C71009BAF68 /* GDTSDKDefines.h */,
+				EF5F5D6B211E9C70009BAF68 /* GDTSplashAd.h */,
+				EF5F5D72211E9C73009BAF68 /* libGDTMobSDK.a */,
+			);
+			path = GDT;
 			sourceTree = "<group>";
 		};
 		EF6A25F120B02B61008C21A6 /* swift */ = {
@@ -728,6 +772,10 @@
 				INFOPLIST_FILE = "salary-calc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/salary-calc/libs/GDT",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = liang.wang.calc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -759,6 +807,10 @@
 				INFOPLIST_FILE = "salary-calc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/salary-calc/libs/GDT",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = liang.wang.calc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
